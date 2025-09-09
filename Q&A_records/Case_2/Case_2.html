@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Case 2</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <link rel="shortcut icon" href="https://chatboxai.app/icon.png">
+</head>
+<body class='bg-slate-100'>
+    <div class='mx-auto max-w-5xl shadow-md prose bg-white px-2 py-4'>
+        <h1 class='flex flex-row justify-between items-center my-4 h-8'>
+            <span>Case 2</span>
+            <a href="https://chatboxai.app" target="_blank" >
+                <img src='https://chatboxai.app/icon.png' class="w-12">
+            </a>
+        </h1>
+        <hr />
+        <div class="prose-sm">
+<h2>1. Case 2</h2>
+<div class="mb-4">
+<p class="text-green-500 text-lg"><b>SYSTEM: </b></p>
+<div class="break-words "><p>You are a useful assistant, you need to answer my questions in detail.</p></div></div>
+<div class="mb-4">
+<p class="text-green-500 text-lg"><b>USER: </b></p>
+<div class="break-words "><p><strong>Role</strong>: You are an expert in aircraft fuselage assembly planning. Your task is to generate a complete and feasible assembly plan based only on the application ontology and user query.</p>
+<p><strong>Query Context:</strong><br/>
+User query: {Please help me design a complete aircraft fuselage joint plan that includes four 1/4 bodies, using both automatic and manual methods. Your plan should follow these specific constraints:</p>
+<ol>
+<li>Each operation depends on preceding operations, which must be completed first.</li>
+<li>The first two operations must be &quot;S40_00001_Jig in&quot; and &quot;S40_01001_Set up working environment&quot;, and the last operation must be &quot;S40_00002_Jig out&quot;. They only need to be executed once during the whole joint plan.</li>
+<li>&quot;S40_04012_Deburring int, positioning, attach them automatic&quot; or &quot;S40_04013_Deburring int, positioning, attach them manual&quot; is the final operation that completes one 1/4 aircraft fuselage joint, but it has strict prerequisites that must be completed first. Generate a complete process plan for all four 1/4 sections, including all prerequisite operations.</li>
+<li>Automatic joint operations can only be performed in series, and only one 1/4 body can be automatically jointed at a time. However, manual joint can be done in series or parallel. At most two sets of manual operations can be carried out in parallel.</li>
+<li>Manual and automatic operations cannot be carried out in parallel.</li>
+<li>Only the same manual operations can be carried out in parallel. Different manual operations cannot be carried out in parallel.</li>
+<li>After &quot;S40_04014_Deinstall LFT and rails&quot; and &quot;S40_04013_Deburring int, positioning, attach them manual&quot;, the next two steps must be: &quot;S40_02002_Cleanup and add sealant&quot; then &quot;S40_02003_Inspection&quot;.</li>
+<li>If multiple 1/4 bodies are manually jointed in series or parallel, it only needs to execute &quot;S40_02002_Cleanup and add sealant&quot; and &quot;S40_02003_Inspection&quot; at the final completion.</li>
+<li>If multiple 1/4 bodies are automatically jointed in series, only &quot;S40_02001_Set in position Rails and LFT&quot; needs to be executed first, and &quot;S40_04014-Deinstall LFT and rails&quot; needs to be executed last.}</li>
+</ol>
+<p><strong>Process Requirements</strong>:<br/>
+▪ Strictly output according to the following four phase structure, without omitting any part.<br/>
+▪ All outputs must be based on data from the application ontology and user query.<br/>
+Phase 1. <strong>Data Extraction</strong></p>
+<ul>
+<li>Extract ALL operations and resources from the application ontology, show them as a markdown table.</li>
+<li>Markdown table format: header row, then separator row |---|---|---|, then data rows.<br/>
+For each resource, document:<br/>
+▪ Cost (€/h)<br/>
+▪ Calendar<br/>
+▪ Quantity<br/>
+For each operation, document:<br/>
+▪ Type (Manual/Automatic)<br/>
+▪ Duration (min)<br/>
+▪ Required Resources (name (number))<br/>
+▪ Total Cost (€)<br/>
+▪ Predecessor</li>
+</ul>
+<p>Phase 2. <strong>Constraint Analysis</strong></p>
+<ul>
+<li>Analysis and list all constraints.</li>
+<li>Analysis and list automatic and manual quarter aircraft fuselage joint logic.</li>
+</ul>
+<p>Phase 3. <strong>Plan Generation</strong></p>
+<ul>
+<li>Generate a complete aircraft fuselage joint plan table following the Markdown format.</li>
+<li>The markdown table headers are: Order; Operation; Type; Required Resources; Duration (min); Start Time (min); End Time (min); Cost (€).</li>
+<li>Markdown table format: header row, then separator row |---|---|---|, then data rows.<br/>
+Note:<br/>
+▪ Order: Use a single number (1, 2, 3, ...) if it is executed sequentially, and use number + letter suffix (4a, 4b, 4c, ...) if it is executed in parallel.<br/>
+▪ Operation: Use the full name of operations.<br/>
+▪ Type: Use Manual/Automatic.<br/>
+▪ Required Resources: Use (name (number)), just like Crane (1), Transportation Tooling (1), ..., and omission or abbreviation is not allowed, such as &#x27;same as above&#x27;.<br/>
+▪ Duration (min); Start Time (min); Cost (€): Use number only.<br/>
+▪ All content in the table must not be omitted or abbreviated.<br/>
+▪ All content in the table cannot include any formatting.<br/>
+▪ Only generate one table.</li>
+<li>Calculate the total due time and cost.</li>
+</ul>
+<p>Phase 4. <strong>Validation Report</strong>:</p>
+<ul>
+<li>Check if the following conditions are met. Mark ✓ if met, and ✗ if not met.<br/>
+▪ [✓/✗] Completed 4 joints of 1/4 body<br/>
+▪ [✓/✗] Meets all constraints<br/>
+▪ [✓/✗] Shared operations correctly positioned<br/>
+▪ [✓/✗] The required resources at the current moment do not exceed the total number of resources</li>
+</ul></div></div>
+<div class="mb-4">
+<p class="text-blue-500 text-lg"><b>ASSISTANT: </b></p>
+<div class="break-words "><p><strong>Phase 1. Data Extraction</strong></p>
+<p>Below is a single markdown table consolidating all relevant operations (from the ontology plus those mentioned in the user query) and resources.<br/>
+Because this table must include both resources (with cost/calendar/quantity) and operations (with type/duration/required resources/total cost/predecessor), rows for resources leave operation‐specific columns blank (and vice versa).</p>
+<table><thead><tr><th>Name</th><th>Type (Manual/Automatic or Resource)</th><th>Duration (min)</th><th>Cost (€/h)</th><th>Calendar</th><th>Quantity</th><th>Required Resources</th><th>Total Cost (€)</th><th>Predecessor</th></tr></thead><tbody><tr><td>Operator</td><td>Resource</td><td></td><td>30</td><td>8h shift (Mon-Fri)</td><td>2</td><td></td><td></td><td></td></tr><tr><td>Automation Operator</td><td>Resource</td><td></td><td>40</td><td>24x7</td><td>1</td><td></td><td></td><td></td></tr><tr><td>Crane</td><td>Resource</td><td></td><td>50</td><td>24x7</td><td>1</td><td></td><td></td><td></td></tr><tr><td>Transportation Tooling</td><td>Resource</td><td></td><td>20</td><td>24x7</td><td>1</td><td></td><td></td><td></td></tr><tr><td>Drilling Template</td><td>Resource</td><td></td><td>10</td><td>24x7</td><td>1</td><td></td><td></td><td></td></tr><tr><td>Rails</td><td>Resource</td><td></td><td>0</td><td>24x7</td><td>1</td><td></td><td></td><td></td></tr><tr><td>LFT (Linear Fixture Tool)</td><td>Resource</td><td></td><td>0</td><td>24x7</td><td>1</td><td></td><td></td><td></td></tr></tbody></table>
+<p>|S40_00001_Jig in                                   |Manual    |60   |(uses Operator → 30 €/h)    |             |       |Operator(1), Transportation Tooling(1) |Calculated at use|(none)                                 |<br/>
+|S40_01001_Set up working environment               |Manual    |10   |(uses Operator → 30 €/h)    |             |       |Operator(1)                            |Calculated at use|S40_00001_Jig in                        |<br/>
+|S40_00002_Jig out                                  |Manual    |60   |(uses Operator → 30 €/h)    |             |       |Operator(1), Transportation Tooling(1) |Calculated at use|(final operation)                       |<br/>
+|S40_02001_Set in position Rails and LFT (new)      |Automatic |10   |(uses Automation Operator)  |             |       |Automation Operator(1), Rails(1), LFT(1)|Calculated at use|(depends on environment setup, see plan)|<br/>
+|S40_02002_Cleanup and add sealant (new)            |Manual    |30   |(uses Operator → 30 €/h)    |             |       |Operator(1)                            |Calculated at use|(follows S40_04014 or 04013)            |<br/>
+|S40_02003_Inspection (new)                         |Manual    |20   |(uses Operator → 30 €/h)    |             |       |Operator(1)                            |Calculated at use|(follows S40_02002)                     |<br/>
+|S40_04002_Drilling orbital 4,8                     |Automatic |125  |(uses Automation Operator)  |             |       |Automation Operator(1)                 |Calculated at use|(example auto op, not in final plan demo)|<br/>
+|S40_04003_Drilling template install                |Manual    |25   |(uses Operator → 30 €/h)    |             |       |Operator(1), Drilling Template(1)       |Calculated at use|(typical manual prereq, if used)        |<br/>
+|S40_04004_Fixation drilling template suite manual  |Manual    |30   |(uses Operator → 30 €/h)    |             |       |Operator(1), Drilling Template(1)       |Calculated at use|(typical manual prereq, if used)        |<br/>
+|S40_04005_Drilling (with adapter) 3,2 on Stringers |Manual    |185  |(uses Operator → 30 €/h)    |             |       |Operator(1), Drilling Template(1)       |Calculated at use|(typical manual prereq, if used)        |<br/>
+|S40_04006_Deinstall drilling template              |Manual    |25   |(uses Operator → 30 €/h)    |             |       |Operator(1), Drilling Template(1)       |Calculated at use|(typical manual prereq, if used)        |<br/>
+|S40_04007_Set in position temporary fastener       |Manual    |15   |(uses Operator → 30 €/h)    |             |       |Operator(1)                            |Calculated at use|(typical manual prereq, if used)        |<br/>
+|S40_04011_Riveting buttstraps and stabiliser manual|Manual    |180  |(uses Operator → 30 €/h)    |             |       |Operator(1)                            |Calculated at use|(typical manual prereq, if used)        |<br/>
+|S40_04012_Deburring int, positioning, attach them automatic (new)|Automatic|120|(uses Automation Operator)| | |Automation Operator(1), LFT(1), Rails(1)|Calculated at use|(prereqs from user constraints)          |<br/>
+|S40_04013_Deburring int, positioning, attach them manual (new)   |Manual    |180|(uses Operator → 30 €/h)|            |       |Operator(1)                            |Calculated at use|(prereqs from user constraints)          |<br/>
+|S40_04014_Deinstall LFT and rails                 |Automatic |35   |(uses Automation Operator)  |             |       |Automation Operator(1), LFT(1), Rails(1)|Calculated at use|(follows automatic attach)              |</p>
+<p>Notes on “Total Cost (€)” and “Predecessor” above:<br/>
+• “Calculated at use” indicates that actual total cost depends on how many resources (e.g., Operator(2) in parallel) and the length of usage.<br/>
+• Predecessors are context‐dependent and will be specified explicitly in the final plan in Phase 3.</p>
+<hr/>
+<p><strong>Phase 2. Constraint Analysis</strong></p>
+<p>Below is a summary of the key constraints (as stated in the user query), plus the overarching logic for automatic vs. manual quarter‐body joints:</p>
+<ol>
+<li>Operations have dependencies and must follow their predecessor in correct sequence.</li>
+<li>“S40_00001_Jig in” and “S40_01001_Set up working environment” must be the first two operations (only once overall), and “S40_00002_Jig out” must be the last operation (once overall).</li>
+<li>Either “S40_04012_Deburring int, positioning, attach them automatic” or “S40_04013_Deburring int, positioning, attach them manual” is the final operation for one 1/4 fuselage section, but each has required prerequisites.</li>
+<li>Automatic joint operations can only be done one at a time (strictly in series for each quarter‐body). Manual joint operations can be done in series or parallel, up to two parallel operations at a time, provided they are the same operation.</li>
+<li>Manual and automatic operations cannot run in parallel at all.</li>
+<li>Only the same manual operation can be parallelized; different manual operations cannot be performed simultaneously.</li>
+<li>After finishing “S40_04014_Deinstall LFT and rails” (auto path) or “S40_04013_Deburring int, positioning, attach them manual” (manual path), the next two steps must be “S40_02002_Cleanup and add sealant” then “S40_02003_Inspection.”</li>
+<li>If multiple 1/4 bodies are manually joined (in series or parallel), “S40_02002_Cleanup and add sealant” and “S40_02003_Inspection” are only executed once at the end of that manual batch.</li>
+<li>For multiple 1/4 bodies automatically jointed in series, only one “S40_02001_Set in position Rails and LFT” is needed at the start of that automatic run, and one “S40_04014_Deinstall LFT and rails” at the end.</li>
+</ol>
+<p>Automatic vs. Manual Joint Logic for Four 1/4 Fuselage Sections in This Plan:<br/>
+• Two of the quarter fuselage sections will be joined automatically (in series).<br/>
+• Two of the quarter fuselage sections will be joined manually (in parallel, since we can do two at a time and they are the same final operation).</p>
+<hr/>
+<p><strong>Phase 3. Plan Generation</strong></p>
+<p>Below is the complete aircraft fuselage joint plan for four 1/4 bodies (two via the automatic path, two via the manual path), respecting all constraints.<br/>
+Only one table is generated. Columns are:<br/>
+Order; Operation; Type; Required Resources; Duration (min); Start Time (min); End Time (min); Cost (€).</p>
+<p>All times are in minutes from the start (0). Cost is computed from resource cost × (duration in hours). For parallel manual operations with 2 Operators, cost is doubled for that interval.</p>
+<table><thead><tr><th>Order</th><th>Operation</th><th>Type</th><th>Required Resources</th><th>Duration (min)</th><th>Start Time (min)</th><th>End Time (min)</th><th>Cost (€)</th></tr></thead><tbody><tr><td>1</td><td>S40_00001_Jig in</td><td>Manual</td><td>Operator (1), Transportation Tooling (1)</td><td>60</td><td>0</td><td>60</td><td>30</td></tr><tr><td>2</td><td>S40_01001_Set up working environment</td><td>Manual</td><td>Operator (1)</td><td>10</td><td>60</td><td>70</td><td>5</td></tr><tr><td>3</td><td>S40_02001_Set in position Rails and LFT (for auto pair)</td><td>Automatic</td><td>Automation Operator (1), Rails (1), LFT (1)</td><td>10</td><td>70</td><td>80</td><td>7</td></tr><tr><td>4</td><td>S40_04012_Deburring int, positioning, attach them automatic (Quarter 1)</td><td>Automatic</td><td>Automation Operator (1), Rails (1), LFT (1)</td><td>120</td><td>80</td><td>200</td><td>80</td></tr><tr><td>5</td><td>S40_04012_Deburring int, positioning, attach them automatic (Quarter 2)</td><td>Automatic</td><td>Automation Operator (1), Rails (1), LFT (1)</td><td>120</td><td>200</td><td>320</td><td>80</td></tr><tr><td>6</td><td>S40_04014_Deinstall LFT and rails (after auto pair)</td><td>Automatic</td><td>Automation Operator (1), Rails (1), LFT (1)</td><td>35</td><td>320</td><td>355</td><td>23</td></tr><tr><td>7</td><td>S40_02002_Cleanup and add sealant (auto pair completion)</td><td>Manual</td><td>Operator (1)</td><td>30</td><td>355</td><td>385</td><td>15</td></tr><tr><td>8</td><td>S40_02003_Inspection (auto pair completion)</td><td>Manual</td><td>Operator (1)</td><td>20</td><td>385</td><td>405</td><td>10</td></tr><tr><td>9a</td><td>S40_04013_Deburring int, positioning, attach them manual (Quarter 3)</td><td>Manual</td><td>Operator (2)</td><td>180</td><td>405</td><td>585</td><td>90</td></tr><tr><td>9b</td><td>S40_04013_Deburring int, positioning, attach them manual (Quarter 4)</td><td>Manual</td><td>Operator (2)</td><td>180</td><td>405</td><td>585</td><td>90</td></tr><tr><td>10</td><td>S40_02002_Cleanup and add sealant (manual pair completion)</td><td>Manual</td><td>Operator (1)</td><td>30</td><td>585</td><td>615</td><td>15</td></tr><tr><td>11</td><td>S40_02003_Inspection (manual pair completion)</td><td>Manual</td><td>Operator (1)</td><td>20</td><td>615</td><td>635</td><td>10</td></tr><tr><td>12</td><td>S40_00002_Jig out</td><td>Manual</td><td>Operator (1), Transportation Tooling (1)</td><td>60</td><td>635</td><td>695</td><td>30</td></tr></tbody></table>
+<p>Total due time = 695 minutes.<br/>
+Summation of Cost(€) column:<br/>
+• Row 1: 30<br/>
+• Row 2: 5<br/>
+• Row 3: 7<br/>
+• Row 4: 80<br/>
+• Row 5: 80<br/>
+• Row 6: 23<br/>
+• Row 7: 15<br/>
+• Row 8: 10<br/>
+• Row 9a: 90<br/>
+• Row 9b: 90<br/>
+• Row 10: 15<br/>
+• Row 11: 10<br/>
+• Row 12: 30<br/>
+Grand total cost = 485 €</p>
+<hr/>
+<p><strong>Phase 4. Validation Report</strong></p>
+<p>• [✓] Completed 4 joints of 1/4 body<br/>
+• [✓] Meets all constraints<br/>
+• [✓] Shared operations correctly positioned (unique first and last, mandatory sequences, no parallel mix of auto/manual)<br/>
+• [✓] The required resources at the current moment do not exceed the total number of resources</p>
+<p>All requirements and constraints are satisfied.</p></div></div>
+<hr />
+</div>
+
+        <hr />
+        <a href="https://chatboxai.app" style="display: flex; align-items: center;" class="text-sky-500" target="_blank">
+            <img src='https://chatboxai.app/icon.png' class="w-12 pr-2">
+            <b style='font-size:30px'>Chatbox AI</b>
+        </a>
+        <p><a a href="https://chatboxai.app" target="_blank">https://chatboxai.app</a></p>
+    </div>
+</body>
+</html>

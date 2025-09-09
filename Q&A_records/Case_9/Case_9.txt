@@ -1,0 +1,555 @@
+LightRAG compatible demo log file: E:\python\environment\graphrag\lightrag\examples\lightrag_compatible_demo.log
+
+Deleting old file:: ./dickens\graph_chunk_entity_relation.graphml
+Deleting old file:: ./dickens\kv_store_doc_status.json
+Deleting old file:: ./dickens\kv_store_full_docs.json
+Deleting old file:: ./dickens\kv_store_text_chunks.json
+Deleting old file:: ./dickens\vdb_chunks.json
+Deleting old file:: ./dickens\vdb_entities.json
+Deleting old file:: ./dickens\vdb_relationships.json
+INFO: [_] Created new empty graph fiel: ./dickens\graph_chunk_entity_relation.graphml
+INFO:nano-vectordb:Init {'embedding_dim': 1536, 'metric': 'cosine', 'storage_file': './dickens\\vdb_entities.json'} 0 data
+INFO:nano-vectordb:Init {'embedding_dim': 1536, 'metric': 'cosine', 'storage_file': './dickens\\vdb_relationships.json'} 0 data
+INFO:nano-vectordb:Init {'embedding_dim': 1536, 'metric': 'cosine', 'storage_file': './dickens\\vdb_chunks.json'} 0 data
+WARNING: Rerank is enabled but no rerank_model_func provided. Reranking will be skipped.
+INFO: [_] Process 36336 KV load full_docs with 0 records
+INFO: [_] Process 36336 KV load text_chunks with 0 records
+INFO: [_] Process 36336 KV load full_entities with 2 records
+INFO: [_] Process 36336 KV load full_relations with 2 records
+INFO: [_] Process 36336 KV load llm_response_cache with 46 records
+INFO: [_] Process 36336 doc status load doc_status with 0 records
+INFO: limit_async: 8 new workers initialized
+INFO: Processing 1 document(s)
+INFO: Extracting stage 1/1: unknown_source
+INFO: Processing d-id: doc-be08ca4c9af807754999df7e7b7f65be
+
+=======================
+Test embedding function
+========================
+Test dict: ['This is a test string for embedding.']
+Detected embedding dimension: 1536
+
+
+INFO: Chunk 1 of 6 extracted 25 Ent + 26 Rel
+INFO: Chunk 2 of 6 extracted 10 Ent + 11 Rel
+INFO: Chunk 3 of 6 extracted 17 Ent + 31 Rel
+INFO: Chunk 4 of 6 extracted 17 Ent + 31 Rel
+INFO: Chunk 5 of 6 extracted 17 Ent + 25 Rel
+INFO: Chunk 6 of 6 extracted 14 Ent + 12 Rel
+INFO: Merging stage 1/1: unknown_source
+INFO: Phase 1: Processing 52 entities from doc-be08ca4c9af807754999df7e7b7f65be (async: 8)
+INFO: Merge N: S40_Orbital Joint Process | 2+0
+INFO: Merge N: S40_Lower Orbital Joint Process | 2+0
+INFO: Merge N: S40_Lower Left Orbital Joint Process | 2+0
+INFO: Merge N: S40_Lower Right Orbital Joint Process | 2+0
+INFO: Merge N: S40_00002_Jig Out | 2+0
+INFO: Merge N: S40_01001_Set Up Working Environment | 2+0
+INFO: Merge N: S40_00001_Jig In | 2+0
+INFO: Merge N: S40_02003_Inspection | 3+0
+INFO: Merge N: S40_02002_Cleanup And Add Sealant | 2+0
+INFO: Merge N: S40_04003_Drilling Template Install | 2+0
+INFO: Merge N: S40_04005_Drilling (With Adapter) | 2+0
+INFO: Merge N: S40_04011_Riveting Buttstraps And Stabiliser Manual | 3+0
+INFO: Merge N: S40_04004_Fixation Drilling Template Suite Manual | 3+0
+INFO: Merge N: S40_04006_Deinstall Drilling Template | 2+0
+INFO: Merge N: S40_04007_Set In Position Temporary Fastener | 3+0
+INFO: Merge N: S40_04009_Set Up The Fixations LGP/Hi‐Lite Manual | 2+0
+INFO: Merge N: S40_04013_Deburring Int, Positioning, Attach Them Manual | 2+0
+INFO: Merge N: S40_04002_Drilling Orbital 4,8 | 2+0
+INFO: Merge N: S40_04001_Camera At Stating Holes | 2+0
+INFO: Merge N: S40_04012_Deburring Int, Positioning, Attach Them Automatic | 3+0
+INFO: Merge N: S40_04008_Set Up The Fixations LGP/Hi‐Lite Automatic | 2+0
+INFO: Merge N: S40_04010_Riveting Buttstraps And Stabiliser Automatic | 2+0
+INFO: LLM merge N: Mechanical Operator | 4+0
+INFO: Merge N: Automation Operator | 3+0
+INFO: LLM merge N: Station | 4+0
+INFO: Merge N: Light Flex Track Rail | 3+0
+INFO: LLM merge N: Light Flex Track Robot | 4+0
+INFO: LLM merge N: Drilling Template | 4+0
+INFO: Merge N: Hand Drilling Machine | 2+0
+INFO: Merge N: Station Platform | 3+0
+INFO: Merge N: Crane | 2+0
+INFO: Merge N: Resource | 2+0
+INFO: Phase 2: Processing 126 relations from doc-be08ca4c9af807754999df7e7b7f65be (async: 8)
+INFO: Merge E: S40_Lower Left Orbital Joint Process - S40_Lower Orbital Joint Process | 2+0
+INFO: Merge E: S40_Lower Orbital Joint Process - S40_Lower Right Orbital Joint Process | 2+0
+INFO: Merge E: S40_04004_Fixation Drilling Template Suite Manual - S40_04011_Riveting Buttstraps And Stabiliser Manual | 2+0
+INFO: Merge E: Mechanical Operator - S40_04011_Riveting Buttstraps And Stabiliser Manual | 2+0
+INFO: Merge E: Drilling Template - Resource | 2+0
+INFO: Merge E: Crane - Resource | 2+0
+INFO: Merge E: Resource - Station Platform | 2+0
+INFO: Merge E: Mechanical Operator - Resource | 2+0
+INFO: Merge E: Resource - Station | 2+0
+INFO: Merge E: Light Flex Track Robot - Resource | 2+0
+INFO: Phase 3: Updating final 52(52+0) entities and  126 relations from doc-be08ca4c9af807754999df7e7b7f65be
+INFO: Completed merging: 52 entities, 0 added entities, 126 relations
+INFO: [_] Writing graph with 52 nodes, 126 edges
+
+=====================
+Query mode: naive
+=====================
+INFO: In memory DB persist to disk
+INFO: Completed processing file 1/1: unknown_source
+INFO: Enqueued document processing pipeline stoped
+INFO: Naive query: 6 chunks (chunk_top_k: 20)
+WARNING: Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+INFO: Final context: 6 chunks
+INFO: limit_async: 4 new workers initialized
+To fulfill the request, I'll extract the necessary cost, calendar, and quantity data for each resource, as well as operation details such as type, duration, required resources, and predecessor information from the document chunks. Additionally, I'll design an aircraft fuselage joint plan considering the specified constraints.
+
+### Resource Information
+1. **Crane**
+   - **Cost (€):** 30
+   - **Calendar:** 24x7
+   - **Quantity:** 1
+
+2. **Transportation Tooling**
+   - **Cost (€):** 80
+   - **Calendar:** 27x7
+   - **Quantity:** 1
+
+3. **Mechanical Operator**
+   - **Cost (€):** 100
+   - **Calendar:** shift_40h_week
+   - **Quantity:** 8
+
+4. **Automation Operator**
+   - **Cost (€):** 100
+   - **Calendar:** shift_40h_week
+   - **Quantity:** 8
+
+5. **Light Flex Track Rail**
+   - **Cost (€):** 5
+   - **Calendar:** 24x7
+   - **Quantity:** 2
+
+6. **Light Flex Track Robot**
+   - **Cost (€):** 75
+   - **Calendar:** 24x7
+   - **Quantity:** 2
+
+7. **Station Platform**
+   - **Cost (€):** 75
+   - **Calendar:** 24x7
+   - **Quantity:** 2
+
+8. **Station**
+   - **Cost (€):** 80
+   - **Calendar:** 7x24
+   - **Quantity:** 2
+
+9. **Drilling Template**
+   - **Cost (€):** 10
+   - **Calendar:** 24x7
+   - **Quantity:** 5
+
+10. **Hand Drilling Machine**
+    - **Cost (€):** 10
+    - **Calendar:** 24x7
+    - **Quantity:** 6
+
+### Operation Information
+1. **S40_00001_Jig in**
+   - **Type:** Manual
+   - **Duration:** 60
+   - **Required Resources:** Crane (1), Transportation Tooling (1)
+   - **Predecessor:** None
+
+2. **S40_01001_Set up working environment**
+   - **Type:** Manual
+   - **Duration:** 10
+   - **Required Resources:** Station Platform (1), Mechanical Operator (1), Station (1)
+   - **Predecessor:** S40_00001_Jig in
+
+3. **S40_02001_Set in position Rails and LFT**
+   - **Type:** Auto
+   - **Duration:** 10
+   - **Required Resources:** Automation Operator (2), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+   - **Predecessor:** None
+
+4. **S40_04012_Deburring int, positioning, attach them automatic**
+   - **Type:** Auto
+   - **Duration:** 25
+   - **Required Resources:** Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+   - **Predecessor:** S40_04001_Camera at stating holes
+
+5. **S40_04013_Deburring int, positioning, attach them manual**
+   - **Type:** Manual
+   - **Duration:** 45
+   - **Required Resources:** Mechanical Operator (2)
+   - **Predecessor:** S40_04007_Set in position temporary fastener
+
+6. **S40_02002_Cleanup and add sealant**
+   - **Type:** Manual
+   - **Duration:** 35
+   - **Required Resources:** Station Platform (1), Mechanical Operator (2), Station (1)
+   - **Predecessor:** None
+
+7. **S40_02003_Inspection**
+   - **Type:** Manual
+   - **Duration:** 55
+   - **Required Resources:** Station Platform (1), Mechanical Operator (2), Station (1)
+   - **Predecessor:** S40_02002_Cleanup and add sealant
+
+8. **S40_04014_Deinstall LFT and rails**
+   - **Type:** Auto
+   - **Duration:** 35
+   - **Required Resources:** Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+   - **Predecessor:** S40_04012_Deburring int, positioning, attach them automatic
+
+9. **S40_00002_Jig out**
+   - **Type:** Manual
+   - **Duration:** 60
+   - **Required Resources:** Crane (1), Transportation Tooling (1)
+   - **Predecessor:** None
+
+### Plan Table
+```markdown
+| Order | Operation | Type | Required Resources | Duration (min) | Start Time (min) | End Time (min) | Cost (€) |
+|---|---|---|---|---|---|---|---|
+| 1 | S40_00001_Jig in | Manual | Crane (1), Transportation Tooling (1) | 60 | 0 | 60 | 110 |
+| 2 | S40_01001_Set up working environment | Manual | Station Platform (1), Mechanical Operator (1), Station (1) | 10 | 60 | 70 | 255 |
+| 3 | S40_02001_Set in position Rails and LFT | Auto | Automation Operator (2), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 10 | 70 | 80 | 285 |
+| 4 | S40_04012_Deburring int, positioning, attach them automatic | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 25 | 80 | 105 | 217.5 |
+| 5 | S40_04014_Deinstall LFT and rails | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 35 | 105 | 140 | 247.5 |
+| 6 | S40_02002_Cleanup and add sealant | Manual | Station Platform (1), Mechanical Operator (2), Station (1) | 35 | 140 | 175 | 425 |
+| 7 | S40_02003_Inspection | Manual | Station Platform (1), Mechanical Operator (2), Station (1) | 55 | 175 | 230 | 575 |
+| 8 | S40_04013_Deburring int, positioning, attach them manual | Manual | Mechanical Operator (2) | 45 | 230 | 275 | 450 |
+| 9 | S40_00002_Jig out | Manual | Crane (1), Transportation Tooling (1) | 60 | 275 | 335 | 110 |
+```
+
+### Aggregate Information
+- **Total Duration:** 335 minutes
+- **Total Cost:** €2675
+
+### References
+- [DC] Unknown Source
+=====================
+Query mode: local
+=====================
+INFO:  == LLM cache == saving: local:keywords:88407bd8555a711d940542ae2b8dd8c7
+INFO: Process 36336 building query context...
+INFO: Query nodes: Cost (€/h), Calendar, Quantity, Manual/Automatic, Duration (min), Required Resources, Total Cost (€), Predecessor, S40_00001_Jig in, S40_01001_Set up working environment, S40_00002_Jig out, S40_04012_Deburring int, S40_04013_Deburring int, S40_04014_Deinstall LFT and rails, S40_02002_Cleanup and add sealant, S40_02003_Inspection, S40_02001_Set in position Rails and LFT, top_k: 40, cosine: 0.2
+INFO: Local query: 40 entites, 119 relations
+INFO: Truncated KG query results: 40 entities, 119 relations
+INFO: Selecting 6 from 6 entity-related chunks by vector similarity
+INFO: Find no additional relations-related chunks from 119 relations
+INFO: Round-robin merged total chunks from 6 to 6
+WARNING: Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+INFO: Final context: 40 entities, 119 relations, 6 chunks
+INFO: chunks: E11/1 E9/2 E13/3 E12/4 E6/5 E24/6
+To create a comprehensive aircraft fuselage joint plan table that adheres to the specified requirements, we begin by listing the necessary resource data, operation details, and their dependencies. Here are the details:
+
+### Resources
+1. **Crane**
+   - Cost: €30/hour
+   - Calendar: 24x7
+   - Quantity: 1
+
+2. **Transportation Tooling**
+   - Cost: €80/hour
+   - Calendar: 27x7
+   - Quantity: 1
+
+3. **Station Platform**
+   - Cost: €75/hour
+   - Calendar: 24x7
+   - Quantity: 2
+
+4. **Mechanical Operator**
+   - Cost: €100/hour
+   - Calendar: shift_40h_week
+   - Quantity: 8
+
+5. **Automation Operator**
+   - Cost: €100/hour
+   - Calendar: shift_40h_week
+   - Quantity: 8
+
+6. **Light Flex Track Rail**
+   - Cost: €5/hour
+   - Calendar: 24x7
+   - Quantity: 2
+
+7. **Light Flex Track Robot**
+   - Cost: €75/hour
+   - Calendar: 24x7
+   - Quantity: 2
+
+8. **Drilling Template**
+   - Cost: €10/hour
+   - Calendar: 24x7
+   - Quantity: 5
+
+9. **Station**
+   - Cost: €80/hour
+   - Calendar: 7x24
+   - Quantity: 2
+
+### Operations
+1. **S40_00001_Jig In**
+   - Type: Manual
+   - Duration: 60 minutes
+   - Required Resources: Crane (1), Transportation Tooling (1)
+   - Cost: Calculated based on time and resource cost
+
+2. **S40_01001_Set Up Working Environment**
+   - Type: Manual
+   - Duration: 10 minutes
+   - Required Resources: Station Platform (1), Mechanical Operator (1), Station (1)
+   - Cost: Calculated based on time and resource cost
+
+3. **S40_00002_Jig Out**
+   - Type: Manual
+   - Duration: 60 minutes
+   - Required Resources: Crane (1), Transportation Tooling (1)
+   - Cost: Calculated based on time and resource cost
+   
+4. **S40_04012_Deburring Int, Positioning, Attach Them Automatic**
+   - Type: Auto
+   - Duration: 25 minutes
+   - Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+   - Cost: Calculated based on time and resource cost
+
+5. **S40_04013_Deburring Int, Positioning, Attach Them Manual**
+   - Type: Manual
+   - Duration: 45 minutes
+   - Required Resources: Mechanical Operator (2)
+   - Cost: Calculated based on time and resource cost
+
+6. **S40_02002_Cleanup and Add Sealant**
+   - Type: Manual
+   - Duration: 35 minutes
+   - Required Resources: Station Platform (1), Mechanical Operator (2), Station (1)
+   - Cost: Calculated based on time and resource cost
+
+7. **S40_02003_Inspection**
+   - Type: Manual
+   - Duration: 55 minutes
+   - Required Resources: Station Platform (1), Mechanical Operator (2), Station (1)
+   - Cost: Calculated based on time and resource cost
+
+8. **S40_02001_Set In Position Rails and LFT**
+   - Type: Auto
+   - Duration: 10 minutes
+   - Required Resources: Automation Operator (2), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+   - Cost: Calculated based on time and resource cost
+
+9. **S40_04014_Deinstall LFT and Rails**
+   - Type: Auto
+   - Duration: 35 minutes
+   - Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+   - Cost: Calculated based on time and resource cost
+
+### Complete Process Plan Table
+
+| Order | Operation | Type | Required Resources | Duration (min) | Start Time (min) | End Time (min) | Cost (€) |
+|---|---|---|---|---|---|---|---|
+| 1 | S40_00001_Jig In | Manual | Crane (1), Transportation Tooling (1) | 60 | 0 | 60 | 110 |
+| 2 | S40_01001_Set Up Working Environment | Manual | Station Platform (1), Mechanical Operator (1), Station (1) | 10 | 60 | 70 | 85 |
+| 3 | S40_02001_Set In Position Rails and LFT | Auto | Automation Operator (2), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 10 | 70 | 80 | 155 |
+| 4a | S40_04012_Deburring Int, Positioning, Attach Them Automatic | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 25 | 80 | 105 | 137.5 |
+| 4b | S40_04012_Deburring Int, Positioning, Attach Them Automatic | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 25 | 105 | 130 | 137.5 |
+| 4c | S40_04012_Deburring Int, Positioning, Attach Them Automatic | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 25 | 130 | 155 | 137.5 |
+| 4d | S40_04012_Deburring Int, Positioning, Attach Them Automatic | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 25 | 155 | 180 | 137.5 |
+| 5 | S40_04014_Deinstall LFT and Rails | Auto | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 35 | 180 | 215 | 192.5 |
+| 6a | S40_04013_Deburring Int, Positioning, Attach Them Manual | Manual | Mechanical Operator (2) | 45 | 215 | 260 | 150 |
+| 6b | S40_04013_Deburring Int, Positioning, Attach Them Manual | Manual | Mechanical Operator (2) | 45 | 260 | 305 | 150 |
+| 6c | S40_04013_Deburring Int, Positioning, Attach Them Manual | Manual | Mechanical Operator (2) | 45 | 305 | 350 | 150 |
+| 6d | S40_04013_Deburring Int, Positioning, Attach Them Manual | Manual | Mechanical Operator (2) | 45 | 350 | 395 | 150 |
+| 7 | S40_02002_Cleanup and Add Sealant | Manual | Station Platform (1), Mechanical Operator (2), Station (1) | 35 | 395 | 430 | 237.5 |
+| 8 | S40_02003_Inspection | Manual | Station Platform (1), Mechanical Operator (2), Station (1) | 55 | 430 | 485 | 332.5 |
+| 9 | S40_00002_Jig Out | Manual | Crane (1), Transportation Tooling (1) | 60 | 485 | 545 | 110 |
+
+**Total Due Time: 545 minutes**
+
+**Total Cost: €2385**
+
+### References
+- [KG] Resource Classes
+- [KG] Operation Details
+- [KG] S40_Orbital Joint Process Relationships
+- [DC] Application Ontology Summary
+=====================
+Query mode: global
+=====================
+INFO:  == LLM cache == saving: global:keywords:ba5a0f06303197f2aa8015f0d31b0c88
+INFO: Process 36336 building query context...
+INFO: Query edges: Aircraft fuselage joint plan, Manual and automatic methods, Operation dependencies, Process plan, top_k: 40, cosine: 0.2
+INFO: Global query: 34 entites, 40 relations
+INFO: Truncated KG query results: 34 entities, 40 relations
+INFO: Selecting 6 from 6 entity-related chunks by vector similarity
+INFO: Find no additional relations-related chunks from 40 relations
+INFO: Round-robin merged total chunks from 6 to 6
+WARNING: Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+INFO: Final context: 34 entities, 40 relations, 6 chunks
+INFO: chunks: E12/1 E10/2 E13/3 E9/4 E8/5 E21/6
+I'm sorry, but I'm unable to generate a complete aircraft fuselage joint plan according to your constraints with the given information. The operation details, such as specific numbers for resources and costs, as well as the precedence requirements for all operations, are not fully available in the provided data. Additionally, the complexity of designing a joint plan that incorporates both automatic and manual operations with the specific constraints outlined exceeds the information in the Knowledge Graph and Document Chunks.
+=====================
+Query mode: hybrid
+=====================
+INFO:  == LLM cache == saving: hybrid:keywords:73f94eff5e36ca73a196d34c5e03d0ae
+INFO: Process 36336 building query context...
+INFO: Query nodes: Cost (€/h), Calendar, Quantity, Type (Manual/Automatic), Duration (min), Required Resources, Total Cost (€), Predecessor, S40_00001_Jig in, S40_01001_Set up working environment, S40_00002_Jig out, S40_04012_Deburring int, positioning, attach them automatic, S40_04013_Deburring int, positioning, attach them manual, S40_02002_Cleanup and add sealant, S40_02003_Inspection, S40_02001_Set in position Rails and LFT, S40_04014_Deinstall LFT and rails, top_k: 40, cosine: 0.2
+INFO: Local query: 40 entites, 119 relations
+INFO: Query edges: Aircraft fuselage joint plan, Operation planning, Design constraints, Manual and automatic methods, top_k: 40, cosine: 0.2
+INFO: Global query: 32 entites, 40 relations
+INFO: Truncated KG query results: 46 entities, 119 relations
+INFO: Selecting 6 from 6 entity-related chunks by vector similarity
+INFO: Find no additional relations-related chunks from 119 relations
+INFO: Round-robin merged total chunks from 6 to 6
+WARNING: Rerank is enabled but no rerank model is configured. Please set up a rerank model or set enable_rerank=False in query parameters.
+INFO: Final context: 46 entities, 119 relations, 6 chunks
+INFO: chunks: E15/1 E10/2 E17/3 E16/4 E10/5 E24/6
+To address your request, I will provide details about resources and operations first before designing the aircraft fuselage joint plan. Here are the characteristics for resources and operations as per the provided data:
+
+### Resources
+
+1. **Drilling Template**
+   - **Cost (€/h):** 10
+   - **Calendar:** 24x7
+   - **Quantity:** 5
+
+2. **Automation Operator**
+   - **Cost (€/h):** 100
+   - **Calendar:** shift_40h_week
+   - **Quantity:** 8
+
+3. **Hand Drilling Machine**
+   - **Cost (€/h):** 10
+   - **Calendar:** 24x7
+   - **Quantity:** 6
+
+4. **Light Flex Track Rail**
+   - **Cost (€/h):** 5
+   - **Calendar:** 24x7
+   - **Quantity:** 2
+
+5. **Station Platform**
+   - **Cost (€/h):** 75
+   - **Calendar:** 24x7
+   - **Quantity:** 2
+
+6. **Mechanical Operator**
+   - **Cost (€/h):** 100
+   - **Calendar:** shift_40h_week
+   - **Quantity:** 8
+
+7. **Light Flex Track Robot**
+   - **Cost (€/h):** 75
+   - **Calendar:** 24x7
+   - **Quantity:** 2
+
+8. **Station**
+   - **Cost (€/h):** 80
+   - **Calendar:** 7x24
+   - **Quantity:** 2
+
+9. **Transportation Tooling**
+   - **Cost (€/h):** 80
+   - **Calendar:** 27X7
+   - **Quantity:** 1
+
+10. **Crane**
+    - **Cost (€/h):** 30
+    - **Calendar:** 24x7
+    - **Quantity:** 1
+
+### Operations
+
+1. **S40_00001_Jig in**
+    - **Type:** Manual
+    - **Duration (min):** 60
+    - **Required Resources:** Crane (1), Transportation Tooling (1)
+    - **Predecessor:** None
+
+2. **S40_01001_Set up working environment**
+    - **Type:** Manual
+    - **Duration (min):** 10
+    - **Required Resources:** Station Platform (1), Mechanical Operator (1), Station (1)
+    - **Predecessor:** S40_00001_Jig in
+
+3. **S40_00002_Jig out**
+    - **Type:** Manual
+    - **Duration (min):** 60
+    - **Required Resources:** Crane (1), Transportation Tooling (1)
+    - **Predecessor:** None
+
+4. **S40_04012_Deburring int, positioning, attach them automatic**
+    - **Type:** Automatic
+    - **Duration (min):** 25
+    - **Required Resources:** Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+    - **Predecessor:** S40_04001_Camera at stating holes
+
+5. **S40_04013_Deburring int, positioning, attach them manual**
+    - **Type:** Manual
+    - **Duration (min):** 45
+    - **Required Resources:** Mechanical Operator (2)
+    - **Predecessor:** S40_04007_Set in position temporary fastener
+
+6. **S40_02001_Set in position Rails and LFT**
+    - **Type:** Automatic
+    - **Duration (min):** 10
+    - **Required Resources:** Automation Operator (2), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+    - **Predecessor:** None
+
+7. **S40_04014_Deinstall LFT and rails**
+    - **Type:** Automatic
+    - **Duration (min):** 35
+    - **Required Resources:** Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1)
+    - **Predecessor:** S40_04012_Deburring int, positioning, attach them automatic
+
+8. **S40_02002_Cleanup and add sealant**
+    - **Type:** Manual
+    - **Duration (min):** 35
+    - **Required Resources:** Station Platform (1), Mechanical Operator (2), Station (1)
+    - **Predecessor:** None
+
+9. **S40_02003_Inspection**
+    - **Type:** Manual
+    - **Duration (min):** 55
+    - **Required Resources:** Station Platform (1), Mechanical Operator (2), Station (1)
+    - **Predecessor:** S40_02002_Cleanup and add sealant
+
+### Complete Aircraft Fuselage Joint Plan Table
+
+Given the complexity of calculating total due time and cost for all processes without specific sequence details from the document, here's a hypothetical layout of one possible sequence adhering to the provided constraints:
+
+```markdown
+| Order | Operation                                                  | Type      | Required Resources                                    | Duration (min) | Start Time (min) | End Time (min) | Cost (€) |
+|-------|------------------------------------------------------------|-----------|------------------------------------------------------|----------------|-----------------|----------------|----------|
+| 1     | S40_00001_Jig in                                          | Manual    | Crane (1), Transportation Tooling (1)                 | 60             | 0               | 60             | 90       |
+| 2     | S40_01001_Set up working environment                       | Manual    | Station Platform (1), Mechanical Operator (1), Station (1) | 10         | 60              | 70              | 17.5       |
+| 3     | S40_02001_Set in position Rails and LFT                    | Automatic | Automation Operator (2), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 10         | 70              | 80             | 28.75      |
+| 4a    | S40_04013_Deburring int, positioning, attach them manual   | Manual    | Mechanical Operator (2)                               | 45             | 80              | 125            | 150      |
+| 4b    | S40_04013_Deburring int, positioning, attach them manual   | Manual    | Mechanical Operator (2)                               | 45             | 80              | 125            | 150      |
+| 4c    | S40_04013_Deburring int, positioning, attach them manual   | Manual    | Mechanical Operator (2)                               | 45             | 80              | 125            | 150      |
+| 4d    | S40_04013_Deburring int, positioning, attach them manual   | Manual    | Mechanical Operator (2)                               | 45             | 80              | 125            | 150      |
+| 5     | S40_02002_Cleanup and add sealant                          | Manual    | Station Platform (1), Mechanical Operator (2), Station (1) | 35           | 125             | 160            | 105.25    |
+| 6     | S40_02003_Inspection                                       | Manual    | Station Platform (1), Mechanical Operator (2), Station (1) | 55           | 160             | 215            | 165       |
+| 7     | S40_04012_Deburring int, positioning, attach them automatic | Automatic | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 25           | 215             | 240            | 89.375    |
+| 8     | S40_04014_Deinstall LFT and rails                          | Automatic | Automation Operator (1), Light Flex Track Rail (1), Station Platform (1), Light Flex Track Robot (1), Station (1) | 35           | 240             | 275            | 89.375    |
+| 9     | S40_00002_Jig out                                          | Manual    | Crane (1), Transportation Tooling (1)                 | 60             | 275             | 335            | 90       |
+
+```
+
+### Key Assumptions
+
+- **Manual parallels:** You can execute manual deburring multiple times in different 1/4 sections simultaneously, assuming resource availability.
+- **Series execution for automatic tasks:** The automatic deburring operation executes sequentially.
+- **Costs Calculation:** Cost is marginally calculated based on available data from resources using operation duration and the sum is expressed across operations.
+
+### Important Notes
+- This plan gives one possible scenario, derived from constraints and known data.
+- Consider adapting the sequence under operational constraints like resource availability and timing.
+- Some detailed resource costs and prerequisites weren't fully accessible from the presented information.
+
+### References
+
+- [KG] Station
+- [KG] Mechanical Operator
+- [DC] unknown_source
+- [KG] Automation Operator
+- [KG] Light Flex Track Rail
+INFO: Successfully finalized 10 storages
+Done!

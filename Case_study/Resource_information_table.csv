@@ -1,0 +1,11 @@
+No.,Resource name,Calendar,Cost,Quantity
+1,Mechanical operator,40 h weekly shift,100 €/h,8
+2,Automation operator,40 h weekly shift,100 €/h,8
+3,Transportation tooling,24/7 operation,80 €/h,1
+4,Station,24/7 operation,80 €/h,2
+5,Light Flex Track Robot,24/7 operation,75 €/h,2
+6,Station platform,24/7 operation,75 €/h,2
+7,Crane,24/7 operation,30 €/h,1
+8,Drilling Template,24/7 operation,10 €/h,5
+9,Hand drilling machine,24/7 operation,10 €/h,6
+10,Light flex track rail,24/7 operation,5 €/h,2

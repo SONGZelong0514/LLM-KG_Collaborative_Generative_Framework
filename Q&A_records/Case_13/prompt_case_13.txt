@@ -1,0 +1,26 @@
+According to the conversation history, please help me design a complete aircraft fuselage joint plan that includes four 1/4 bodies, using both automatic and manual methods. Your plan should follow these specific constraints:
+
+1. Each operation depends on preceding operations, which must be completed first.
+2. The first two operations must be "S40_00001_Jig in" and "S40_01001_Set up working environment", and the last operation must be "S40_00002_Jig out". They only need to be executed once during the whole joint plan.
+3. "S40_04012_Deburring int, positioning, attach them automatic" or "S40_04013_Deburring int, positioning, attach them manual" marks the completion of one 1/4 aircraft fuselage joint. You must include a total of four such operations to complete the joint of the entire aircraft fuselage.
+4. Automatic joint operations can only be performed in series, and only one 1/4 body can be automatically jointed at a time. However, manual joint can be done in series or parallel. At most two sets of manual operations can be carried out in parallel.
+5. Manual and automatic operations cannot be carried out in parallel.
+6. Only the same manual operations can be carried out in parallel. Different manual operations cannot be carried out in parallel.
+7. After "S40_04014_Deinstall LFT and rails" and "S40_04013_Deburring int, positioning, attach them manual", the next two steps must be: "S40_02002_Cleanup and add sealant" then "S40_02003_Inspection".
+8. If multiple 1/4 bodies are manually jointed in series or parallel, it only needs to execute "S40_02002_Cleanup and add sealant" and "S40_02003_Inspection" at the final completion.
+9. If multiple 1/4 bodies are automatically jointed in series, only "S40_02001_Set in position Rails and LFT" needs to be executed first, and "S40_04014-Deinstall LFT and rails" needs to be executed last.
+
+Your answer must comply with the following requirements:
+- Generate a complete aircraft fuselage joint plan table following the Markdown format.
+- The markdown table headers are: Order; Operation; Type; Required Resources; Duration (min); Start Time (min); End Time (min); Cost (€).
+- Markdown table format: header row, then separator row |---|---|---|, then data rows.
+Note:
+▪ Order: Use a single number (1, 2, 3, ...) if it is executed sequentially, and use number + letter suffix (4a, 4b, 4c, ...) if it is executed in parallel.
+▪ Operation: Use the full name of operations.
+▪ Type: Use Manual/Automatic.
+▪ Required Resources: Use (name (number)), just like Crane (1), Transportation Tooling (1), ..., and omission or abbreviation is not allowed, such as 'same as above'.
+▪ Duration (min); Start Time (min); Cost (€): Use number only.
+▪ All content in the table must not be omitted or abbreviated.
+▪ All content in the table cannot include any formatting.
+▪ Only generate one table.
+- Calculate the total due time and cost.

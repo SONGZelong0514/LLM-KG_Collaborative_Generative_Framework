@@ -1,0 +1,21 @@
+No.,Operation name,Type,Duration,Required resources,Processor
+1,S40_00001_Jig_in,Manual,60 min,"Crane (1), Transportation tooling (1)",\
+2,S40_01001_Set up working environment,Manual,10 min,"Station (1), Mechanical operator (1), Station platform (1)",1
+3,S40_02001_Set in position Rails and LFT,Auto,10 min,"Automation operator (2), Station (1), Light flex track rail (1), Light flex track robot (1), Station platform (1)",\
+4,S40_04001_Camera at stating holes,Auto,15 min,"Automation Operator(1), Station(1), Light Flex Track Rail(1), Light Flex Track Robot(1), Station platform(1)",3
+5,"S40_04002_Drilling orbital 4,8",Auto,125 min,"Automation Operator(1), Station(1), Light Flex Track Rail(1), Light Flex Track Robot(1), Station platform(1)",4
+6,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Auto,20 min,"Automation Operator(1), Station(1), Light Flex Track Rail(1), Light Flex Track Robot(1), Station platform(1)",5
+7,S40_04010_Riveting buttstraps and stabiliser automatic,Auto,90 min,"Automation Operator(1), Station(1), Light Flex Track Rail(1), Light Flex Track Robot(1), Station platform(1)",6
+8,"S40_04012_Deburring int, positioning, attach them automatic",Auto,25 min,"Automation Operator(1), Station(1), Light Flex Track Rail(1), Light Flex Track Robot(1), Station platform(1)",7
+9,S40_04014_Deinstall LFT and rails,Auto,35 min,"Automation Operator(1), Station(1), Light Flex Track Rail(1), Light Flex Track Robot(1), Station platform(1)",8
+10,S40_04003_Drilling template install,Manual,25 min,"Station(1), Mechanical Operator(2), Station platform(1)",\
+11,S40_04004_Fixation drilling template suite manual,Manual,30 min,"Station(1), Mechanical Operator(2), Drilling Template(1), Station platform(1)",10
+12,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,185 min,"Station(1), Mechanical Operator(2), Drilling Template(1), Station platform(1), Hand drilling machine(2)",11
+13,S40_04006_Deinstall drilling template,Manual,25 min,"Station(1), Mechanical Operator(2), Drilling Template(1), Station platform(1)",12
+14,S40_04007_Set in position temporary fastener,Manual,15 min,"Station(1), Mechanical Operator(2), Station platform(1)",13
+15,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,35 min,Mechanical Operator(2),14
+16,S40_04011_Riveting buttstraps and stabiliser manual,Manual,180 min,Mechanical Operator(2),15
+17,"S40_04013_Deburring int, positioning, attach them manual",Manual,45 min,Mechanical Operator(2),16
+18,S40_02002_Cleanup and add sealant,Manual,35 min,"Station(1), Mechanical Operator(2), Station platform(1)",\
+19,S40_02003_Inspection,Manual,55 min,"Station(1), Mechanical Operator(2), Station platform(1)",18
+20,S40_00002_Jig out,Manual,60 min,"Crane(1), Transportation tooling(1)",\

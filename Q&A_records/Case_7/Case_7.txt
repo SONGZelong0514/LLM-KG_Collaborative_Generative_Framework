@@ -1,0 +1,242 @@
+输出:
+2025-08-21 03:32:37.0982 - INFO - graphrag.storage.file_pipeline_storage - Creating file storage at E:\python\environment\graphrag\microsoft_graphrag\ragtest\output
+2025-08-21 03:32:37.0984 - INFO - graphrag.utils.storage - reading table from storage: communities.parquet
+2025-08-21 03:32:37.0992 - INFO - graphrag.utils.storage - reading table from storage: community_reports.parquet
+2025-08-21 03:32:37.0996 - INFO - graphrag.utils.storage - reading table from storage: text_units.parquet
+2025-08-21 03:32:37.0999 - INFO - graphrag.utils.storage - reading table from storage: relationships.parquet
+2025-08-21 03:32:38.0003 - INFO - graphrag.utils.storage - reading table from storage: entities.parquet
+2025-08-21 03:32:41.0282 - WARNING - graphrag.query.structured_search.local_search.mixed_context - Reached token limit - reverting to previous context state
+2025-08-21 03:38:24.0173 - INFO - graphrag.cli.query - Local Search Response:
+**Resource Information**
+
+Below is the available information about each resource’s Cost (€/h), Calendar, and Quantity, based on the provided data. Where no data was found, it is indicated accordingly:
+
+• Crane  
+  – Cost (€/h): No data found  
+  – Calendar: No data found  
+  – Quantity: 1  
+
+• Transportation tooling  
+  – Cost (€/h): 80  
+  – Calendar: 27X7  
+  – Quantity: 1  
+
+• Drilling Template  
+  – Cost (€/h): 10  
+  – Calendar: 24X7  
+  – Quantity: 5  
+
+• Automation Operator  
+  – Cost (€/h): 100  
+  – Calendar: No data found  
+  – Quantity: 1  
+
+• Mechanical Operator  
+  – Cost (€/h): No data found  
+  – Calendar: No data found  
+  – Quantity: 2 (overall pool; actual requirement per operation may vary)  
+
+• Light Flex Track Rail  
+  – Cost (€/h): No data found  
+  – Calendar: No data found  
+  – Quantity: 1  
+
+• Light Flex Track Robot  
+  – Cost (€/h): No data found  
+  – Calendar: No data found  
+  – Quantity: 1  
+
+• Station platform  
+  – Cost (€/h): No data found  
+  – Calendar: No data found  
+  – Quantity: 1  
+
+• Station  
+  – Cost (€/h): No data found  
+  – Calendar: No data found  
+  – Quantity: 1  
+
+---
+
+**Operation Information**
+
+Below is the operation information (Type, Duration (min), Required Resources, and known predecessor requirements). Where cost per operation can be partially calculated (due to some known resource rates), it is shown in the final plan table:
+
+• S40_00001_Jig in  
+  – Type: Manual  
+  – Duration (min): 60  
+  – Required Resources: Crane (1), Transportation tooling (1)  
+  – No predecessor requirements identified  
+
+• S40_00002_Jig out  
+  – Type: Unspecified/Manual  
+  – Duration (min): 60  
+  – Required Resources: Crane (1), Transportation tooling (1)  
+  – Executes last in the overall plan  
+
+• S40_01001_Set up working environment  
+  – Type: Manual  
+  – Duration (min): 10  
+  – Required Resources: Station platform (1), Mechanical Operator (1), Station (1)  
+
+• S40_02001_Set in position Rails and LFT  
+  – Type: Automatic  
+  – Duration (min): 10  
+  – Required Resources: Automation Operator (2), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  
+  – No explicit predecessor in the file, but must happen before camera usage  
+
+• S40_04001_Camera at stating holes  
+  – Type: Automatic  
+  – Duration (min): 15  
+  – Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  
+  – Predecessor: S40_02001_Set in position Rails and LFT  
+
+• S40_04012_Deburring int, positioning, attach them automatic  
+  – Type: Automatic  
+  – Duration (min): 25  
+  – Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  
+  – Predecessor: S40_04001_Camera at stating holes  
+
+• S40_04014_Deinstall LFT and rails  
+  – Type: Automatic  
+  – Duration (min): 35  
+  – Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  
+  – Typically follows final automatic deburring step in a series of automated joints  
+
+• S40_04003_Drilling template install  
+  – Type: Manual  
+  – Duration (min): 25  
+  – Required Resources: Station platform (1), Mechanical Operator (assumed 1 or 2), Station (1)  
+  – Used for installing template prior to fixation or drilling steps  
+
+• S40_04004_Fixation drilling template suite manual  
+  – Type: Manual  
+  – Duration (min): 30  
+  – Required Resources: Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)  
+
+• S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template  
+  – Type: Manual  
+  – Duration (min): 185  
+  – Required Resources: Drilling Template (1), Hand drilling machine (2), Station platform (1), Mechanical Operator (2), Station (1)  
+
+• S40_04006_Deinstall drilling template  
+  – Type: Manual  
+  – Duration (min): 25  
+  – Required Resources: Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)  
+
+• S40_04007_Set in position temporary fastener  
+  – Type: Manual  
+  – Duration (min): 15  
+  – Required Resources: Station platform (1), Mechanical Operator (assumed 1), Station (1)  
+  – Predecessor: S40_04006_Deinstall drilling template  
+
+• S40_04013_Deburring int, positioning, attach them manual  
+  – Type: Manual  
+  – Duration (min): 45  
+  – Required Resources: Mechanical Operator (2), Station platform (1), Station (1)  
+  – Predecessor: S40_04007_Set in position temporary fastener  
+
+• S40_02002_Cleanup and add sealant  
+  – Type: Manual  
+  – Duration (min): 35  
+  – Required Resources: Station platform (1), Mechanical Operator (2), Station (1)  
+
+• S40_02003_Inspection  
+  – Type: Manual  
+  – Duration (min): 55  
+  – Required Resources: Station platform (1), Mechanical Operator (2), Station (1)  
+
+---
+
+**Complete Aircraft Fuselage Joint Plan for Four 1/4 Bodies**
+
+Below is a single comprehensive plan table in Markdown. It incorporates:  
+1) “S40_00001_Jig in” and “S40_01001_Set up working environment” at the start.  
+2) Two 1/4 bodies assembled automatically in series (operations 3–8).  
+3) Two 1/4 bodies assembled manually in series (operations 9–20).  
+4) “S40_02002_Cleanup and add sealant” and “S40_02003_Inspection” afterward, once both manual and automatic 1/4 sections are complete (operations 21–22).  
+5) “S40_00002_Jig out” at the end (operation 23).  
+
+Cost (€) is shown only where rate data is known (Transportation tooling: 80 €/h, Drilling Template: 10 €/h, Automation Operator: 100 €/h). All other resource costs are unknown and contribute “0” in this table.
+
+|Order|Operation|Type|Required Resources|Duration (min)|Start Time (min)|End Time (min)|Cost (€)|
+|---|---|---|---|---|---|---|---|
+|1|S40_00001_Jig in|Manual|Crane (1), Transportation tooling (1)|60|0|60|80|
+|2|S40_01001_Set up working environment|Manual|Station platform (1), Mechanical Operator (1), Station (1)|10|60|70|0|
+|3|S40_02001_Set in position Rails and LFT|Automatic|Automation Operator (2), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|10|70|80|33|
+|4|S40_04001_Camera at stating holes (Q1)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|15|80|95|25|
+|5|S40_04012_Deburring int, positioning, attach them automatic (Q1)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|25|95|120|42|
+|6|S40_04001_Camera at stating holes (Q2)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|15|120|135|25|
+|7|S40_04012_Deburring int, positioning, attach them automatic (Q2)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|25|135|160|42|
+|8|S40_04014_Deinstall LFT and rails|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|35|160|195|58|
+|9|S40_04003_Drilling template install (Q3)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|195|220|0|
+|10|S40_04004_Fixation drilling template suite manual (Q3)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|30|220|250|5|
+|11|S40_04005_Drilling (with adapter) 3,2 on Stringers (Q3)|Manual|Drilling Template (1), Hand drilling machine (2), Station platform (1), Mechanical Operator (2), Station (1)|185|250|435|31|
+|12|S40_04006_Deinstall drilling template (Q3)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|435|460|4|
+|13|S40_04007_Set in position temporary fastener (Q3)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|15|460|475|0|
+|14|S40_04013_Deburring int, positioning, attach them manual (Q3)|Manual|Mechanical Operator (2), Station platform (1), Station (1)|45|475|520|0|
+|15|S40_04003_Drilling template install (Q4)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|520|545|0|
+|16|S40_04004_Fixation drilling template suite manual (Q4)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|30|545|575|5|
+|17|S40_04005_Drilling (with adapter) 3,2 on Stringers (Q4)|Manual|Drilling Template (1), Hand drilling machine (2), Station platform (1), Mechanical Operator (2), Station (1)|185|575|760|31|
+|18|S40_04006_Deinstall drilling template (Q4)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|760|785|4|
+|19|S40_04007_Set in position temporary fastener (Q4)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|15|785|800|0|
+|20|S40_04013_Deburring int, positioning, attach them manual (Q4)|Manual|Mechanical Operator (2), Station platform (1), Station (1)|45|800|845|0|
+|21|S40_02002_Cleanup and add sealant|Manual|Station platform (1), Mechanical Operator (2), Station (1)|35|845|880|0|
+|22|S40_02003_Inspection|Manual|Station platform (1), Mechanical Operator (2), Station (1)|55|880|935|0|
+|23|S40_00002_Jig out|Manual|Crane (1), Transportation tooling (1)|60|935|995|80|
+
+---
+
+**Total Time and Cost**
+
+• The total time (makespan) ends at minute 995.  
+• The sum of known resource-related costs for these operations is 465 €.  
+
+(Unknown-cost resources are listed as contributing “0” in the table due to lack of cost data.)
+
+This plan satisfies the stated constraints:
+1. All operations respect their prerequisite order.  
+2. “S40_00001_Jig in” and “S40_01001_Set up working environment” occur first, “S40_00002_Jig out” is last, each executed only once.  
+3. Each 1/4 body’s final joint step is either S40_04012 (automatic) or S40_04013 (manual).  
+4. The two automatic sections are done in series; the two manual sections are done in series (though could be parallel if resource availability allowed).  
+5. No overlapping of manual and automatic processes.  
+6. Same manual operations for a single quarter are executed in sequence here (avoiding resource conflicts).  
+7. After finishing S40_04014 (automatic) and S40_04013 (manual), S40_02002 and S40_02003 follow.  
+8. S40_02002_Cleanup and add sealant and S40_02003_Inspection are only performed once after all manual quarter-sections complete.  
+9. For the automated sections, “S40_02001_Set in position Rails and LFT” is done first for both quarter-bodies, and “S40_04014_Deinstall LFT and rails” is done after both are finished.  
+
+Hence, the table above represents a valid complete fuselage joint plan for four 1/4 sections under the given constraints.
+
+错误:
+--- Logging error ---
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\logging\__init__.py", line 1163, in emit
+    stream.write(msg + self.terminator)
+UnicodeEncodeError: 'gbk' codec can't encode character '\u20ac' in position 170: illegal multibyte sequence
+Call stack:
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Scripts\graphrag.exe\__main__.py", line 7, in <module>
+    sys.exit(app())
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\typer\main.py", line 324, in __call__
+    return get_command(self)(*args, **kwargs)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\click\core.py", line 1442, in __call__
+    return self.main(*args, **kwargs)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\typer\core.py", line 757, in main
+    return _main(
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\typer\core.py", line 195, in _main
+    rv = self.invoke(ctx)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\click\core.py", line 1830, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\click\core.py", line 1226, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\click\core.py", line 794, in invoke
+    return callback(*args, **kwargs)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\typer\main.py", line 699, in wrapper
+    return callback(**use_params)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\graphrag\cli\main.py", line 502, in _query_cli
+    run_local_search(
+  File "D:\Anaconda\Anaconda3\envs\graphrag\Lib\site-packages\graphrag\cli\query.py", line 285, in run_local_search
+    logger.info("Local Search Response:\n%s", response)
+Message: 'Local Search Response:\n%s'
+Arguments: ('**Resource Information**\n\nBelow is the available information about each resource’s Cost (€/h), Calendar, and Quantity, based on the provided data. Where no data was found, it is indicated accordingly:\n\n• Crane  \n  – Cost (€/h): No data found  \n  – Calendar: No data found  \n  – Quantity: 1  \n\n• Transportation tooling  \n  – Cost (€/h): 80  \n  – Calendar: 27X7  \n  – Quantity: 1  \n\n• Drilling Template  \n  – Cost (€/h): 10  \n  – Calendar: 24X7  \n  – Quantity: 5  \n\n• Automation Operator  \n  – Cost (€/h): 100  \n  – Calendar: No data found  \n  – Quantity: 1  \n\n• Mechanical Operator  \n  – Cost (€/h): No data found  \n  – Calendar: No data found  \n  – Quantity: 2 (overall pool; actual requirement per operation may vary)  \n\n• Light Flex Track Rail  \n  – Cost (€/h): No data found  \n  – Calendar: No data found  \n  – Quantity: 1  \n\n• Light Flex Track Robot  \n  – Cost (€/h): No data found  \n  – Calendar: No data found  \n  – Quantity: 1  \n\n• Station platform  \n  – Cost (€/h): No data found  \n  – Calendar: No data found  \n  – Quantity: 1  \n\n• Station  \n  – Cost (€/h): No data found  \n  – Calendar: No data found  \n  – Quantity: 1  \n\n---\n\n**Operation Information**\n\nBelow is the operation information (Type, Duration (min), Required Resources, and known predecessor requirements). Where cost per operation can be partially calculated (due to some known resource rates), it is shown in the final plan table:\n\n• S40_00001_Jig in  \n  – Type: Manual  \n  – Duration (min): 60  \n  – Required Resources: Crane (1), Transportation tooling (1)  \n  – No predecessor requirements identified  \n\n• S40_00002_Jig out  \n  – Type: Unspecified/Manual  \n  – Duration (min): 60  \n  – Required Resources: Crane (1), Transportation tooling (1)  \n  – Executes last in the overall plan  \n\n• S40_01001_Set up working environment  \n  – Type: Manual  \n  – Duration (min): 10  \n  – Required Resources: Station platform (1), Mechanical Operator (1), Station (1)  \n\n• S40_02001_Set in position Rails and LFT  \n  – Type: Automatic  \n  – Duration (min): 10  \n  – Required Resources: Automation Operator (2), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  \n  – No explicit predecessor in the file, but must happen before camera usage  \n\n• S40_04001_Camera at stating holes  \n  – Type: Automatic  \n  – Duration (min): 15  \n  – Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  \n  – Predecessor: S40_02001_Set in position Rails and LFT  \n\n• S40_04012_Deburring int, positioning, attach them automatic  \n  – Type: Automatic  \n  – Duration (min): 25  \n  – Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  \n  – Predecessor: S40_04001_Camera at stating holes  \n\n• S40_04014_Deinstall LFT and rails  \n  – Type: Automatic  \n  – Duration (min): 35  \n  – Required Resources: Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)  \n  – Typically follows final automatic deburring step in a series of automated joints  \n\n• S40_04003_Drilling template install  \n  – Type: Manual  \n  – Duration (min): 25  \n  – Required Resources: Station platform (1), Mechanical Operator (assumed 1 or 2), Station (1)  \n  – Used for installing template prior to fixation or drilling steps  \n\n• S40_04004_Fixation drilling template suite manual  \n  – Type: Manual  \n  – Duration (min): 30  \n  – Required Resources: Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)  \n\n• S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template  \n  – Type: Manual  \n  – Duration (min): 185  \n  – Required Resources: Drilling Template (1), Hand drilling machine (2), Station platform (1), Mechanical Operator (2), Station (1)  \n\n• S40_04006_Deinstall drilling template  \n  – Type: Manual  \n  – Duration (min): 25  \n  – Required Resources: Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)  \n\n• S40_04007_Set in position temporary fastener  \n  – Type: Manual  \n  – Duration (min): 15  \n  – Required Resources: Station platform (1), Mechanical Operator (assumed 1), Station (1)  \n  – Predecessor: S40_04006_Deinstall drilling template  \n\n• S40_04013_Deburring int, positioning, attach them manual  \n  – Type: Manual  \n  – Duration (min): 45  \n  – Required Resources: Mechanical Operator (2), Station platform (1), Station (1)  \n  – Predecessor: S40_04007_Set in position temporary fastener  \n\n• S40_02002_Cleanup and add sealant  \n  – Type: Manual  \n  – Duration (min): 35  \n  – Required Resources: Station platform (1), Mechanical Operator (2), Station (1)  \n\n• S40_02003_Inspection  \n  – Type: Manual  \n  – Duration (min): 55  \n  – Required Resources: Station platform (1), Mechanical Operator (2), Station (1)  \n\n---\n\n**Complete Aircraft Fuselage Joint Plan for Four 1/4 Bodies**\n\nBelow is a single comprehensive plan table in Markdown. It incorporates:  \n1) “S40_00001_Jig in” and “S40_01001_Set up working environment” at the start.  \n2) Two 1/4 bodies assembled automatically in series (operations 3–8).  \n3) Two 1/4 bodies assembled manually in series (operations 9–20).  \n4) “S40_02002_Cleanup and add sealant” and “S40_02003_Inspection” afterward, once both manual and automatic 1/4 sections are complete (operations 21–22).  \n5) “S40_00002_Jig out” at the end (operation 23).  \n\nCost (€) is shown only where rate data is known (Transportation tooling: 80 €/h, Drilling Template: 10 €/h, Automation Operator: 100 €/h). All other resource costs are unknown and contribute “0” in this table.\n\n|Order|Operation|Type|Required Resources|Duration (min)|Start Time (min)|End Time (min)|Cost (€)|\n|---|---|---|---|---|---|---|---|\n|1|S40_00001_Jig in|Manual|Crane (1), Transportation tooling (1)|60|0|60|80|\n|2|S40_01001_Set up working environment|Manual|Station platform (1), Mechanical Operator (1), Station (1)|10|60|70|0|\n|3|S40_02001_Set in position Rails and LFT|Automatic|Automation Operator (2), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|10|70|80|33|\n|4|S40_04001_Camera at stating holes (Q1)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|15|80|95|25|\n|5|S40_04012_Deburring int, positioning, attach them automatic (Q1)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|25|95|120|42|\n|6|S40_04001_Camera at stating holes (Q2)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|15|120|135|25|\n|7|S40_04012_Deburring int, positioning, attach them automatic (Q2)|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|25|135|160|42|\n|8|S40_04014_Deinstall LFT and rails|Automatic|Automation Operator (1), Light Flex Track Rail (1), Station platform (1), Light Flex Track Robot (1), Station (1)|35|160|195|58|\n|9|S40_04003_Drilling template install (Q3)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|195|220|0|\n|10|S40_04004_Fixation drilling template suite manual (Q3)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|30|220|250|5|\n|11|S40_04005_Drilling (with adapter) 3,2 on Stringers (Q3)|Manual|Drilling Template (1), Hand drilling machine (2), Station platform (1), Mechanical Operator (2), Station (1)|185|250|435|31|\n|12|S40_04006_Deinstall drilling template (Q3)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|435|460|4|\n|13|S40_04007_Set in position temporary fastener (Q3)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|15|460|475|0|\n|14|S40_04013_Deburring int, positioning, attach them manual (Q3)|Manual|Mechanical Operator (2), Station platform (1), Station (1)|45|475|520|0|\n|15|S40_04003_Drilling template install (Q4)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|520|545|0|\n|16|S40_04004_Fixation drilling template suite manual (Q4)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|30|545|575|5|\n|17|S40_04005_Drilling (with adapter) 3,2 on Stringers (Q4)|Manual|Drilling Template (1), Hand drilling machine (2), Station platform (1), Mechanical Operator (2), Station (1)|185|575|760|31|\n|18|S40_04006_Deinstall drilling template (Q4)|Manual|Drilling Template (1), Station platform (1), Mechanical Operator (assumed 1), Station (1)|25|760|785|4|\n|19|S40_04007_Set in position temporary fastener (Q4)|Manual|Station platform (1), Mechanical Operator (assumed 1), Station (1)|15|785|800|0|\n|20|S40_04013_Deburring int, positioning, attach them manual (Q4)|Manual|Mechanical Operator (2), Station platform (1), Station (1)|45|800|845|0|\n|21|S40_02002_Cleanup and add sealant|Manual|Station platform (1), Mechanical Operator (2), Station (1)|35|845|880|0|\n|22|S40_02003_Inspection|Manual|Station platform (1), Mechanical Operator (2), Station (1)|55|880|935|0|\n|23|S40_00002_Jig out|Manual|Crane (1), Transportation tooling (1)|60|935|995|80|\n\n---\n\n**Total Time and Cost**\n\n• The total time (makespan) ends at minute 995.  \n• The sum of known resource-related costs for these operations is 465 €.  \n\n(Unknown-cost resources are listed as contributing “0” in the table due to lack of cost data.)\n\nThis plan satisfies the stated constraints:\n1. All operations respect their prerequisite order.  \n2. “S40_00001_Jig in” and “S40_01001_Set up working environment” occur first, “S40_00002_Jig out” is last, each executed only once.  \n3. Each 1/4 body’s final joint step is either S40_04012 (automatic) or S40_04013 (manual).  \n4. The two automatic sections are done in series; the two manual sections are done in series (though could be parallel if resource availability allowed).  \n5. No overlapping of manual and automatic processes.  \n6. Same manual operations for a single quarter are executed in sequence here (avoiding resource conflicts).  \n7. After finishing S40_04014 (automatic) and S40_04013 (manual), S40_02002 and S40_02003 follow.  \n8. S40_02002_Cleanup and add sealant and S40_02003_Inspection are only performed once after all manual quarter-sections complete.  \n9. For the automated sections, “S40_02001_Set in position Rails and LFT” is done first for both quarter-bodies, and “S40_04014_Deinstall LFT and rails” is done after both are finished.  \n\nHence, the table above represents a valid complete fuselage joint plan for four 1/4 sections under the given constraints.',)

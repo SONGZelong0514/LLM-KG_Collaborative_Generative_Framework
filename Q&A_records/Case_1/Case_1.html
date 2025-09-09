@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Case 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+    <link rel="shortcut icon" href="https://chatboxai.app/icon.png">
+</head>
+<body class='bg-slate-100'>
+    <div class='mx-auto max-w-5xl shadow-md prose bg-white px-2 py-4'>
+        <h1 class='flex flex-row justify-between items-center my-4 h-8'>
+            <span>Case 1</span>
+            <a href="https://chatboxai.app" target="_blank" >
+                <img src='https://chatboxai.app/icon.png' class="w-12">
+            </a>
+        </h1>
+        <hr />
+        <div class="prose-sm">
+<h2>1. Case 1</h2>
+<div class="mb-4">
+<p class="text-green-500 text-lg"><b>SYSTEM: </b></p>
+<div class="break-words "><p>You are a useful assistant, you need to answer my questions in detail.</p></div></div>
+<div class="mb-4">
+<p class="text-green-500 text-lg"><b>USER: </b></p>
+<div class="break-words "><p>According to the application ontology, please help me design a complete aircraft fuselage joint plan that includes four 1/4 bodies, using both automatic and manual methods. Your plan should follow these specific constraints:</p>
+<p>Each operation depends on preceding operations, which must be completed first.<br/>
+The first two operations must be &quot;S40_00001_Jig in&quot; and &quot;S40_01001_Set up working environment&quot;, and the last operation must be &quot;S40_00002_Jig out&quot;. They only need to be executed once during the whole joint plan.<br/>
+&quot;S40_04012_Deburring int, positioning, attach them automatic&quot; or &quot;S40_04013_Deburring int, positioning, attach them manual&quot; is the final operation that completes one 1/4 aircraft fuselage joint, but it has strict prerequisites that must be completed first. Generate a complete process plan for all four 1/4 sections, including all prerequisite operations.<br/>
+Automatic joint operations can only be performed in series, and only one 1/4 body can be automatically jointed at a time. However, manual joint can be done in series or parallel. At most two sets of manual operations can be carried out in parallel.<br/>
+Manual and automatic operations cannot be carried out in parallel.<br/>
+Only the same manual operations can be carried out in parallel. Different manual operations cannot be carried out in parallel.<br/>
+After &quot;S40_04014_Deinstall LFT and rails&quot; and &quot;S40_04013_Deburring int, positioning, attach them manual&quot;, the next two steps must be: &quot;S40_02002_Cleanup and add sealant&quot; then &quot;S40_02003_Inspection&quot;.<br/>
+If multiple 1/4 bodies are manually jointed in series or parallel, it only needs to execute &quot;S40_02002_Cleanup and add sealant&quot; and &quot;S40_02003_Inspection&quot; at the final completion.<br/>
+If multiple 1/4 bodies are automatically jointed in series, only &quot;S40_02001_Set in position Rails and LFT&quot; needs to be executed first, and &quot;S40_04014-Deinstall LFT and rails&quot; needs to be executed last.<br/>
+Your answer must comply with the following requirements:</p>
+<p>Generate a complete aircraft fuselage joint plan table following the Markdown format.<br/>
+The markdown table headers are: Order; Operation; Type; Required Resources; Duration (min); Start Time (min); End Time (min); Cost (€).<br/>
+Markdown table format: header row, then separator row |---|---|---|, then data rows.<br/>
+Note:<br/>
+▪ Order: Use a single number (1, 2, 3, ...) if it is executed sequentially, and use number + letter suffix (4a, 4b, 4c, ...) if it is executed in parallel.<br/>
+▪ Operation: Use the full name of operations.<br/>
+▪ Type: Use Manual/Automatic.<br/>
+▪ Required Resources: Use (name (number)), just like Crane (1), Transportation Tooling (1), ..., and omission or abbreviation is not allowed, such as &#x27;same as above&#x27;.<br/>
+▪ Duration (min); Start Time (min); Cost (€): Use number only.<br/>
+▪ All content in the table must not be omitted or abbreviated.<br/>
+▪ All content in the table cannot include any formatting.<br/>
+▪ Only generate one table.<br/>
+Calculate the total due time and cost.</p></div></div>
+<div class="mb-4">
+<p class="text-blue-500 text-lg"><b>ASSISTANT: </b></p>
+<div class="break-words "><table><thead><tr><th>Order</th><th>Operation</th><th>Type</th><th>Required Resources</th><th>Duration (min)</th><th>Start Time (min)</th><th>End Time (min)</th><th>Cost (€)</th></tr></thead><tbody><tr><td>1</td><td>S40_00001_Jig in</td><td>Manual</td><td>Crane (1), Transportation Tooling (1), Operator (1)</td><td>60</td><td>0</td><td>60</td><td>100</td></tr><tr><td>2</td><td>S40_01001_Set up working environment</td><td>Manual</td><td>Operator (1)</td><td>10</td><td>60</td><td>70</td><td>10</td></tr><tr><td>3</td><td>S40_02001_Set in position Rails and LFT</td><td>Manual</td><td>Operator (1), LFT (1), Rails (1)</td><td>15</td><td>70</td><td>85</td><td>20</td></tr><tr><td>4</td><td>S40_04012_Deburring int, positioning, attach them automatic (quarter #1)</td><td>Automatic</td><td>Robot (1), Operator (1)</td><td>30</td><td>85</td><td>115</td><td>50</td></tr><tr><td>5</td><td>S40_04012_Deburring int, positioning, attach them automatic (quarter #2)</td><td>Automatic</td><td>Robot (1), Operator (1)</td><td>30</td><td>115</td><td>145</td><td>50</td></tr><tr><td>6</td><td>S40_04014_Deinstall LFT and rails</td><td>Automatic</td><td>Robot (1), Operator (1)</td><td>35</td><td>145</td><td>180</td><td>30</td></tr><tr><td>7</td><td>S40_02002_Cleanup and add sealant</td><td>Manual</td><td>Operator (1)</td><td>20</td><td>180</td><td>200</td><td>15</td></tr><tr><td>8</td><td>S40_02003_Inspection</td><td>Manual</td><td>Quality Controller (1)</td><td>10</td><td>200</td><td>210</td><td>10</td></tr><tr><td>9a</td><td>S40_04013_Deburring int, positioning, attach them manual (quarter #3)</td><td>Manual</td><td>Operator (1), Drill (1)</td><td>40</td><td>210</td><td>250</td><td>60</td></tr><tr><td>9b</td><td>S40_04013_Deburring int, positioning, attach them manual (quarter #4)</td><td>Manual</td><td>Operator (1), Drill (1)</td><td>40</td><td>210</td><td>250</td><td>60</td></tr><tr><td>10</td><td>S40_02002_Cleanup and add sealant</td><td>Manual</td><td>Operator (1)</td><td>20</td><td>250</td><td>270</td><td>15</td></tr><tr><td>11</td><td>S40_02003_Inspection</td><td>Manual</td><td>Quality Controller (1)</td><td>10</td><td>270</td><td>280</td><td>10</td></tr><tr><td>12</td><td>S40_00002_Jig out</td><td>Manual</td><td>Crane (1), Transportation Tooling (1), Operator (1)</td><td>60</td><td>280</td><td>340</td><td>100</td></tr></tbody></table>
+<p>Total due time: 340 minutes<br/>
+Total cost: 530 €</p></div></div>
+<hr />
+</div>
+
+        <hr />
+        <a href="https://chatboxai.app" style="display: flex; align-items: center;" class="text-sky-500" target="_blank">
+            <img src='https://chatboxai.app/icon.png' class="w-12 pr-2">
+            <b style='font-size:30px'>Chatbox AI</b>
+        </a>
+        <p><a a href="https://chatboxai.app" target="_blank">https://chatboxai.app</a></p>
+    </div>
+</body>
+</html>
