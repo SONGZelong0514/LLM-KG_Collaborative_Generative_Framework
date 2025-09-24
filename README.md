@@ -1,2 +1,2 @@
 # Prompt template:
-![prompt](https://github.com/user-attachments/assets/b8aecc0b-0566-4bf2-bfd2-eed2bbed923b)
+![prompt](https://github.com/user-attachments/assets/79c795b6-6f7e-4564-af19-ac0aefc02ae7)
