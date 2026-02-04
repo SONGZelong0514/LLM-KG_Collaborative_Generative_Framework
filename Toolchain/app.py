@@ -315,10 +315,8 @@ with gr.Blocks(css=custom_css) as demo:
         assistant_partial = ""
 
         for part, g_path in smart_qa_system(user_msg):
-            # 累加回答
             assistant_partial += part
 
-            # 输出给前端
             yield (
                     history +
                     [{"role": "user", "content": user_msg},
@@ -436,11 +434,12 @@ with gr.Blocks(css=custom_css) as demo:
         outputs=chatbot
     )
 
-# ------------------------- 启动 ----------------------------
+# ------------------------- Start ----------------------------
 if __name__ == "__main__":
     static_dir = os.path.join(os.getcwd(), "static")
     if not os.path.exists(static_dir):
         os.makedirs(static_dir)
 
     demo.queue().launch(server_name="localhost",
+
                         server_port=7860)
