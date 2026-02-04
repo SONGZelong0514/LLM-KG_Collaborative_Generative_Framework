@@ -12,9 +12,9 @@ from openai import OpenAI
 load_dotenv()
 client = OpenAI()
 
-llm = ChatOpenAI(model="gpt-4", temperature=0)
-llm_2 = ChatOpenAI(model="gpt-4", temperature=0, streaming=True)
-llm_3 = ChatOpenAI(model="gpt-4", temperature=0, streaming=True)
+llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm_2 = ChatOpenAI(model="gpt-4o", temperature=0, streaming=True)
+llm_3 = ChatOpenAI(model="o1", temperature=0, streaming=True)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 graph = Neo4jGraph()
@@ -460,4 +460,5 @@ if __name__ == "__main__":
             print("\nAnswer:", response)
         except Exception as e:
             print(f"Error: {str(e)}")
+
             print("The system will continue to operate ...")
