@@ -14,7 +14,7 @@ client = OpenAI()
 
 llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 llm_2 = ChatOpenAI(model="gpt-4o", temperature=0, streaming=True)
-llm_3 = ChatOpenAI(model="o1", temperature=0, streaming=True)
+llm_3 = ChatOpenAI(model="gpt-4o", temperature=0, streaming=True)
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
 graph = Neo4jGraph()
@@ -378,7 +378,7 @@ def design_answer_token_stream(question: str, history: str):
     prompt_text = design_qa_prompt.format(question=question, history=history)
 
     stream = client.chat.completions.create(
-        model      = "o1",
+        model      = "gpt-4o",
         messages   = [{"role": "user", "content": prompt_text}],
         temperature= 0,
         stream     = True
@@ -462,3 +462,4 @@ if __name__ == "__main__":
             print(f"Error: {str(e)}")
 
             print("The system will continue to operate ...")
+
