@@ -1,0 +1,38 @@
+﻿Order,Operation,Type,Required Resources,Duration (min),Start Time (min),End Time (min),Cost (€)
+1,S40_00001_Jig in,Manual,"Crane (1), Transportation Tooling (1)",60,0,60,110.00
+2,S40_01001_Set up working environment,Manual,"Station (1), Mechanical Operator (1), Station Platform (1)",10,60,70,42.50
+3a,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,70,95,120.83
+3b,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,70,95,120.83
+4a,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,95,125,146.25
+4b,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,95,125,146.25
+5a,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,125,310,912.08
+5b,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,125,310,912.08
+6a,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,310,335,120.83
+6b,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,310,335,120.83
+7a,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,335,350,72.50
+7b,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,335,350,72.50
+8a,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,350,385,116.67
+8b,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,350,385,116.67
+9a,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,385,565,600.00
+9b,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,385,565,600.00
+10a,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,565,610,150.00
+10b,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,565,610,150.00
+11a,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,610,635,120.83
+11b,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,610,635,120.83
+12a,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,635,665,146.25
+12b,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,635,665,146.25
+13a,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,665,850,912.08
+13b,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,665,850,912.08
+14a,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,850,875,120.83
+14b,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,850,875,120.83
+15a,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,875,890,72.50
+15b,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,875,890,72.50
+16a,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,890,925,116.67
+16b,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,890,925,116.67
+17a,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,925,1105,600.00
+17b,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,925,1105,600.00
+18a,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,1105,1150,150.00
+18b,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,1105,1150,150.00
+19,S40_02002_Cleanup and add sealant,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",35,1150,1185,169.17
+20,S40_02003_Inspection,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",55,1185,1240,265.83
+21,S40_00002_Jig out,Manual,"Crane (1), Transportation Tooling (1)",60,1240,1300,110.00

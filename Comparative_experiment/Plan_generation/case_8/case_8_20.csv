@@ -1,0 +1,28 @@
+﻿Order,Operation,Type,Required Resources,Duration (min),Start Time (min),End Time (min),Cost (€)
+1,S40_00001_Jig in,Manual,"Crane (1), Transportation Tooling (1)",60,0,60,110.00
+2,S40_01001_Set up working environment,Manual,"Station (1), Mechanical Operator (1), Station Platform (1)",10,60,70,42.50
+3,S40_02001_Set in position Rails and LFT,Automatic,"Automation Operator (2), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",10,70,80,72.50
+4,S40_04001_Camera at stating holes,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",15,80,95,66.25
+5,"S40_04002_Drilling orbital 4,8",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",125,95,220,552.08
+6,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",20,220,240,88.40
+7,S40_04010_Riveting buttstraps and stabiliser automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",90,240,330,397.50
+8,"S40_04012_Deburring int, positioning, attach them automatic",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",25,330,355,110.42
+9,S40_04001_Camera at stating holes,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",15,355,370,66.25
+10,"S40_04002_Drilling orbital 4,8",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",125,370,495,552.08
+11,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",20,495,515,88.40
+12,S40_04010_Riveting buttstraps and stabiliser automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",90,515,605,397.50
+13,"S40_04012_Deburring int, positioning, attach them automatic",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",25,605,630,110.42
+14,S40_04001_Camera at stating holes,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",15,630,645,66.25
+15,"S40_04002_Drilling orbital 4,8",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",125,645,770,552.08
+16,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",20,770,790,88.40
+17,S40_04010_Riveting buttstraps and stabiliser automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",90,790,880,397.50
+18,"S40_04012_Deburring int, positioning, attach them automatic",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",25,880,905,110.42
+19,S40_04001_Camera at stating holes,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",15,905,920,66.25
+20,"S40_04002_Drilling orbital 4,8",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",125,920,1045,552.08
+21,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",20,1045,1065,88.40
+22,S40_04010_Riveting buttstraps and stabiliser automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",90,1065,1155,397.50
+23,"S40_04012_Deburring int, positioning, attach them automatic",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",25,1155,1180,110.42
+24,S40_04014_Deinstall LFT and rails,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",35,1180,1215,154.58
+25,S40_02002_Cleanup and add sealant,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",35,1215,1250,188.13
+26,S40_02003_Inspection,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",55,1250,1305,295.63
+27,S40_00002_Jig out,Manual,"Crane (1), Transportation Tooling (1)",60,1305,1365,110.00
