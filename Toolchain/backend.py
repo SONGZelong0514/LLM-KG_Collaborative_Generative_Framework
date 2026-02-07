@@ -109,10 +109,11 @@ For each operation, document:
 ▪ Required Resources (name (number))
 ▪ Total Cost (€)
 ▪ Predecessor
+Round Cost (€) to two decimal places.
 
 Phase 2. **Constraint Analysis**
-- Analysis and list all constraints.
-- Analysis and list automatic and manual quarter aircraft fuselage joint logic.
+- Analyze and list all constraints.
+- Analyze and list automatic and manual quarter aircraft fuselage joint logic.
 
 Phase 3. **Plan Generation**
 - Generate a complete aircraft fuselage joint plan table following the Markdown format.
@@ -462,4 +463,5 @@ if __name__ == "__main__":
             print(f"Error: {str(e)}")
 
             print("The system will continue to operate ...")
+
 
