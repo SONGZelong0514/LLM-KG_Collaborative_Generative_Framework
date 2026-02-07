@@ -1,0 +1,123 @@
+Here is the merged information for each operation, listing all required resources and the required quantity of each resource:
+
+1. **S40_00001_Jig in**
+   - Required Resources:
+     - Crane: Quantity 1
+     - Transportation tooling: Quantity 1
+
+2. **S40_00002_Jig out**
+   - Required Resources:
+     - Crane: Quantity 1
+     - Transportation tooling: Quantity 1
+
+3. **S40_01001_Set up working environment**
+   - Required Resources:
+     - Station platform: Quantity 2
+     - Station: Quantity 1
+     - Light Flex Track Rail: Quantity 1
+
+4. **S40_02001_Set in position Rails and LFT**
+   - Required Resources:
+     - Automation Operator: Quantity 1
+     - Light Flex Track Rail: Quantity 1
+     - Station platform: Quantity 1
+     - Light Flex Track Robot: Quantity 1
+     - Station: Quantity 1
+
+5. **S40_02002_Cleanup and add sealant**
+   - Required Resources:
+     - Station platform: Quantity 1
+     - Station: Quantity 1
+     - Mechanical Operator: Quantity 2
+
+6. **S40_02003_Inspection**
+   - Required Resources:
+     - Station platform: Quantity 1
+     - Station: Quantity 1
+     - Mechanical Operator: Quantity 2
+
+7. **S40_04002_Drilling orbital 4,8**
+   - Required Resources:
+     - Automation Operator: Quantity 1
+     - Light Flex Track Rail: Quantity 1
+     - Station platform: Quantity 1
+     - Light Flex Track Robot: Quantity 1
+     - Station: Quantity 1
+
+8. **S40_04003_Drilling template install**
+   - Required Resources:
+     - Station platform: Quantity 1
+     - Station: Quantity 1
+     - Mechanical Operator: Quantity 2
+
+9. **S40_04004_Fixation drilling template suite manual**
+   - Required Resources:
+     - Station platform: Quantity 1
+     - Station: Quantity 1
+     - Mechanical Operator: Quantity 2
+
+10. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2
+
+11. **S40_04006_Deinstall drilling template**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2
+
+12. **S40_04007_Set in position temporary fastener**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2
+
+13. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - Required Resources:
+      - Automation Operator: Quantity 1
+      - Light Flex Track Rail: Quantity 1
+      - Station platform: Quantity 1
+      - Light Flex Track Robot: Quantity 1
+      - Station: Quantity 1
+
+14. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2
+
+15. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - Required Resources:
+      - Automation Operator: Quantity 1
+      - Light Flex Track Rail: Quantity 1
+      - Station platform: Quantity 1
+      - Light Flex Track Robot: Quantity 1
+      - Station: Quantity 1
+
+16. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2
+
+17. **S40_04012_Deburring int, positioning, attach them automatic**
+    - Required Resources:
+      - Automation Operator: Quantity 1
+      - Light Flex Track Rail: Quantity 1
+      - Station platform: Quantity 1
+      - Light Flex Track Robot: Quantity 1
+      - Station: Quantity 1
+
+18. **S40_04013_Deburring int, positioning, attach them manual**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2
+
+19. **S40_04014_Deinstall LFT and rails**
+    - Required Resources:
+      - Station platform: Quantity 1
+      - Station: Quantity 1
+      - Mechanical Operator: Quantity 2

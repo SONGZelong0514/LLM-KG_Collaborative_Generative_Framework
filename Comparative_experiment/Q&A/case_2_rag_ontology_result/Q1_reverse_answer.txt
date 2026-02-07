@@ -1,0 +1,10 @@
+Yes, the knowledge graph defines hierarchical relationships between processes and sub-processes. Here are the processes together with their sub-processes:
+
+1. **Process**: `http://webprotege.stanford.edu/R7bvu1LW8iIyqBKJ7rmCgDe` (process)
+   - **Sub-process**: `http://webprotege.stanford.edu/RBxXtUCHPcPjgNJyWDZdC6x` (hasSubprocess)
+
+2. **Process**: `http://webprotege.stanford.edu/RC3SMTo1pqRXZWD5dLjQzIu` (hasProcess)
+   - **Sub-process**: `http://webprotege.stanford.edu/R7bvu1LW8iIyqBKJ7rmCgDe` (process)
+
+3. **Process**: `http://webprotege.stanford.edu/R7bvu1LW8iIyqBKJ7rmCgDe` (process)
+   - **Sub-process**: `http://webprotege.stanford.edu/RBxXtUCHPcPjgNJyWDZdC6x` (hasSubprocess)

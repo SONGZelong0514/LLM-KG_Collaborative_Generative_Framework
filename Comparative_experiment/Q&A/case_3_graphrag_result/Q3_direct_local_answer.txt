@@ -1,0 +1,118 @@
+Here is a detailed list of resources, including their name, calendar, capacity, and cost per hour:
+
+### Station
+- **Name:** Station
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $80
+- **Number of Relationships:** 15
+[Data: Entities (29)]
+
+### Station Platform
+- **Name:** Station platform
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $75
+- **Number of Relationships:** 15
+[Data: Entities (28)]
+
+### Crane
+- **Name:** Crane
+- **Calendar:** 24x7
+- **Capacity:** 1
+- **Cost per Hour:** $30
+- **Number of Relationships:** 2
+[Data: Entities (35)]
+
+### Transportation Tooling
+- **Name:** Transportation tooling
+- **Calendar:** 24x7
+- **Capacity:** 1
+- **Cost per Hour:** $80
+- **Number of Relationships:** 2
+[Data: Entities (36)]
+
+### Drilling Template
+- **Name:** Drilling Template
+- **Calendar:** 24x7
+- **Capacity:** 5
+- **Cost per Hour:** $10
+- **Number of Relationships:** 3
+[Data: Entities (33)]
+
+### Hand Drilling Machine
+- **Name:** Hand drilling machine
+- **Calendar:** 24x7
+- **Capacity:** 6
+- **Cost per Hour:** $10
+- **Number of Relationships:** 1
+[Data: Entities (34)]
+
+### Automation Operator
+- **Name:** Automation Operator
+- **Calendar:** Shift 40h/week
+- **Capacity:** 8
+- **Cost per Hour:** $100
+- **Number of Relationships:** 7
+[Data: Entities (30)]
+
+### Mechanical Operator
+- **Name:** Mechanical Operator
+- **Calendar:** Shift 40h/week
+- **Capacity:** 8
+- **Cost per Hour:** $100
+- **Number of Relationships:** 11
+[Data: Entities (27)]
+
+### Light Flex Track Robot
+- **Name:** Light Flex Track Robot
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $75
+- **Number of Relationships:** 7
+[Data: Entities (31)]
+
+### Light Flex Track Rail
+- **Name:** Light Flex Track Rail
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $5
+- **Number of Relationships:** 7
+[Data: Entities (32)]
+
+These resources are integral to the operations within their respective communities, supporting various processes and ensuring efficient workflow execution.
+[0m
+
+--- STDERR (non-fatal) ---
+Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000024DB57BF040>
+transport: <_ProactorSocketTransport fd=7680 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+Exception ignored in: <function _SSLProtocolTransport.__del__ at 0x0000024D0323D750>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 321, in __del__
+    self.close()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 316, in close
+    self._ssl_protocol._start_shutdown()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 599, in _start_shutdown
+    self._write_appdata(b'')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 604, in _write_appdata
+    self._process_write_backlog()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 712, in _process_write_backlog
+    self._fatal_error(exc, 'Fatal error on SSL transport')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 726, in _fatal_error
+    self._transport._force_close(exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 152, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 753, in call_soon
+    self._check_closed()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

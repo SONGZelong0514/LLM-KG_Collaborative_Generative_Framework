@@ -1,0 +1,47 @@
+1. **Fixing Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+2. **Fastening Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+3. **Sealing Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+4. **Riveting Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+5. **Drilling Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+6. **Deburring Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+7. **Setup Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+8. **Installation Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+9. **Uninstallation Operation**
+   - Type: Manufacturing Operation
+   - Duration: Positive Integer
+
+10. **Cleaning Operation**
+    - Type: Manufacturing Operation
+    - Duration: Positive Integer
+
+11. **Inspection Operation**
+    - Type: Manufacturing Operation
+    - Duration: Positive Integer
+
+12. **Positioning Operation**
+    - Type: Manufacturing Operation
+    - Duration: Positive Integer

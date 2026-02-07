@@ -1,0 +1,130 @@
+Here is a list of operations along with their names, types, and durations:
+
+### Automated Operations
+1. **S40_02001_Set in position Rails and LFT**
+   - **Type:** Auto
+   - **Duration:** 10 minutes
+   - **Description:** This operation involves setting in position Rails and Light Flex Track (LFT) [Data: Entities (1)].
+
+2. **S40_04002_Drilling orbital 4,8**
+   - **Type:** Auto
+   - **Duration:** 125 minutes
+   - **Description:** This operation involves drilling orbital holes with a diameter of 4.8 [Data: Entities (3)].
+
+3. **S40_04010_Riveting buttstraps and stabiliser automatic**
+   - **Type:** Auto
+   - **Duration:** 90 minutes
+   - **Description:** This operation involves automatically riveting buttstraps and stabilizers [Data: Entities (11)].
+
+4. **S40_04012_Deburring int, positioning, attach them automatic**
+   - **Type:** Auto
+   - **Duration:** 25 minutes
+   - **Description:** This operation involves deburring, positioning, and attaching components automatically [Data: Entities (13)].
+
+5. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+   - **Type:** Auto
+   - **Duration:** 20 minutes
+   - **Description:** This operation involves setting up fixations for LGP/Hi-Lite automatically [Data: Entities (9)].
+
+6. **S40_04014_Deinstall LFT and rails**
+   - **Type:** Auto
+   - **Duration:** 35 minutes
+   - **Description:** This operation involves deinstalling LFT and rails [Data: Entities (15)].
+
+### Manual Operations
+1. **S40_02003_Inspection**
+   - **Type:** Manual
+   - **Duration:** 55 minutes
+   - **Description:** This operation involves manual inspection [Data: Entities (17)].
+
+2. **S40_00001_Jig in**
+   - **Type:** Manual
+   - **Duration:** 60 minutes
+   - **Description:** This operation involves manually jiggling in components [Data: Entities (18)].
+
+3. **S40_00002_Jig out**
+   - **Type:** Manual
+   - **Duration:** 60 minutes
+   - **Description:** This operation involves manually jiggling out components [Data: Entities (19)].
+
+4. **S40_01001_Set up working environment**
+   - **Type:** Manual
+   - **Duration:** 10 minutes
+   - **Description:** This operation involves setting up the working environment manually [Data: Entities (0)].
+
+5. **S40_04004_Fixation drilling template suite manual**
+   - **Type:** Manual
+   - **Duration:** 30 minutes
+   - **Description:** This operation involves manually fixing the drilling template suite [Data: Entities (5)].
+
+6. **S40_04003_Drilling template install**
+   - **Type:** Manual
+   - **Duration:** 25 minutes
+   - **Description:** This operation involves manually installing the drilling template [Data: Entities (4)].
+
+7. **S40_04006_Deinstall drilling template**
+   - **Type:** Manual
+   - **Duration:** 25 minutes
+   - **Description:** This operation involves manually deinstalling the drilling template [Data: Entities (7)].
+
+8. **S40_04011_Riveting buttstraps and stabiliser manual**
+   - **Type:** Manual
+   - **Duration:** 180 minutes
+   - **Description:** This operation involves manually riveting buttstraps and stabilizers [Data: Entities (12)].
+
+9. **S40_04013_Deburring int, positioning, attach them manual**
+   - **Type:** Manual
+   - **Duration:** 45 minutes
+   - **Description:** This operation involves manually deburring, positioning, and attaching components [Data: Entities (14)].
+
+10. **S40_02002_Cleanup and add sealant**
+    - **Type:** Manual
+    - **Duration:** 35 minutes
+    - **Description:** This operation involves cleaning up and adding sealant manually [Data: Entities (16)].
+
+11. **S40_04007_Set in position temporary fastener**
+    - **Type:** Manual
+    - **Duration:** 15 minutes
+    - **Description:** This operation involves manually setting in position temporary fasteners [Data: Entities (8)].
+
+12. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - **Type:** Manual
+    - **Duration:** 35 minutes
+    - **Description:** This operation involves manually setting up fixations for LGP/Hi-Lite [Data: Entities (10)].
+
+This list provides a comprehensive overview of the operations, highlighting the balance between automated and manual processes within the community's workflow.
+[0m
+
+--- STDERR (non-fatal) ---
+Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000178B51A8C40>
+transport: <_ProactorSocketTransport fd=7648 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+Exception ignored in: <function _SSLProtocolTransport.__del__ at 0x000001786CC8D750>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 321, in __del__
+    self.close()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 316, in close
+    self._ssl_protocol._start_shutdown()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 599, in _start_shutdown
+    self._write_appdata(b'')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 604, in _write_appdata
+    self._process_write_backlog()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 712, in _process_write_backlog
+    self._fatal_error(exc, 'Fatal error on SSL transport')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 726, in _fatal_error
+    self._transport._force_close(exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 152, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 753, in call_soon
+    self._check_closed()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

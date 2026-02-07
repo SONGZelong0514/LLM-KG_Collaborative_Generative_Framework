@@ -1,0 +1,79 @@
+{
+  "question_id": "Q3",
+  "question_variants": [
+    {
+      "variant_id": "Q3_direct",
+      "question": "List all resources with their name, calendar, number, and cost per hour."
+    },
+    {
+      "variant_id": "Q3_constrained",
+      "question": "Using only the knowledge graph, provide the complete resource catalog including name, calendar, number, and hourly cost."
+    },
+    {
+      "variant_id": "Q3_reverse",
+      "question": "Are calendars, numbers, and hourly costs defined for resources in the knowledge graph? If yes, list them for every resource."
+    }
+  ],
+  "gold_answer": [
+    {
+      "resource_name": "Automation Operator",
+      "calendar": "shift_40h_week",
+      "number": 8,
+      "cost_per_hour": 100
+    },
+    {
+      "resource_name": "Station",
+      "calendar": "24x7",
+      "number": 2,
+      "cost_per_hour": 80
+    },
+    {
+      "resource_name": "Mechanical Operator",
+      "calendar": "shift_40h_week",
+      "number": 8,
+      "cost_per_hour": 100
+    },
+    {
+      "resource_name": "Crane",
+      "calendar": "24x7",
+      "number": 1,
+      "cost_per_hour": 30
+    },
+    {
+      "resource_name": "Light Flex Track Rail",
+      "calendar": "24x7",
+      "number": 2,
+      "cost_per_hour": 5
+    },
+    {
+      "resource_name": "Drilling Template",
+      "calendar": "24x7",
+      "number": 5,
+      "cost_per_hour": 10
+    },
+    {
+      "resource_name": "Light Flex Track Robot",
+      "calendar": "24x7",
+      "number": 2,
+      "cost_per_hour": 75
+    },
+    {
+      "resource_name": "Station platform",
+      "calendar": "24x7",
+      "number": 2,
+      "cost_per_hour": 75
+    },
+    {
+      "resource_name": "Transportation tooling",
+      "calendar": "24x7",
+      "number": 1,
+      "cost_per_hour": 80
+    },
+    {
+      "resource_name": "Hand drilling machine",
+      "calendar": "24x7",
+      "number": 6,
+      "cost_per_hour": 10
+    }
+  ]
+}

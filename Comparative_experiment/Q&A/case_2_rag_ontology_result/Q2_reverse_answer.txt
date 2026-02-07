@@ -1,0 +1,45 @@
+Yes, the knowledge graph specifies operation types and durations. Here are the operations along with their types and durations:
+
+1. **Drilling Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+2. **Installation Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+3. **Fixing Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+4. **Sealing Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+5. **Deburring Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+6. **Cleaning Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+7. **Setup Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+8. **Uninstallation Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+9. **Inspection Operation**
+   - Type: Not specified
+   - Duration: Positive integer
+
+10. **Riveting Operation**
+    - Type: Not specified
+    - Duration: Positive integer
+
+11. **Positioning Operation**
+    - Type: Not specified
+    - Duration: Positive integer

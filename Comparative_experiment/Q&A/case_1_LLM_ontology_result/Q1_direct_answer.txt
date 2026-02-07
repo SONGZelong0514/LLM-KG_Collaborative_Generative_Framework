@@ -1,0 +1,40 @@
+The ontology provides information about various processes and their sub-processes. Here is the list:
+
+1. **Orbital Joint Process**
+   - Sub-processes:
+     - S40_Orbital Joint Process
+     - S40_Upper Orbital Joint Process
+     - S40_Lower Orbital Joint Process
+     - S40_Upper Right Orbital Joint Process
+     - S40_Lower Right Orbital Joint Process
+     - S40_Upper Left Orbital Joint Process
+     - S40_Lower Left Orbital Joint Process
+
+2. **Manufacturing Process**
+   - Sub-processes:
+     - S40_02001_Set in position Rails and LFT
+     - S40_02002_Cleanup and add sealant
+     - S40_02003_Inspection
+
+3. **Manufacturing Process Plan**
+   - Sub-processes:
+     - AssemblyProcessPlan
+     - MachiningProccessPlan
+     - MeasuringProcessPlan
+
+4. **Assembly Process**
+   - Sub-processes:
+     - S40_00001_Jig in
+     - S40_00002_Jig out
+
+5. **Design Process**
+   - Sub-processes:
+     - ValidationProcess
+     - VerificationProcess
+     - TradeoffProcess
+
+6. **Business Process**
+   - Sub-processes:
+     - Business Process Plan
+
+These processes and sub-processes are part of the ontology's structure, detailing various operations and plans within a manufacturing context.
