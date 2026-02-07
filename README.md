@@ -1,5 +1,5 @@
 # Prompt template:
-[prompt.tif](https://github.com/user-attachments/files/25152685/prompt.tif)
+![Uploading prompt.jpg…]()
 
 # Demo video:
 https://youtu.be/icpT_mcnjMk
