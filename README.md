@@ -1,4 +1,5 @@
 # Prompt template:
-![prompt](https://github.com/user-attachments/assets/79c795b6-6f7e-4564-af19-ac0aefc02ae7)
+[prompt.tif](https://github.com/user-attachments/files/25152685/prompt.tif)
+
 # Demo video:
 https://youtu.be/icpT_mcnjMk
