@@ -1,0 +1,24 @@
+{
+  "verification_report": {
+    "violation_list": [],
+    "repair_advice": []
+  },
+  "simulation_result": {
+    "operation_duration_check": {
+      "all_operation_durations_correct": true,
+      "incorrect_operation_durations": []
+    },
+    "operation_resource_check": {
+      "all_operation_resources_correct": true,
+      "incorrect_operation_resources": []
+    },
+    "operation_cost_check": {
+      "all_operation_costs_correct": true,
+      "incorrect_operation_costs": []
+    },
+    "resource_usage_check": {
+      "resource_usage_exceeds_limit": false,
+      "exceeded_resources": []
+    }
+  }
+}

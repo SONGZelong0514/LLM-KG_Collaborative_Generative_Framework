@@ -1,0 +1,246 @@
+{
+  "verification_report": {
+    "violation_list": [
+      {
+        "id": "V1",
+        "involved_operations": [
+          "order_10: S40_02001_Set in position Rails and LFT"
+        ],
+        "reason": "The plan executes S40_02001_Set in position Rails and LFT a second time for Quarter section 2. Because the two automatic joint chains are executed consecutively in serial, this operation is a shared automatic-chain operation and must be executed only once before the first automatic chain. The occurrence at order_3 is the required shared setup before the first automatic chain; the occurrence at order_10 is an extra duplicated execution.",
+        "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+      },
+      {
+        "id": "V2",
+        "involved_operations": [
+          "order_9: S40_04014_Deinstall LFT and rails"
+        ],
+        "reason": "The plan executes S40_04014_Deinstall LFT and rails after the first automatic chain, before the second automatic chain starts. Because the two automatic joint chains are executed consecutively in serial, this operation is a shared automatic-chain operation and must be executed only once after the last automatic chain. The occurrence at order_16 is the required final deinstallation after the last automatic chain; the occurrence at order_9 is an extra premature execution.",
+        "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+      }
+    ],
+    "repair_advice": [
+      {
+        "id": "R1",
+        "advice": "Use a globally shared automatic-chain setup and deinstallation for the two serial automatic quarter sections. Keep order_3: S40_02001_Set in position Rails and LFT as the single shared setup before the first automatic chain. Remove order_10: S40_02001_Set in position Rails and LFT because it is a duplicated setup before the second automatic chain. Remove order_9: S40_04014_Deinstall LFT and rails because deinstallation must not occur between the two serial automatic chains. Keep order_16: S40_04014_Deinstall LFT and rails as the single shared deinstallation after the last automatic chain. All other automatic-chain operations between S40_04001_Camera at stating holes and S40_04012_Deburring int, positioning, attach them automatic should remain executed once for Quarter section 1 and once for Quarter section 2."
+      }
+    ]
+  },
+  "simulation_result": {
+    "operation_duration_check": {
+      "all_operation_durations_correct": true,
+      "incorrect_operation_durations": []
+    },
+    "operation_resource_check": {
+      "all_operation_resources_correct": false,
+      "incorrect_operation_resources": [
+        {
+          "order": "21a",
+          "operation": "S40_04007_Set in position temporary fastener",
+          "missing_resources": {
+            "Station Platform": 1
+          },
+          "extra_resources": {},
+          "wrong_quantities": {},
+          "plan_resources": {
+            "Station": 1,
+            "Mechanical Operator": 2
+          },
+          "correct_resources": {
+            "Station": 1,
+            "Mechanical Operator": 2,
+            "Station Platform": 1
+          }
+        },
+        {
+          "order": "21b",
+          "operation": "S40_04007_Set in position temporary fastener",
+          "missing_resources": {
+            "Station Platform": 1
+          },
+          "extra_resources": {},
+          "wrong_quantities": {},
+          "plan_resources": {
+            "Station": 1,
+            "Mechanical Operator": 2
+          },
+          "correct_resources": {
+            "Station": 1,
+            "Mechanical Operator": 2,
+            "Station Platform": 1
+          }
+        }
+      ]
+    },
+    "operation_cost_check": {
+      "all_operation_costs_correct": false,
+      "incorrect_operation_costs": [
+        {
+          "order": "2",
+          "operation": "S40_01001_Set up working environment",
+          "given_cost": 41.67,
+          "correct_cost": 42.5
+        },
+        {
+          "order": "3",
+          "operation": "S40_02001_Set in position Rails and LFT",
+          "given_cost": 116.67,
+          "correct_cost": 72.5
+        },
+        {
+          "order": "4",
+          "operation": "S40_04001_Camera at stating holes",
+          "given_cost": 70.0,
+          "correct_cost": 83.75
+        },
+        {
+          "order": "5",
+          "operation": "S40_04002_Drilling orbital 4,8",
+          "given_cost": 583.33,
+          "correct_cost": 697.92
+        },
+        {
+          "order": "6",
+          "operation": "S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+          "given_cost": 93.33,
+          "correct_cost": 111.67
+        },
+        {
+          "order": "7",
+          "operation": "S40_04010_Riveting buttstraps and stabiliser automatic",
+          "given_cost": 420.0,
+          "correct_cost": 502.5
+        },
+        {
+          "order": "8",
+          "operation": "S40_04012_Deburring int, positioning, attach them automatic",
+          "given_cost": 116.67,
+          "correct_cost": 139.58
+        },
+        {
+          "order": "9",
+          "operation": "S40_04014_Deinstall LFT and rails",
+          "given_cost": 163.33,
+          "correct_cost": 195.42
+        },
+        {
+          "order": "10",
+          "operation": "S40_02001_Set in position Rails and LFT",
+          "given_cost": 116.67,
+          "correct_cost": 72.5
+        },
+        {
+          "order": "11",
+          "operation": "S40_04001_Camera at stating holes",
+          "given_cost": 70.0,
+          "correct_cost": 83.75
+        },
+        {
+          "order": "12",
+          "operation": "S40_04002_Drilling orbital 4,8",
+          "given_cost": 583.33,
+          "correct_cost": 697.92
+        },
+        {
+          "order": "13",
+          "operation": "S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+          "given_cost": 93.33,
+          "correct_cost": 111.67
+        },
+        {
+          "order": "14",
+          "operation": "S40_04010_Riveting buttstraps and stabiliser automatic",
+          "given_cost": 420.0,
+          "correct_cost": 502.5
+        },
+        {
+          "order": "15",
+          "operation": "S40_04012_Deburring int, positioning, attach them automatic",
+          "given_cost": 116.67,
+          "correct_cost": 139.58
+        },
+        {
+          "order": "16",
+          "operation": "S40_04014_Deinstall LFT and rails",
+          "given_cost": 163.33,
+          "correct_cost": 195.42
+        },
+        {
+          "order": "17a",
+          "operation": "S40_04003_Drilling template install",
+          "given_cost": 91.67,
+          "correct_cost": 147.92
+        },
+        {
+          "order": "17b",
+          "operation": "S40_04003_Drilling template install",
+          "given_cost": 91.67,
+          "correct_cost": 147.92
+        },
+        {
+          "order": "18a",
+          "operation": "S40_04004_Fixation drilling template suite manual",
+          "given_cost": 116.67,
+          "correct_cost": 182.5
+        },
+        {
+          "order": "18b",
+          "operation": "S40_04004_Fixation drilling template suite manual",
+          "given_cost": 116.67,
+          "correct_cost": 182.5
+        },
+        {
+          "order": "19a",
+          "operation": "S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+          "given_cost": 716.67,
+          "correct_cost": 1187.08
+        },
+        {
+          "order": "19b",
+          "operation": "S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+          "given_cost": 716.67,
+          "correct_cost": 1187.08
+        },
+        {
+          "order": "20a",
+          "operation": "S40_04006_Deinstall drilling template",
+          "given_cost": 91.67,
+          "correct_cost": 152.08
+        },
+        {
+          "order": "20b",
+          "operation": "S40_04006_Deinstall drilling template",
+          "given_cost": 91.67,
+          "correct_cost": 152.08
+        },
+        {
+          "order": "21a",
+          "operation": "S40_04007_Set in position temporary fastener",
+          "given_cost": 55.0,
+          "correct_cost": 88.75
+        },
+        {
+          "order": "21b",
+          "operation": "S40_04007_Set in position temporary fastener",
+          "given_cost": 55.0,
+          "correct_cost": 88.75
+        },
+        {
+          "order": "25",
+          "operation": "S40_02002_Cleanup and add sealant",
+          "given_cost": 116.67,
+          "correct_cost": 207.08
+        },
+        {
+          "order": "26",
+          "operation": "S40_02003_Inspection",
+          "given_cost": 183.33,
+          "correct_cost": 325.42
+        }
+      ]
+    },
+    "resource_usage_check": {
+      "resource_usage_exceeds_limit": false,
+      "exceeded_resources": []
+    }
+  }
+}
