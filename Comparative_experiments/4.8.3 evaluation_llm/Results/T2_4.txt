@@ -1,0 +1,35 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This is a repeated automatic-chain shared start operation. It appears again before the second automatic section, but the shared automatic start must occur only once before the first automatic chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This automatic-chain shared end operation is executed after the first automatic section, but it must be reserved for after the last automatic chain only.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "33: S40_02002_Cleanup and add sealant",
+        "34: S40_02003_Inspection"
+      ],
+      "reason": "The required final three-operation tail is incomplete because the plan ends after inspection and never includes the required final jig-out operation.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the plan around a single automatic block and a complete closing shared tail: keep orders 1-3 as the shared start, remove the duplicate automatic start at order 10, remove the premature automatic deinstall at order 9, keep one shared S40_02001 before the first automatic section and one shared S40_04014 after the last automatic section, then append S40_00002_Jig out after order 34. If the manual phase is meant to be parallel, overlap the two manual quarter sections instead of running them strictly back-to-back."
+    }
+  ]
+}

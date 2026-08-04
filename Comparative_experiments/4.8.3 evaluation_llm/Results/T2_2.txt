@@ -1,0 +1,38 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "These are duplicate shared boundary operations in the automatic joint phase. `S40_02001_Set in position Rails and LFT` must appear only once before the first automatic chain, and `S40_04014_Deinstall LFT and rails` must appear only once after the last automatic chain. The plan repeats both across quarter sections, which breaks the shared-operation rule.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_25: S40_04003_Drilling template install",
+        "order_26: S40_04004_Fixation drilling template suite manual",
+        "order_27: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_28: S40_04006_Deinstall drilling template",
+        "order_29: S40_04007_Set in position temporary fastener",
+        "order_30: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_31: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_32: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The manual phase is scheduled strictly after the first manual chain instead of overlapping with it. The provided plan structure requires the two manual joint chains to be executed in parallel, so the second manual chain should have been arranged to overlap the first one rather than start only after it finishes.",
+      "evidence": "The plan first executes two automatic joint chains in serial, and then executes two manual joint chains in parallel."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Consolidate the automatic phase into one shared start and one shared finish: keep a single `S40_02001_Set in position Rails and LFT` before quarter section 1, remove the duplicate `order_10` occurrence, keep `S40_04014_Deinstall LFT and rails` only after quarter section 2, and remove the premature `order_9` occurrence. Preserve the per-section automatic work items in between."
+    },
+    {
+      "id": "R2",
+      "advice": "Rebuild the manual phase as two overlapping chains instead of two back-to-back chains: keep each chain's internal precedence intact, but shift the second manual chain (`S40_04003` through `S40_04013` for quarter section 4) so it runs in parallel with the first manual chain rather than starting only after `order_24`. Also append the missing shared closing operation `S40_00002_Jig out` after `S40_02003_Inspection`."
+    }
+  ]
+}

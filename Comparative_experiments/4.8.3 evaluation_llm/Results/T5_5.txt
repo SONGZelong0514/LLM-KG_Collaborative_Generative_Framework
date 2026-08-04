@@ -1,0 +1,45 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "20: S40_02001_Set in position Rails and LFT",
+        "26: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The plan executes two automatic joint chains in serial for quarter sections 3 and 4, but the shared boundary operations of consecutive automatic chains are repeated. According to the constraint, when multiple automatic joint chains are executed consecutively in serial, the automatic chain must use a single shared start operation before the first chain and a single shared end operation after the last chain. The second occurrence of the start operation and the first occurrence of the end operation therefore violate the required automatic-chain structure.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "11: S40_02002_Cleanup and add sealant",
+        "12: S40_02003_Inspection",
+        "27: S40_02002_Cleanup and add sealant",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "Cleanup and inspection are executed twice in the plan: once after the manual joint chain and again after the automatic joint chains. The constraints require these operations to be executed immediately after the relevant chain completion, but also specify that for multiple manual chains these operations are shared and executed only once after the final manual-chain completion. More importantly, the overall plan structure requires first completing the two manual joint chains in parallel and then the two automatic joint chains in serial for the four quarter sections; the generated plan instead contains only one manual chain and places one cleanup/inspection pair after that incomplete manual stage and another pair after the automatic stage. This duplicates shared completion operations and breaks the intended complete-plan structure.",
+      "evidence": "Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\".\nImmediately after \"S40_04013_Deburring int, positioning, attach them manual\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\". When multiple manual joint chains are executed in parallel or in series, these two operations must be executed only once, after the final \"S40_04013_Deburring int, positioning, attach them manual\" operation has been completed."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan contains only one manual joint chain, for quarter section 2. However, the required overall execution pattern is to first execute two manual joint chains in parallel, then two automatic joint chains in serial, completing four quarter fuselage sections total. Since only one manual chain appears, the plan does not satisfy the mandated number and pattern of manual chains.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two automatic joint chains in serial.\nThe plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\nThe manual joint chain is defined as the sequence of manual operations starting from \"S40_04003_Drilling template install\" and ending at \"S40_04013_Deburring int, positioning, attach them manual\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan to match the required global pattern: keep orders 1 and 2 as the unique shared start, then add one complete second manual joint chain for another quarter section and schedule the two manual chains in parallel. After the final manual operation \"S40_04013_Deburring int, positioning, attach them manual\" of the two manual chains, keep only one shared cleanup/inspection pair and remove the extra manual-stage duplication. Next, execute two automatic chains in serial for the remaining two quarter sections, but modify the automatic block so that \"S40_02001_Set in position Rails and LFT\" appears only once before the first automatic chain and \"S40_04014_Deinstall LFT and rails\" appears only once after the second automatic chain; remove the repeated automatic shared boundary operations from the middle of the serial automatic block. Finally, place one cleanup/inspection pair immediately after the single final automatic deinstall operation, and keep \"S40_00002_Jig out\" as the unique last operation."
+    }
+  ]
+}

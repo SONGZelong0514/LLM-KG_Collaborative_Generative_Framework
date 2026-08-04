@@ -1,0 +1,21 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "35: S40_02002_Cleanup and add sealant"
+      ],
+      "reason": "This operation starts without its required predecessor `S40_02001_Set in position Rails and LFT`, so the plan violates the precedence rule.",
+      "evidence": [
+        "All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed.",
+        "\"S40_02003_Inspection\": [\"S40_02002_Cleanup and add sealant\"]"
+      ]
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Insert `S40_02001_Set in position Rails and LFT` immediately before `S40_02002_Cleanup and add sealant`, then keep the final shared sequence as `S40_02002_Cleanup and add sealant -> S40_02003_Inspection -> S40_00002_Jig out`. No other operations need to be removed."
+    }
+  ]
+}

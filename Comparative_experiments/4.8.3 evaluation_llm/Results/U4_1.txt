@@ -1,0 +1,9 @@
+{
+  "violation_list": [],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add one more complete 1/4 fuselage section before `S40_02002_Cleanup and add sealant` so the plan reaches four sections total. Keep the current three manual sections, and insert a fourth full section using the same manual chain (`S40_04003_Drilling template install` through `S40_04013_Deburring int, positioning, attach them manual`) or replace one section with a full automatic chain if that is the intended strategy. No existing operations need to be removed, and the final three shared operations must remain in the stated order."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "25: S40_02002_Cleanup and add sealant",
+        "26: S40_02003_Inspection"
+      ],
+      "reason": "The plan stops after Inspection and never performs the required final operation S40_00002_Jig out. This makes the mandated final three-operation sequence incomplete.",
+      "evidence": "The final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing start, four automatic quarter-section chains, and the current Cleanup -> Inspection tail, but add the missing shared operation S40_00002_Jig out immediately after S40_02003_Inspection. Also verify that all five shared operations appear exactly once and that no extra shared-operation repetition is introduced."
+    }
+  ]
+}

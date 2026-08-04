@@ -1,0 +1,20 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_27: S40_02002_Cleanup and add sealant",
+        "order_28: S40_02003_Inspection",
+        "order_29: S40_00002_Jig out"
+      ],
+      "reason": "The plan contains only three quarter-section joint chains (Quarter section 1 to Quarter section 3) and then starts the final shared closeout sequence. Because the required fourth 1/4 fuselage section is missing, the cleanup/inspection/jig-out operations are executed before the full fuselage joint plan is complete.",
+      "evidence": "The plan executes four manual joint chains in series. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add one complete fourth quarter-section joint chain before order 27, using the same manual sequence as the other sections (S40_04003 -> S40_04004 -> S40_04005 -> S40_04006 -> S40_04007 -> S40_04009 -> S40_04011 -> S40_04013). Keep the final shared operations (cleanup, inspection, jig out) after that added section; no other removals are needed if you stay with a fully manual serial plan."
+    }
+  ]
+}

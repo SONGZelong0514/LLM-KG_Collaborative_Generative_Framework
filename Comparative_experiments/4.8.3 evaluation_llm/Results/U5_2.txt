@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_00002_Jig out"
+      ],
+      "reason": "The plan does not satisfy the required final shared-operation sequence. The last operation is \"S40_00002_Jig out\", but the required final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\" in that order. Because the cleanup and inspection operations are missing, this final operation is placed in a non-compliant ending structure.",
+      "evidence": "\"The first two operations must be \\\"S40_00001_Jig in\\\" and \\\"S40_01001_Set up working environment\\\", and the final three operations must be \\\"S40_02002_Cleanup and add sealant\\\", \\\"S40_02003_Inspection\\\", and \\\"S40_00002_Jig out\\\", in that order. These five operations are global shared operations and must each appear exactly once.\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing four quarter-section manual chains, but insert the missing global shared closing operations after the last quarter-section work and before the final jig-out: add exactly one \"S40_02002_Cleanup and add sealant\" followed by exactly one \"S40_02003_Inspection\", then keep \"S40_00002_Jig out\" as the final operation. Do not add extra shared-operation duplicates."
+    }
+  ]
+}

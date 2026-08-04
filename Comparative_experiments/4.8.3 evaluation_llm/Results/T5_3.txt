@@ -1,0 +1,89 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "20: S40_02001_Set in position Rails and LFT",
+        "26: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint chains are executed consecutively in serial for two 1/4 fuselage sections, but the shared boundary operations of the serial automatic chains are duplicated. For serial automatic execution, the start operation S40_02001_Set in position Rails and LFT must appear only once before the first automatic chain, and the end operation S40_04014_Deinstall LFT and rails must appear only once after the last automatic chain. The plan includes a second S40_02001 and an intermediate S40_04014 for the second automatic section, which violates the shared-operation rule.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "11: S40_02002_Cleanup and add sealant",
+        "12: S40_02003_Inspection",
+        "26: S40_04014_Deinstall LFT and rails",
+        "27: S40_02002_Cleanup and add sealant",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "Cleanup and inspection are executed twice in the plan. After the manual chain ends at order 10, cleanup and inspection are performed at orders 11 and 12. Then after the automatic chain ends at order 26, cleanup and inspection are performed again at orders 27 and 28. The constraints require these operations to be executed immediately after the relevant chain completion, but when multiple manual chains exist they must be executed only once after the final manual completion, and after automatic completion they must occur immediately after S40_04014. Because the plan mixes one cleanup/inspection pair after the manual chain and another pair after the automatic chain, the shared post-chain closure operations are duplicated and the plan does not provide a single compliant completion structure for the whole four-section plan.",
+      "evidence": "Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\".\nImmediately after \"S40_04013_Deburring int, positioning, attach them manual\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\". When multiple manual joint chains are executed in parallel or in series, these two operations must be executed only once, after the final \"S40_04013_Deburring int, positioning, attach them manual\" operation has been completed."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "13: S40_02001_Set in position Rails and LFT",
+        "14: S40_04001_Camera at stating holes",
+        "15: S40_04002_Drilling orbital 4,8",
+        "16: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "17: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "18: S40_04012_Deburring int, positioning, attach them automatic",
+        "19: S40_04014_Deinstall LFT and rails",
+        "20: S40_02001_Set in position Rails and LFT",
+        "21: S40_04001_Camera at stating holes",
+        "22: S40_04002_Drilling orbital 4,8",
+        "23: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "24: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "25: S40_04012_Deburring int, positioning, attach them automatic",
+        "26: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The plan completes only three 1/4 fuselage joint chains: one manual chain for Quarter section 2 and two automatic chains for Quarter sections 3 and 4. The constraints require four 1/4 fuselage sections in total, each completed by one joint chain. One quarter section chain is missing entirely.",
+      "evidence": "The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    },
+    {
+      "id": "V4",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "13: S40_02001_Set in position Rails and LFT",
+        "14: S40_04001_Camera at stating holes",
+        "15: S40_04002_Drilling orbital 4,8",
+        "16: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "17: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "18: S40_04012_Deburring int, positioning, attach them automatic",
+        "19: S40_04014_Deinstall LFT and rails",
+        "20: S40_02001_Set in position Rails and LFT",
+        "21: S40_04001_Camera at stating holes",
+        "22: S40_04002_Drilling orbital 4,8",
+        "23: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "24: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "25: S40_04012_Deburring int, positioning, attach them automatic",
+        "26: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The required overall execution pattern is not satisfied. The user requires the plan to first execute two manual joint chains in parallel, and then execute two automatic joint chains in serial. The generated plan contains only one manual joint chain, and it is followed by two automatic chains. Therefore the mandatory initial pattern of two parallel manual chains is not achieved.",
+      "evidence": "Please help me design a complete aircraft fuselage joint plan. The plan first executes two manual joint chains in parallel, and then executes two automatic joint chains in serial."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the whole plan into four section-completion chains with this global pattern: keep order 1 and order 2 as the only initial shared operations, then add a second complete manual joint chain for a missing quarter section and schedule the two manual chains so their time intervals overlap in parallel. Do not place S40_02002_Cleanup and add sealant / S40_02003_Inspection after the first manual chain; instead place a single cleanup-inspection pair only after the final manual chain completion if the manual stage is intended to close there, or otherwise redesign the plan so closure happens only at the required stage boundary. For the automatic stage, execute two automatic section chains in serial but keep S40_02001_Set in position Rails and LFT only once before the first automatic section and keep S40_04014_Deinstall LFT and rails only once after the second automatic section; remove the duplicated order 20 and the intermediate/final duplication pattern around order 26 by merging the two automatic chains under shared start/end operations. After the final required chain completion, place exactly one compliant S40_02002_Cleanup and add sealant followed immediately by one S40_02003_Inspection, then keep S40_00002_Jig out as the single final operation."
+    }
+  ]
+}

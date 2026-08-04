@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_4: S40_04002_Drilling orbital 4,8"
+      ],
+      "reason": "This operation starts at minute 80 before its prerequisite operation S40_04001_Camera at stating holes has completed (it ends at minute 220). That breaks the required automatic-chain precedence in the first quarter section.",
+      "evidence": "S40_04002_Drilling orbital 4,8: [\"S40_04001_Camera at stating holes\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Reorder the first quarter-section automatic chain so it follows the dependency sequence S40_04001 -> S40_04002 -> S40_04008 -> S40_04010 -> S40_04012, then shift the later section timings accordingly. Keep the shared start and end operations unchanged, and preserve the existing serial structure across the four quarter sections."
+    }
+  ]
+}

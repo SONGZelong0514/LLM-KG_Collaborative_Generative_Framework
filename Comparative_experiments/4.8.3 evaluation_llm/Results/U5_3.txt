@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_00002_Jig out"
+      ],
+      "reason": "The plan ends with Jig out but omits the required cleanup and inspection shared operations immediately before it, so the mandated final shared sequence is not satisfied.",
+      "evidence": "The final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the two parallel manual section chains as they are, and insert the missing shared closing operations once at the end: add \"S40_02002_Cleanup and add sealant\" followed by \"S40_02003_Inspection\" immediately before \"S40_00002_Jig out\". No other operations need to be removed."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_4: S40_04002_Drilling orbital 4,8",
+        "order_5: S40_04001_Camera at stating holes"
+      ],
+      "reason": "In quarter section 1, drilling is scheduled before the camera-at-stating-holes step, but the plan requires the camera step to finish first. This breaks the precedence dependency between these two operations.",
+      "evidence": "\"S40_04002_Drilling orbital 4,8\": [\"S40_04001_Camera at stating holes\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall plan structure the same, but reorder the first automatic section so that `S40_04001_Camera at stating holes` comes before `S40_04002_Drilling orbital 4,8`. Preserve the shared operations exactly once at the start and end (`S40_02001_Set in position Rails and LFT` before the first chain, `S40_04014_Deinstall LFT and rails` after the last chain), and keep the remaining automatic steps in each quarter section in precedence order: `S40_04001 -> S40_04002 -> S40_04008 -> S40_04010 -> S40_04012`. No operations need to be added or removed."
+    }
+  ]
+}

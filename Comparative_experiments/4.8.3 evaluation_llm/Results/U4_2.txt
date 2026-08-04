@@ -1,0 +1,9 @@
+{
+  "violation_list": [],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add one missing Quarter section 4 manual joint chain before `S40_02002_Cleanup and add sealant` so the plan completes four 1/4 fuselage sections in total. Use the same full manual sequence already used in the existing sections: `S40_04003_Drilling template install` -> `S40_04004_Fixation drilling template suite manual` -> `S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template` -> `S40_04006_Deinstall drilling template` -> `S40_04007_Set in position temporary fastener` -> `S40_04009_Set up the fixations LGP/Hi-Lite manual` -> `S40_04011_Riveting buttstraps and stabiliser manual` -> `S40_04013_Deburring int, positioning, attach them manual`. Keep the existing shared operations exactly once at the start and end, and do not add extra copies of the shared cleanup/inspection/jig-out steps."
+    }
+  ]
+}

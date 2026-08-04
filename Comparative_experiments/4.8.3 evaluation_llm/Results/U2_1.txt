@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_25: S40_02002_Cleanup and add sealant",
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "The plan does not contain the required final operation S40_00002_Jig out, so the mandatory final three-operation sequence is incomplete. As a result, cleanup and inspection are present, but the required terminal shared block is not satisfied.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add the missing global shared operation S40_00002_Jig out as the very last step after S40_02003_Inspection, and keep the terminal block in the required order: S40_02002_Cleanup and add sealant -> S40_02003_Inspection -> S40_00002_Jig out. No other structural changes are needed to the four quarter-section automatic chains, provided their precedence order remains unchanged."
+    }
+  ]
+}

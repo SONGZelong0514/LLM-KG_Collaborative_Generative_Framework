@@ -1,0 +1,50 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This deinstalls the LFT and rails after only the first automatic quarter section, but the plan still has another automatic joint chain to run. The shared automatic-chain end operation must occur only once after the last automatic chain, not between automatic chains.",
+      "evidence": "5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This repeats the automatic-chain start operation before the second automatic quarter section. The constraint allows that shared start operation only once before the first automatic chain, so this second occurrence violates the required serial automatic-chain structure.",
+      "evidence": "5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "order_17: S40_04003_Drilling template install",
+        "order_18: S40_04004_Fixation drilling template suite manual",
+        "order_19: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_20: S40_04006_Deinstall drilling template",
+        "order_21: S40_04007_Set in position temporary fastener",
+        "order_22: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_23: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_24: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan contains only one manual joint chain, covering a single quarter section, but the overall requirement is to complete four 1/4 fuselage sections with two manual joint chains after the two automatic chains. The required second manual chain is missing, so the plan does not complete the full section count.",
+      "evidence": "3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    },
+    {
+      "id": "V4",
+      "involved_operations": [
+        "order_25: S40_02002_Cleanup and add sealant",
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "The plan ends after inspection and omits the required final Jig out operation. As a result, the required final three-operation ending sequence is not satisfied.",
+      "evidence": "2. The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the plan around the required global structure: keep the two shared start operations once at the beginning, run exactly two automatic quarter-section chains in serial with one shared `S40_02001_Set in position Rails and LFT` before the first automatic chain and one shared `S40_04014_Deinstall LFT and rails` after the second automatic chain, then add a second complete manual quarter-section chain after the first manual chain so the total reaches four sections, and finally append `S40_02002_Cleanup and add sealant`, `S40_02003_Inspection`, and `S40_00002_Jig out` exactly once at the end."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint chain boundary operations are duplicated in the middle of the serial automatic sequence. Order 9 closes quarter section 1 with the shared deinstall too early, and order 10 repeats the shared automatic start in quarter section 2, but these boundary operations are supposed to appear only once across the serial automatic chains.",
+      "evidence": "\"When multiple automatic joint chains are executed consecutively in serial, \\\"S40_02001_Set in position Rails and LFT\\\" and \\\"S40_04014_Deinstall LFT and rails\\\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section.\""
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_25: S40_02002_Cleanup and add sealant",
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "The plan ends after cleanup and inspection, but the required final shared sequence is incomplete because the mandatory Jig out step is missing. This means the plan does not satisfy the required ending order.",
+      "evidence": "\"The first two operations must be \\\"S40_00001_Jig in\\\" and \\\"S40_01001_Set up working environment\\\", and the final three operations must be \\\"S40_02002_Cleanup and add sealant\\\", \\\"S40_02003_Inspection\\\", and \\\"S40_00002_Jig out\\\", in that order. These five operations are global shared operations and must each appear exactly once.\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan into four quarter sections total: keep one shared automatic start before the first automatic section, run two complete automatic sections serially, then run two complete manual sections serially before the shared closing operations. Remove the extra automatic boundary placement at order 9 and the repeated automatic start at order 10 so the automatic shared ops appear only once at the outer boundaries, add a missing fourth section by inserting another full manual chain (S40_04003 through S40_04013) before cleanup, and append S40_00002_Jig out after inspection so the final sequence is cleanup -> inspection -> Jig out."
+    }
+  ]
+}

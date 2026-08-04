@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_23: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_24: S40_04007_Set in position temporary fastener"
+      ],
+      "reason": "In Quarter section 3, the operation S40_04009_Set up the fixations LGP/Hi-Lite manual is scheduled before its prerequisite S40_04007_Set in position temporary fastener, so the precedence chain is broken.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed. \"S40_04009_Set up the fixations LGP/Hi-Lite manual\": [\"S40_04007_Set in position temporary fastener\"]"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_32: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_31: S40_04007_Set in position temporary fastener"
+      ],
+      "reason": "In Quarter section 4, the operation S40_04009_Set up the fixations LGP/Hi-Lite manual is scheduled before its prerequisite S40_04007_Set in position temporary fastener, so the precedence chain is broken.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed. \"S40_04009_Set up the fixations LGP/Hi-Lite manual\": [\"S40_04007_Set in position temporary fastener\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall four-section manual-only structure, but reorder the manual joint chain inside Quarter section 3 and Quarter section 4 so that S40_04007_Set in position temporary fastener comes before S40_04009_Set up the fixations LGP/Hi-Lite manual in each section. No new operations are needed and no operations need to be removed; only swap those two operations in the affected sections, while preserving the existing shared-operation positions at the beginning and end."
+    }
+  ]
+}

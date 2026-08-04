@@ -1,0 +1,22 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_4: S40_04002_Drilling orbital 4,8",
+        "order_5: S40_04001_Camera at stating holes"
+      ],
+      "reason": "In quarter section 1, drilling is scheduled before the required camera-at-holes step. `S40_04002_Drilling orbital 4,8` can only start after `S40_04001_Camera at stating holes` is completed, so these two operations are in the wrong order.",
+      "evidence": [
+        "All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed.",
+        "\"S40_04002_Drilling orbital 4,8\": [\"S40_04001_Camera at stating holes\"]"
+      ]
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Reorder the first automatic chain so that `S40_04001_Camera at stating holes` comes before `S40_04002_Drilling orbital 4,8`; keep the remaining automatic sections and the shared start/end operations unchanged."
+    }
+  ]
+}

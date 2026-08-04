@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_4: S40_04002_Drilling orbital 4,8"
+      ],
+      "reason": "Order 4 violates the precedence dependency because it starts before its prerequisite has completed. In the plan, drilling in quarter section 1 is scheduled before the required camera step, so the automatic chain order is broken.",
+      "evidence": "\"S40_04002_Drilling orbital 4,8\": [\"S40_04001_Camera at stating holes\"] ; \"An operation can start only after all its prerequisite operations have been completed.\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall four-section serial automatic chain structure and the shared start/end operations unchanged, but reorder quarter section 1 so `S40_04001_Camera at stating holes` executes before `S40_04002_Drilling orbital 4,8`. No operations need to be added or removed; the fix is a local precedence-correct swap in the first section."
+    }
+  ]
+}

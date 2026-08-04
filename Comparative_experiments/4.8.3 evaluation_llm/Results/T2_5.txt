@@ -1,0 +1,37 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_02001_Set in position Rails and LFT",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The shared automatic-chain start operation appears twice, but it must be executed only once before the first automatic chain when multiple automatic chains are run in serial.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The shared automatic-chain end operation appears twice, but it must be executed only once after the last automatic chain when multiple automatic chains are run in serial.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "order_33: S40_02002_Cleanup and add sealant",
+        "order_34: S40_02003_Inspection"
+      ],
+      "reason": "The plan ends after inspection and does not include the required final Jig out operation, so the required final three-operation sequence is incomplete.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the initial shared setup operations once, run the automatic chain as two quarter-section executions without repeating the shared start/end operations, then place the missing S40_00002_Jig out after S40_02003_Inspection. Concretely, remove the second occurrences of S40_02001_Set in position Rails and LFT and S40_04014_Deinstall LFT and rails, keep the section-specific automatic steps repeated per quarter section, and add the missing final Jig out operation to complete the terminal shared sequence. If the intended overall structure must also have parallel manual chains, overlap the two manual quarter-section chains instead of executing them strictly back-to-back."
+    }
+  ]
+}

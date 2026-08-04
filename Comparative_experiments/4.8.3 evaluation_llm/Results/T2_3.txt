@@ -1,0 +1,37 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_02001_Set in position Rails and LFT",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint chain start operation is duplicated across the two serial automatic sections, but it must be shared and executed only once before the first automatic chain.",
+      "evidence": "\"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint chain end operation is duplicated across the two serial automatic sections, but it must be shared and executed only once after the last automatic chain.",
+      "evidence": "\"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively"
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "order_33: S40_02002_Cleanup and add sealant",
+        "order_34: S40_02003_Inspection"
+      ],
+      "reason": "The plan ends with cleanup and inspection but does not include the required final S40_00002_Jig out, so the required final three-operation sequence is not satisfied.",
+      "evidence": "The final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan so the two automatic sections share a single S40_02001_Set in position Rails and LFT before the first automatic chain and a single S40_04014_Deinstall LFT and rails after the last automatic chain, while keeping all section-specific automatic steps once per quarter section. Then append the missing S40_00002_Jig out after S40_02003_Inspection so the plan ends with cleanup -> inspection -> jig out."
+    }
+  ]
+}

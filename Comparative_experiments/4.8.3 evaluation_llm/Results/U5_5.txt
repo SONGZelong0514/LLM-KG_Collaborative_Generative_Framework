@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_00002_Jig out"
+      ],
+      "reason": "The plan ends with Jig out, but the required final shared sequence is missing the cleanup and inspection operations before it. As a result, the final ordering and completeness requirement for the global shared operations is not satisfied.",
+      "evidence": "The final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing four quarter-section manual chains unchanged, but insert the missing global shared operations so that the plan ends with `S40_02002_Cleanup and add sealant` followed by `S40_02003_Inspection`, and then `S40_00002_Jig out`. Do not move `S40_00002_Jig out` earlier; it must be the last operation, and the shared global operations must appear exactly once."
+    }
+  ]
+}

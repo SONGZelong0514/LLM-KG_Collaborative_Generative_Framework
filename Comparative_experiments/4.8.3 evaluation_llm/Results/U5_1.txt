@@ -1,0 +1,34 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_00002_Jig out"
+      ],
+      "reason": "The required final shared closing sequence is missing. The plan ends directly with jig out and does not include the mandatory operations S40_02002_Cleanup and add sealant and S40_02003_Inspection before S40_00002_Jig out.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "19: S40_00002_Jig out"
+      ],
+      "reason": "The plan is not complete because the shared operation S40_02002_Cleanup and add sealant is required exactly once but does not appear anywhere in the generated plan.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "19: S40_00002_Jig out"
+      ],
+      "reason": "The plan is not complete because the shared operation S40_02003_Inspection is required exactly once but does not appear anywhere in the generated plan.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing four manual joint chains and their overall structure, since the plan already completes four 1/4 fuselage sections as two parallel manual chains followed by two parallel manual chains, and the listed manual-chain precedences are satisfied. Modify only the global ending sequence: add exactly one shared operation S40_02002_Cleanup and add sealant after the completion of all four manual chains, then add exactly one shared operation S40_02003_Inspection after cleanup, and move S40_00002_Jig out to occur after inspection as the last operation. Do not add automatic-chain operations unless you intend to redesign the whole concept, because the current plan is purely manual and already covers the four required sections."
+    }
+  ]
+}

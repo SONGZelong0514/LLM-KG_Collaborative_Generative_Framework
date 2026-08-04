@@ -1,0 +1,69 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "23: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "24: S40_04007_Set in position temporary fastener"
+      ],
+      "reason": "The precedence dependency is violated in Quarter section 4. The manual fixation setup operation is scheduled before the required temporary fastener operation, but it can start only after that prerequisite has been completed.",
+      "evidence": "\"S40_04009_Set up the fixations LGP/Hi-Lite manual\": [\"S40_04007_Set in position temporary fastener\"]"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "1: S40_00001_Jig in",
+        "2: S40_01001_Set up working environment",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "The required final global operation \"S40_00002_Jig out\" is missing. Therefore, the plan does not satisfy the constraint that the first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final operation must be \"S40_00002_Jig out\", with each of these shared operations appearing exactly once.",
+      "evidence": "Constraint 2: \"The first two operations must be \\\"S40_00001_Jig in\\\" and \\\"S40_01001_Set up working environment\\\", and the final operation must be \\\"S40_00002_Jig out\\\", in that order. These three operations are global shared operations and must each appear exactly once.\""
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "11: S40_04003_Drilling template install",
+        "12: S40_04004_Fixation drilling template suite manual",
+        "13: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "14: S40_04006_Deinstall drilling template",
+        "15: S40_04007_Set in position temporary fastener",
+        "16: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "17: S40_04011_Riveting buttstraps and stabiliser manual",
+        "18: S40_04013_Deburring int, positioning, attach them manual",
+        "19: S40_04003_Drilling template install",
+        "20: S40_04004_Fixation drilling template suite manual",
+        "21: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "22: S40_04006_Deinstall drilling template",
+        "23: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "24: S40_04007_Set in position temporary fastener",
+        "25: S40_04011_Riveting buttstraps and stabiliser manual",
+        "26: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan contains only three manual joint chains and no automatic joint chain. The user required exactly four 1/4 fuselage sections in total, with the execution pattern being first one automatic joint chain in serial and then three manual joint chains in serial. Since no automatic-chain operations appear, one of the four required section-completion chains is missing and the required overall structure is violated.",
+      "evidence": "User requirement: \"The plan first executes one automatic joint chains in serial, and then executes three manual joint chains in serial.\" Constraint 3: \"The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\" Constraint 5: \"The automatic joint chain is defined as a sequence of automatic operations starting from \\\"S40_02001_Set in position Rails and LFT\\\" and ending at \\\"S40_04014_Deinstall LFT and rails\\\".\""
+    },
+    {
+      "id": "V4",
+      "involved_operations": [
+        "27: S40_02002_Cleanup and add sealant",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "The cleanup and inspection sequence is executed after the final manual chain, but the required preceding automatic chain ending with \"S40_04014_Deinstall LFT and rails\" does not exist anywhere in the plan. Therefore, the overall required structure of one automatic chain followed by three manual chains is not satisfied, and the mandated post-automatic sequence cannot be fulfilled.",
+      "evidence": "Constraint 7: \"Immediately after \\\"S40_04014_Deinstall LFT and rails\\\" is completed, \\\"S40_02002_Cleanup and add sealant\\\" must be executed, followed by \\\"S40_02003_Inspection\\\".\" Constraint 5: \"The automatic joint chain is defined as a sequence of automatic operations starting from \\\"S40_02001_Set in position Rails and LFT\\\" and ending at \\\"S40_04014_Deinstall LFT and rails\\\".\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan to match the required global pattern: keep orders 1 and 2 as the shared starting operations, then insert one complete automatic joint chain for one 1/4 fuselage section before any manual chain begins. This automatic chain must include the operations from \"S40_02001_Set in position Rails and LFT\" through \"S40_04014_Deinstall LFT and rails\" in dependency-feasible order. After that, schedule exactly three complete manual joint chains in serial, one for each remaining 1/4 fuselage section. For Quarter section 4, swap the order of the two operations so that \"S40_04007_Set in position temporary fastener\" occurs before \"S40_04009_Set up the fixations LGP/Hi-Lite manual\". Keep \"S40_02002_Cleanup and add sealant\" and \"S40_02003_Inspection\" only once after the final chain completion as required by the chosen structure, and add \"S40_00002_Jig out\" exactly once as the final operation of the entire plan."
+    }
+  ]
+}

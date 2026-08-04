@@ -1,0 +1,65 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "11a: S40_04003_Drilling template install",
+        "11b: S40_04003_Drilling template install",
+        "12a: S40_04004_Fixation drilling template suite manual",
+        "12b: S40_04004_Fixation drilling template suite manual",
+        "13a: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "13b: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "14a: S40_04006_Deinstall drilling template",
+        "14b: S40_04006_Deinstall drilling template",
+        "15a: S40_04007_Set in position temporary fastener",
+        "15b: S40_04007_Set in position temporary fastener",
+        "16a: S40_04011_Riveting buttstraps and stabiliser manual",
+        "16b: S40_04011_Riveting buttstraps and stabiliser manual",
+        "17a: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "17b: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "18a: S40_04013_Deburring int, positioning, attach them manual",
+        "18b: S40_04013_Deburring int, positioning, attach them manual",
+        "19: S40_02002_Cleanup and add sealant",
+        "20: S40_02003_Inspection"
+      ],
+      "reason": "The required overall execution structure is not satisfied. The plan contains only manual joint-chain operations and no automatic joint chain at all, so it cannot realize the required pattern of first one automatic joint chain in serial, then two manual joint chains in parallel, and finally one manual joint chain in serial. Because all four quarter sections must be completed in total by joint chains, the missing automatic chain means the mandated mix and sequencing of chain types is violated.",
+      "evidence": "The plan first executes one automatic joint chains in serial, and then executes two manual joint chains in parallel, and finally executes one manual joint chains in serial."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "16a: S40_04011_Riveting buttstraps and stabiliser manual",
+        "16b: S40_04011_Riveting buttstraps and stabiliser manual",
+        "17a: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "17b: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "18a: S40_04013_Deburring int, positioning, attach them manual",
+        "18b: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The precedence dependency inside the manual joint chain is violated for quarter sections 2 and 3. The riveting operation is scheduled before the required manual fixation setup operation, but riveting buttstraps and stabiliser manual can start only after set up the fixations LGP/Hi-Lite manual has been completed.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "19: S40_02002_Cleanup and add sealant",
+        "20: S40_02003_Inspection"
+      ],
+      "reason": "Cleanup and inspection are placed after the final manual chain, but the plan has no automatic joint chain and therefore does not execute cleanup and inspection immediately after completion of an automatic chain ending with S40_04014_Deinstall LFT and rails, as required for the overall plan structure that must include an automatic chain first. The required automatic-chain closure sequence is absent entirely.",
+      "evidence": "7. Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the plan around the required global pattern: keep 1: S40_00001_Jig in and 2: S40_01001_Set up working environment at the start and 21: S40_00002_Jig out at the end, but insert one complete automatic joint chain before any manual chain operations. Add the automatic-chain operations beginning with S40_02001_Set in position Rails and LFT and continuing through S40_04001, S40_04002, S40_04008, S40_04010, S40_04012, and ending with S40_04014_Deinstall LFT and rails. Then place S40_02002_Cleanup and add sealant and S40_02003_Inspection immediately after that automatic chain. After the automatic chain, execute exactly two manual joint chains in parallel for two quarter sections, then execute one additional manual joint chain in serial for the remaining quarter section. Also correct the internal order of the manual chains so that S40_04009_Set up the fixations LGP/Hi-Lite manual occurs before S40_04011_Riveting buttstraps and stabiliser manual in every manual section. Remove the current incorrectly ordered quarter-section-2 and quarter-section-3 sequence around orders 16a/16b and 17a/17b, and replace it with dependency-compliant ordering."
+    }
+  ]
+}

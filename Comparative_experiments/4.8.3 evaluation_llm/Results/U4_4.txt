@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_26: S40_04013_Deburring int, positioning, attach them manual",
+        "order_27: S40_02002_Cleanup and add sealant"
+      ],
+      "reason": "The plan finishes the third manual quarter section and then immediately enters the final shared cleanup/inspection/jig-out block. It never includes the required fourth 1/4 fuselage section, so the overall plan is incomplete.",
+      "evidence": "\"The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing first two shared operations and the final three shared operations unchanged, but insert one additional complete manual joint chain before `S40_02002_Cleanup and add sealant`. The added chain should repeat the full manual sequence from `S40_04003_Drilling template install` through `S40_04013_Deburring int, positioning, attach them manual`, so the plan covers four quarter sections in total."
+    }
+  ]
+}

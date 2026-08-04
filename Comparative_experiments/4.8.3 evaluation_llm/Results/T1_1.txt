@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This automatic shared start operation is executed again for quarter section 2, but the plan must use it only once before the first automatic chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This automatic shared end operation appears after quarter section 1, but it must be executed only once after the last automatic chain, not between automatic sections.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan so the automatic start/end are shared correctly: keep a single \"S40_02001_Set in position Rails and LFT\" before the first automatic chain, remove the premature \"S40_04014_Deinstall LFT and rails\" from quarter section 1, and keep one final \"S40_04014_Deinstall LFT and rails\" only after the last automatic chain. Then add a second manual quarter-section chain by repeating the manual sequence from \"S40_04003_Drilling template install\" through \"S40_04013_Deburring int, positioning, attach them manual\" so the plan reaches four total quarter sections. Finally, append \"S40_00002_Jig out\" after \"S40_02003_Inspection\" to satisfy the required ending."
+    }
+  ]
+}

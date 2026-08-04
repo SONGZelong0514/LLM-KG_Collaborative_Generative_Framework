@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_23: S40_04009_Set up the fixations LGP/Hi-Lite manual"
+      ],
+      "reason": "In Quarter section 3, the fixation setup operation starts before its required prerequisite temporary fastener installation is completed. This breaks the required precedence order within the manual joint chain.",
+      "evidence": "S40_04009_Set up the fixations LGP/Hi-Lite manual: [\"S40_04007_Set in position temporary fastener\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "For Quarter section 3, reorder the manual chain so that S40_04007_Set in position temporary fastener is executed before S40_04009_Set up the fixations LGP/Hi-Lite manual. Keep the rest of the four-section manual sequence unchanged, since the other sections already follow the correct dependency order."
+    }
+  ]
+}

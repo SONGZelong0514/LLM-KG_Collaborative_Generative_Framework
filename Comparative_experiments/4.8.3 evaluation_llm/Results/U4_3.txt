@@ -1,0 +1,16 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [],
+      "reason": "The generated plan only completes three quarter sections (Quarter section 1, 2, and 3). The required fourth 1/4 fuselage section is missing, so the plan does not satisfy the required total section count.",
+      "evidence": "The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add one complete fourth quarter-section joint chain before the final shared cleanup/inspection/jig-out block. The safest global fix is to insert another full manual chain in the same order as the existing manual sections: `S40_04003_Drilling template install` -> `S40_04004_Fixation drilling template suite manual` -> `S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template` -> `S40_04006_Deinstall drilling template` -> `S40_04007_Set in position temporary fastener` -> `S40_04009_Set up the fixations LGP/Hi-Lite manual` -> `S40_04011_Riveting buttstraps and stabiliser manual` -> `S40_04013_Deburring int, positioning, attach them manual`. No existing operations need to be removed."
+    }
+  ]
+}

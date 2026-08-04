@@ -1,0 +1,68 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "23: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "24: S40_04007_Set in position temporary fastener"
+      ],
+      "reason": "The manual-chain precedence is violated in Quarter section 4. The temporary fastener operation must be completed before the manual fixation setup operation, but the plan schedules the fixation setup first and the temporary fastener afterward.",
+      "evidence": "\"S40_04009_Set up the fixations LGP/Hi-Lite manual\": [\"S40_04007_Set in position temporary fastener\"]"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "27: S40_02002_Cleanup and add sealant",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "The required final global operation is missing. The plan ends with inspection instead of ending with S40_00002_Jig out, and S40_00002_Jig out does not appear exactly once as required.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final operation must be \"S40_00002_Jig out\", in that order. These three operations are global shared operations and must each appear exactly once."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "11: S40_04003_Drilling template install",
+        "12: S40_04004_Fixation drilling template suite manual",
+        "13: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "14: S40_04006_Deinstall drilling template",
+        "15: S40_04007_Set in position temporary fastener",
+        "16: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "17: S40_04011_Riveting buttstraps and stabiliser manual",
+        "18: S40_04013_Deburring int, positioning, attach them manual",
+        "19: S40_04003_Drilling template install",
+        "20: S40_04004_Fixation drilling template suite manual",
+        "21: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "22: S40_04006_Deinstall drilling template",
+        "23: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "24: S40_04007_Set in position temporary fastener",
+        "25: S40_04011_Riveting buttstraps and stabiliser manual",
+        "26: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan does not include any automatic joint chain and completes only three quarter sections, all using manual chains (Quarter sections 2, 3, and 4). The required structure is one automatic joint chain followed by three manual joint chains in serial, for a total of four 1/4 fuselage sections.",
+      "evidence": "The plan first executes one automatic joint chains in serial, and then executes three manual joint chains in serial. The plan must satisfy the following constraints.\n3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    },
+    {
+      "id": "V4",
+      "involved_operations": [
+        "27: S40_02002_Cleanup and add sealant",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "Cleanup and inspection are only valid immediately after completion of the automatic chain at S40_04014_Deinstall LFT and rails or after the final manual-chain completion at S40_04013_Deburring int, positioning, attach them manual. Because the required automatic chain is completely absent, the overall mandated plan pattern is not satisfied.",
+      "evidence": "7. Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan to match the required global pattern: keep orders 1 and 2 as the only initial shared operations, then add one complete automatic joint chain for the missing quarter section before all manual chains. This automatic chain must start with S40_02001_Set in position Rails and LFT and include the required automatic operations through S40_04014_Deinstall LFT and rails, respecting all listed dependencies. After that, execute exactly three manual joint chains in serial for the remaining three quarter sections. For Quarter section 4, swap the order of S40_04007_Set in position temporary fastener and S40_04009_Set up the fixations LGP/Hi-Lite manual so that the temporary fastener comes first. Keep S40_02002_Cleanup and add sealant followed by S40_02003_Inspection only once after the final chain completion as required by the chosen overall structure, and add S40_00002_Jig out exactly once as the last operation of the entire plan."
+    }
+  ]
+}
