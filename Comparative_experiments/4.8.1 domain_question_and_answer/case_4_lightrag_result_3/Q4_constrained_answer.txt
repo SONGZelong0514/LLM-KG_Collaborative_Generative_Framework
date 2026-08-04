@@ -1,0 +1,120 @@
+The operation-resource requirement mapping, including the quantity needed per resource, is as follows:
+
+### Operation-Resource Requirement Mapping
+
+#### 1. **Operation: S40_00001_Jig in**
+   - **Resource: Transportation tooling**: Quantity = 1
+   - **Resource: Crane**: Quantity = 1
+
+#### 2. **Operation: S40_00002_Jig out**
+   - **Resource: Transportation tooling**: Quantity = 1
+   - **Resource: Crane**: Quantity = 1
+
+#### 3. **Operation: S40_01001_Set up working environment**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+
+#### 4. **Operation: S40_02001_Set in position Rails and LFT**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 2
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+
+#### 5. **Operation: S40_02002_Cleanup and add sealant**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+
+#### 6. **Operation: S40_02003_Inspection**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+
+#### 7. **Operation: S40_04001_Camera at stating holes**
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 1
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+
+#### 8. **Operation: S40_04002_Drilling orbital 4,8**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 1
+
+#### 9. **Operation: S40_04003_Drilling template install**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+
+#### 10. **Operation: S40_04004_Fixation drilling template suite manual**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+   - **Resource: Drilling Template**: Quantity = 1
+
+#### 11. **Operation: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+   - **Resource: Drilling Template**: Quantity = 1
+   - **Resource: Hand drilling machine**: Quantity = 1
+
+#### 12. **Operation: S40_04006_Deinstall drilling template**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+   - **Resource: Drilling Template**: Quantity = 1
+
+#### 13. **Operation: S40_04007_Set in position temporary fastener**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Mechanical Operator**: Quantity = 1
+
+#### 14. **Operation: S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 1
+
+#### 15. **Operation: S40_04009_Set up the fixations LGP/Hi-Lite manual**
+   - **Resource: Mechanical Operator**: Quantity = 1
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+
+#### 16. **Operation: S40_04010_Riveting buttstraps and stabiliser automatic**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 1
+
+#### 17. **Operation: S40_04011_Riveting buttstraps and stabiliser manual**
+   - **Resource: Mechanical Operator**: Quantity = 1
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+
+#### 18. **Operation: S40_04012_Deburring int, positioning, attach them automatic**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 1
+
+#### 19. **Operation: S40_04013_Deburring int, positioning, attach them manual**
+   - **Resource: Mechanical Operator**: Quantity = 1
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+
+#### 20. **Operation: S40_04014_Deinstall LFT and rails**
+   - **Resource: Station**: Quantity = 1
+   - **Resource: Station platform**: Quantity = 1
+   - **Resource: Automation Operator**: Quantity = 1
+   - **Resource: Light Flex Track Robot**: Quantity = 1
+   - **Resource: Light Flex Track Rail**: Quantity = 1
+
+This mapping provides a complete overview of the operation-resource requirements based on the knowledge graph provided.

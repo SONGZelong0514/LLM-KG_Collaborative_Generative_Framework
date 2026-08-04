@@ -1,0 +1,59 @@
+Yes, the knowledge graph contains defined calendars, numbers, and hourly costs for various resources. Here is the detailed information for each resource:
+
+### Resource Details
+
+- **Transportation Tooling**
+  - **Calendar:** 24x7
+  - **Number:** 1
+  - **Cost per Hour:** $80
+
+- **Drilling Template**
+  - **Calendar:** 24x7
+  - **Number:** 5
+  - **Cost per Hour:** $10
+
+- **Station**
+  - **Calendar:** 24x7
+  - **Number:** 2
+  - **Cost per Hour:** $80
+
+- **Crane**
+  - **Calendar:** 24x7
+  - **Number:** 1
+  - **Cost per Hour:** $30
+
+- **Station Platform**
+  - **Calendar:** 24x7
+  - **Number:** 2
+  - **Cost per Hour:** $75
+
+- **Light Flex Track Rail**
+  - **Calendar:** 24x7
+  - **Number:** 2
+  - **Cost per Hour:** $5
+
+- **Hand Drilling Machine**
+  - **Calendar:** 24x7
+  - **Number:** 6
+  - **Cost per Hour:** $10
+
+- **Mechanical Operator**
+  - **Calendar:** Shift (40 hours a week)
+  - **Number:** 8
+  - **Cost per Hour:** $100
+
+- **Automation Operator**
+  - **Calendar:** Shift (40 hours a week)
+  - **Number:** 8
+  - **Cost per Hour:** $100
+
+- **Light Flex Track Robot**
+  - **Calendar:** 24x7
+  - **Number:** 2
+  - **Cost per Hour:** $75
+
+This comprehensive listing includes all the resources along with their respective calendars, numbers, and hourly costs as defined in the knowledge graph. 
+
+### References
+
+- [1] triplet.csv
