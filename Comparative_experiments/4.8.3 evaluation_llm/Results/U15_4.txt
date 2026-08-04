@@ -1,0 +1,33 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "11: S40_04003_Drilling template install",
+        "12: S40_04004_Fixation drilling template suite manual",
+        "13: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "14: S40_04006_Deinstall drilling template",
+        "15: S40_04007_Set in position temporary fastener",
+        "16: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "17: S40_04011_Riveting buttstraps and stabiliser manual",
+        "18: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The two manual joint chains are scheduled serially rather than in parallel. The Quarter section 1 manual chain runs from order 3 to order 10, ending at 610 min, and the Quarter section 2 manual chain starts only afterward at order 11, starting at 610 min. Therefore, the two manual chains do not overlap in time.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two automatic joint chains in serial."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Modify the global schedule so that the two manual joint chains for Quarter section 1 and Quarter section 2 are executed in parallel after the shared setup operations, while preserving the internal precedence sequence within each manual chain. Keep the shared initial operations S40_00001_Jig in and S40_01001_Set up working environment exactly once at the beginning, keep the two automatic joint chains after the manual phase and in serial, and keep S40_00002_Jig out exactly once at the end. The manual cleanup and inspection operations S40_02002_Cleanup and add sealant and S40_02003_Inspection should remain only once after the final completed S40_04013_Deburring int, positioning, attach them manual operation from the parallel manual chains. No additional duplicate cleanup/inspection operations are needed for the manual chains."
+    }
+  ]
+}

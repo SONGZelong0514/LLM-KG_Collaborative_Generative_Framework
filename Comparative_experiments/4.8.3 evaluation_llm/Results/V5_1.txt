@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_02001_Set in position Rails and LFT",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The shared automatic-chain start operation appears twice, but the constraint requires it to be executed only once before the first automatic chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The shared automatic-chain end operation appears twice, but the constraint requires it to be executed only once after the last automatic chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion so that S40_02001_Set in position Rails and LFT appears only once before the first automatic quarter-section chain, and S40_04014_Deinstall LFT and rails appears only once after the last automatic quarter-section chain. Keep the per-quarter automatic operations duplicated for each section, but remove the extra shared start/end occurrences from the second automatic chain. The rest of the plan can remain in serial order if desired."
+    }
+  ]
+}

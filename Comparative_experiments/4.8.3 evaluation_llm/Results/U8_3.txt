@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This operation repeats the shared automatic-chain start operation. The plan already executes the same shared start at order 3, so order 10 violates the requirement that this shared operation appear only once before the first automatic chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This operation closes the automatic chain too early. It appears in quarter section 1 even though the shared automatic-chain end operation must occur only once after the last automatic chain, which is quarter section 2 in this plan.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the two automatic quarter-section chains in serial, but treat `S40_02001_Set in position Rails and LFT` as a single shared setup before quarter section 1 and `S40_04014_Deinstall LFT and rails` as a single shared teardown after quarter section 2. Remove the duplicate `S40_02001` from order 10 and the premature `S40_04014` from order 9; retain all other automatic steps once per automatic section and leave the manual quarter sections unchanged."
+    }
+  ]
+}

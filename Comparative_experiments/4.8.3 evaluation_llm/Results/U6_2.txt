@@ -1,0 +1,33 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_11: S40_04003_Drilling template install",
+        "order_12: S40_04004_Fixation drilling template suite manual",
+        "order_13: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_14: S40_04006_Deinstall drilling template",
+        "order_15: S40_04007_Set in position temporary fastener",
+        "order_16: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_17: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_18: S40_04013_Deburring int, positioning, attach them manual",
+        "order_19: S40_04003_Drilling template install",
+        "order_20: S40_04004_Fixation drilling template suite manual",
+        "order_21: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_22: S40_04006_Deinstall drilling template",
+        "order_23: S40_04007_Set in position temporary fastener",
+        "order_24: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_25: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_26: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The second pair of manual joint chains is executed serially: quarter section 4 starts only after quarter section 3 is finished. This violates the required execution pattern that the first two manual joint chains run in parallel and then the second two manual joint chains also run in parallel.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two manual joint chains in parallel."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the schedule so the manual work is organized into two overlapping blocks: keep quarter sections 1 and 2 parallel as planned, then start quarter section 4 at the same time as quarter section 3 instead of after it finishes. Preserve the internal precedence order within each quarter section, and keep the shared cleanup, inspection, and jig-out operations after both parallel blocks are complete."
+    }
+  ]
+}

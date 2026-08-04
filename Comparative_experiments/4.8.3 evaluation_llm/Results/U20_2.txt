@@ -1,0 +1,32 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT",
+        "order_16: S40_04014_Deinstall LFT and rails",
+        "order_17: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "For three automatic joint chains executed consecutively in serial, the automatic-chain boundary operations must be shared: S40_02001_Set in position Rails and LFT should be executed only once before the first automatic chain, and S40_04014_Deinstall LFT and rails should be executed only once after the last automatic chain. The plan repeats these shared boundary operations for intermediate automatic sections, so order_9, order_10, order_16, and order_17 are extra occurrences.",
+      "evidence": "5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT",
+        "order_16: S40_04014_Deinstall LFT and rails",
+        "order_17: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "After S40_04014_Deinstall LFT and rails is completed, cleanup and inspection must occur immediately. In the plan, order_9 is followed by another S40_02001 operation at order_10 instead of cleanup, and order_16 is followed by another S40_02001 operation at order_17 instead of cleanup.",
+      "evidence": "7. Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion as three serial automatic joint chains with shared boundary operations. Keep only one S40_02001_Set in position Rails and LFT before the first automatic chain and keep only one S40_04014_Deinstall LFT and rails after the third automatic chain. Remove the duplicate shared boundary operations at order_9, order_10, order_16, and order_17. The internal automatic operations S40_04001_Camera at stating holes, S40_04002_Drilling orbital 4,8, S40_04008_Set up the fixations LGP/Hi-Lite automatic, S40_04010_Riveting buttstraps and stabiliser automatic, and S40_04012_Deburring int, positioning, attach them automatic should remain repeated once for each of the three automatic 1/4 fuselage sections in serial order. Then execute S40_02002_Cleanup and add sealant and S40_02003_Inspection immediately after the single final S40_04014 operation, followed by the manual joint chain, its cleanup and inspection, and finally S40_00002_Jig out. No new operations are required; the main repair is to remove the extra shared automatic boundary operations and resequence the remaining operations accordingly."
+    }
+  ]
+}

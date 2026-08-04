@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "11: S40_04003_Drilling template install"
+      ],
+      "reason": "The two manual joint chains are scheduled serially instead of in parallel. Quarter section 1 manual chain ends at order 10, and Quarter section 2 manual chain starts only afterward at order 11, so the two manual chains do not overlap in time.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two automatic joint chains in serial. Parallel execution means that multiple joint chains are executed during overlapping time intervals."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Modify the schedule so that the two manual joint chains for Quarter section 1 and Quarter section 2 overlap in time. Keep the internal precedence order within each manual chain unchanged, but move the Quarter section 2 manual chain earlier so it starts before the Quarter section 1 manual chain has completed. Keep the shared cleanup and inspection operations only once after the final manual deburring operation, then execute the two automatic joint chains in serial as currently structured, followed by the automatic cleanup, inspection, and final Jig out. No operation needs to be removed; only the timing/order of the second manual chain should be adjusted to create parallel execution."
+    }
+  ]
+}

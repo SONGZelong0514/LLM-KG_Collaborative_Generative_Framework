@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_04004_Fixation drilling template suite manual"
+      ],
+      "reason": "Quarter section 1 executes S40_04004 before its required prerequisite S40_04003, so the precedence order inside the manual joint chain is broken.",
+      "evidence": "\"S40_04004_Fixation drilling template suite manual\": [\"S40_04003_Drilling template install\"]\n\"All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed.\""
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_11: S40_04003_Drilling template install"
+      ],
+      "reason": "The plan only contains Quarter sections 1, 3, and 4, so it completes three 1/4 fuselage sections instead of the required four. The missing Quarter section 2 makes the overall fuselage joint plan incomplete.",
+      "evidence": "\"The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the plan as four complete quarter-section chains in series, keep the shared start/end operations unchanged, move S40_04003_Drilling template install before S40_04004_Fixation drilling template suite manual in Quarter section 1, and insert the missing Quarter section 2 manual chain with the full manual sequence between sections 1 and 3."
+    }
+  ]
+}

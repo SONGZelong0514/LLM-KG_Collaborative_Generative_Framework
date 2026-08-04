@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_1: S40_02001_Set in position Rails and LFT",
+        "order_2: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The plan does not start with the required two global shared operations. Order 1 and order 2 occupy the first two positions, but the first two operations must be the jig-in step and the working-environment setup step, so the schedule begins in the wrong order and omits the required start sequence.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Globally reorder the plan so it begins with `S40_00001_Jig in` followed by `S40_01001_Set up working environment`, then start the first automatic chain with `S40_02001_Set in position Rails and LFT`. Keep the two automatic fuselage sections serial, keep `S40_04014_Deinstall LFT and rails` as the single shared automatic tail after the last automatic section, then execute the two manual sections serially, and leave the final cleanup/inspection/jig-out trio at the end in the required order."
+    }
+  ]
+}

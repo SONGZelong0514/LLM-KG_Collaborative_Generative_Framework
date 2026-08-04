@@ -1,0 +1,33 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "4: S40_04004_Fixation drilling template suite manual",
+        "5: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "6: S40_04006_Deinstall drilling template",
+        "7: S40_04007_Set in position temporary fastener",
+        "8: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "9: S40_04011_Riveting buttstraps and stabiliser manual",
+        "10: S40_04013_Deburring int, positioning, attach them manual",
+        "11: S40_04003_Drilling template install",
+        "12: S40_04004_Fixation drilling template suite manual",
+        "13: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "14: S40_04006_Deinstall drilling template",
+        "15: S40_04007_Set in position temporary fastener",
+        "16: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "17: S40_04011_Riveting buttstraps and stabiliser manual",
+        "18: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The generated plan executes the two manual joint chains serially, not in parallel. Quarter section 1 manual chain runs from order 3 to order 10, ending at 610 min. Quarter section 2 manual chain starts at order 11 at 610 min, exactly after Quarter section 1 ends, so there is no overlapping time interval between the two manual chains. This violates the requirement that the plan first executes two manual joint chains in parallel.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two automatic joint chains in serial. Parallel execution means that multiple joint chains are executed during overlapping time intervals."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the same four-section structure and keep the automatic portion after the manual portion. No operations need to be added or removed for chain-count completeness. Reschedule the two manual joint chains for Quarter section 1 and Quarter section 2 so that their execution intervals overlap while still preserving the internal precedence order within each manual chain: S40_04003 -> S40_04004 -> S40_04005 -> S40_04006 -> S40_04007 -> S40_04009 -> S40_04011 -> S40_04013. The shared S40_02002_Cleanup and add sealant and S40_02003_Inspection after the manual chains should remain only once and must be placed immediately after the later of the two S40_04013_Deburring int, positioning, attach them manual operations is completed. After that, keep the two automatic joint chains in serial as currently structured, followed by the automatic cleanup/inspection and final S40_00002_Jig out."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_04014_Deinstall LFT and rails",
+        "20: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The plan executes two automatic joint chains consecutively in serial, but the shared automatic operations are not handled as shared operations. S40_04014_Deinstall LFT and rails is executed after the first automatic quarter section instead of only after the last automatic chain, and S40_02001_Set in position Rails and LFT is executed again before the second automatic quarter section instead of only once before the first automatic chain.",
+      "evidence": "5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "19: S40_04014_Deinstall LFT and rails",
+        "20: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "After order 19, S40_04014_Deinstall LFT and rails, the plan immediately starts another S40_02001_Set in position Rails and LFT operation instead of immediately executing S40_02002_Cleanup and add sealant followed by S40_02003_Inspection.",
+      "evidence": "7. Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Modify the automatic-chain portion so that the shared automatic operations are executed only once across the two serial automatic chains. Keep order 13, S40_02001_Set in position Rails and LFT, as the single shared setup before the first automatic chain. Remove order 19, S40_04014_Deinstall LFT and rails, because deinstallation must occur only after the last automatic chain. Remove order 20, S40_02001_Set in position Rails and LFT, because the setup must not be repeated before the second automatic chain. Then execute the per-section automatic operations for quarter section 3 and quarter section 4 in serial, and keep a single S40_04014_Deinstall LFT and rails after the final automatic per-section operation. After that final S40_04014_Deinstall LFT and rails, keep S40_02002_Cleanup and add sealant and S40_02003_Inspection immediately afterward, followed by the final S40_00002_Jig out."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "32: S40_00002_Jig out"
+      ],
+      "reason": "The plan terminates with Jig out after completing only three automatic quarter-section chains. The required fourth 1/4 fuselage section, which should be completed by one manual joint chain after the three automatic chains, is missing. Therefore Jig out is executed before the complete fuselage joint plan has been finished, including the required manual-chain post-cleanup and inspection.",
+      "evidence": "Please help me design a complete aircraft fuselage joint plan. The plan first executes three automatic joint chains in serial, and then executes one manual joint chains in serial.\n3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\n6. The manual joint chain is defined as the sequence of manual operations starting from \"S40_04003_Drilling template install\" and ending at \"S40_04013_Deburring int, positioning, attach them manual\".\n8. Immediately after \"S40_04013_Deburring int, positioning, attach them manual\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\". When multiple manual joint chains are executed in parallel or in series, these two operations must be executed only once, after the final \"S40_04013_Deburring int, positioning, attach them manual\" operation has been completed."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing three serial automatic joint chains and the immediate automatic-chain cleanup and inspection after S40_04014_Deinstall LFT and rails. Before the final S40_00002_Jig out operation, add one complete manual joint chain for the missing fourth quarter section in dependency order: S40_04003_Drilling template install, S40_04004_Fixation drilling template suite manual, S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template, S40_04006_Deinstall drilling template, S40_04007_Set in position temporary fastener, S40_04009_Set up the fixations LGP/Hi-Lite manual, S40_04011_Riveting buttstraps and stabiliser manual, and S40_04013_Deburring int, positioning, attach them manual. Then add the required post-manual S40_02002_Cleanup and add sealant followed by S40_02003_Inspection. Move S40_00002_Jig out to the very end after these added operations."
+    }
+  ]
+}

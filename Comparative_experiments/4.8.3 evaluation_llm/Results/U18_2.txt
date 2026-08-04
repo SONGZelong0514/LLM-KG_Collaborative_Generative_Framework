@@ -1,0 +1,25 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_02002_Cleanup and add sealant",
+        "20: S40_02003_Inspection",
+        "21: S40_02001_Set in position Rails and LFT",
+        "22: S40_04001_Camera at stating holes",
+        "23: S40_04002_Drilling orbital 4,8",
+        "24: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "25: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "26: S40_04012_Deburring int, positioning, attach them automatic"
+      ],
+      "reason": "The generated plan completes only two manual joint chains, then performs cleanup/inspection and starts automatic-chain operations for Quarter section 3. This violates the required global execution pattern: three manual joint chains must be executed in serial first, and only then one automatic joint chain may be executed. As a result, the third 1/4 fuselage section is handled by automatic operations instead of by the required third manual chain, and the manual cleanup/inspection is executed too early.",
+      "evidence": "The plan first executes three manual joint chains in serial, and then executes one automatic joint chains in serial.\n8. Immediately after \"S40_04013_Deburring int, positioning, attach them manual\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\". When multiple manual joint chains are executed in parallel or in series, these two operations must be executed only once, after the final \"S40_04013_Deburring int, positioning, attach them manual\" operation has been completed."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan to follow the required global pattern: keep the first two shared operations and the final Jig out operation, but execute three complete manual joint chains in serial before starting any automatic joint chain. Add one complete manual joint chain after the current second manual chain, using the manual sequence from S40_04003_Drilling template install through S40_04013_Deburring int, positioning, attach them manual. Move the manual cleanup and inspection operations so they occur only once and immediately after the third/final manual S40_04013 operation. Remove or convert the extra automatic operations currently used for Quarter section 3, and retain only one automatic joint chain for the remaining 1/4 section. Place S40_02001_Set in position Rails and LFT before that single automatic chain, execute the automatic internal sequence once, then execute S40_04014_Deinstall LFT and rails, followed immediately by S40_02002_Cleanup and add sealant and S40_02003_Inspection, and finally S40_00002_Jig out."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This is a second execution of the automatic-chain shared start operation. With two automatic joint chains executed in serial, this operation must appear only once before the first automatic chain, not again before the second chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This automatic-chain shared end operation is placed after the first automatic section instead of only once after the last automatic chain. The plan therefore ends the automatic chain too early and duplicates a shared operation.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V3",
+      "involved_operations": [
+        "order_29: S40_04009_Set up the fixations LGP/Hi-Lite manual"
+      ],
+      "reason": "This manual-chain operation starts before its prerequisite operation has completed. In quarter section 4, it is scheduled before S40_04007, which violates the required precedence.",
+      "evidence": "\"S40_04009_Set up the fixations LGP/Hi-Lite manual\": [\"S40_04007_Set in position temporary fastener\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall 4-section structure, but modify the plan globally as follows: remove the extra automatic start operation at order 10 so S40_02001 appears only once before quarter section 1; remove the early automatic deinstall at order 9 so S40_04014 appears only once after quarter section 2; and swap the quarter 4 manual steps so S40_04007 comes before S40_04009, with S40_04011 and S40_04013 remaining after them in dependency order."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install",
+        "11: S40_04003_Drilling template install",
+        "19: S40_04003_Drilling template install"
+      ],
+      "reason": "The generated plan starts and executes three manual joint chains, but it does not execute the required automatic joint chain before them. No automatic joint-chain operations from \"S40_02001_Set in position Rails and LFT\" through \"S40_04014_Deinstall LFT and rails\" appear in the plan. Therefore, the plan completes only the three manual quarter sections and does not satisfy the required structure of one automatic joint chain followed by three manual joint chains, nor the requirement to complete four 1/4 fuselage sections in total.",
+      "evidence": "Please help me design a complete aircraft fuselage joint plan. The plan first executes one automatic joint chains in serial, and then executes three manual joint chains in serial.\n3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\n5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Insert one complete automatic joint chain immediately after \"2: S40_01001_Set up working environment\" and before the current first manual chain at \"3: S40_04003_Drilling template install\". The added automatic chain should follow its dependency order: \"S40_02001_Set in position Rails and LFT\", \"S40_04001_Camera at stating holes\", \"S40_04002_Drilling orbital 4,8\", \"S40_04008_Set up the fixations LGP/Hi-Lite automatic\", \"S40_04010_Riveting buttstraps and stabiliser automatic\", \"S40_04012_Deburring int, positioning, attach them automatic\", and \"S40_04014_Deinstall LFT and rails\". Immediately after the added \"S40_04014_Deinstall LFT and rails\", add \"S40_02002_Cleanup and add sealant\" followed by \"S40_02003_Inspection\". Then keep the existing three manual joint chains in serial order, keep the existing cleanup and inspection after the final manual \"S40_04013_Deburring int, positioning, attach them manual\", and keep \"S40_00002_Jig out\" as the final operation."
+    }
+  ]
+}

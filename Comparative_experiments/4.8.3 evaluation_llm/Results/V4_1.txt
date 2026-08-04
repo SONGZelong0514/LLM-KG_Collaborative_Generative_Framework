@@ -1,0 +1,27 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint chain shared endpoints are repeated in the second automatic section. These operations must appear only once across the serial automatic chains, but the plan includes them again in Quarter section 2.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_29: S40_04009_Set up the fixations LGP/Hi-Lite manual"
+      ],
+      "reason": "This manual operation is scheduled before its prerequisite operation S40_04007_Deinstall drilling template? No, the actual prerequisite is S40_04007_Set in position temporary fastener. In Quarter section 4, S40_04009 is placed before S40_04007, so it starts before its required predecessor has completed.",
+      "evidence": "An operation can start only after all its prerequisite operations have been completed."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall four-section structure, but remove the duplicated automatic shared endpoints so that S40_02001_Set in position Rails and LFT appears only once before the first automatic chain and S40_04014_Deinstall LFT and rails appears only once after the last automatic chain. Also reorder Quarter section 4 so S40_04007_Set in position temporary fastener comes before S40_04009_Set up the fixations LGP/Hi-Lite manual, or swap those two operations, to restore the precedence chain."
+    }
+  ]
+}

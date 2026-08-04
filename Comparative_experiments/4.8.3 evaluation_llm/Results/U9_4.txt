@@ -1,0 +1,33 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10a: S40_04003_Drilling template install",
+        "order_10b: S40_04003_Drilling template install",
+        "order_11a: S40_04004_Fixation drilling template suite manual",
+        "order_11b: S40_04004_Fixation drilling template suite manual",
+        "order_12a: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_12b: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_13a: S40_04006_Deinstall drilling template",
+        "order_13b: S40_04006_Deinstall drilling template",
+        "order_14a: S40_04007_Set in position temporary fastener",
+        "order_14b: S40_04007_Set in position temporary fastener",
+        "order_15a: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_15b: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_16a: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_16b: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_17a: S40_04013_Deburring int, positioning, attach them manual",
+        "order_17b: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan switches to the two manual chains after only one automatic chain, so it completes only three quarter sections in total instead of the required four. This means the required second automatic joint chain is missing, and the overall execution pattern does not match the requested two automatic chains followed by two manual chains.",
+      "evidence": "The plan first executes two automatic joint chains in serial, and then executes two manual joint chains in parallel. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add a second automatic joint chain after order 9 and before order 10a/10b so the plan contains two automatic sections in serial, then keep the two manual sections in parallel afterward. Repeat the non-shared automatic section operations for the added automatic section, while keeping the shared automatic start/end operations executed only once across the serial automatic chains. This will bring the plan to four completed quarter sections and restore the intended overall structure."
+    }
+  ]
+}

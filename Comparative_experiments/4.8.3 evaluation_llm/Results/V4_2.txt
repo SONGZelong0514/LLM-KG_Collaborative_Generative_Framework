@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic chain shared operations are repeated across the two serial automatic sections. The first S40_04014 appears before the last automatic chain is finished, and the second S40_02001 is inserted again even though it should occur only once at the start of the automatic chain block.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic block so it has one shared S40_02001 before the first automatic section and one shared S40_04014 after the second automatic section only. Remove the premature S40_04014 at order 9 and the duplicated S40_02001 at order 10; keep the other automatic steps duplicated once per section, then follow with the two manual sections and the final cleanup/inspection/jig-out sequence."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "20: S40_02002_Cleanup and add sealant",
+        "21: S40_02003_Inspection",
+        "22: S40_00002_Jig out"
+      ],
+      "reason": "The plan closes the manual-chain phase and performs cleanup, inspection, and jig-out after only three completed 1/4 fuselage sections: one automatic chain for Quarter section 1 and two parallel manual chains for Quarter sections 2 and 3. The required final serial manual joint chain for the fourth 1/4 fuselage section is missing. Therefore, orders 20, 21, and 22 are executed prematurely before the required fourth section has been completed.",
+      "evidence": "The plan first executes one automatic joint chains in serial, and then executes two manual joint chains in parallel, and finally executes one manual joint chains in serial. / 3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain. / 8. Immediately after \"S40_04013_Deburring int, positioning, attach them manual\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\". When multiple manual joint chains are executed in parallel or in series, these two operations must be executed only once, after the final \"S40_04013_Deburring int, positioning, attach them manual\" operation has been completed."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Insert one additional complete manual joint chain for the fourth 1/4 fuselage section after the two parallel manual chains for Quarter sections 2 and 3 have finished. The added serial manual chain should contain: S40_04003_Drilling template install, S40_04004_Fixation drilling template suite manual, S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template, S40_04006_Deinstall drilling template, S40_04007_Set in position temporary fastener, S40_04009_Set up the fixations LGP/Hi-Lite manual, S40_04011_Riveting buttstraps and stabiliser manual, and S40_04013_Deburring int, positioning, attach them manual. Move the existing manual-phase cleanup and inspection operations, orders 20 and 21, to occur immediately after this added final manual-chain S40_04013 operation. Move order 22, S40_00002_Jig out, to remain the final operation after the moved inspection. Do not add extra Jig in, working-environment setup, or Jig out operations, because these shared operations must each appear exactly once."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_1: S40_02001_Set in position Rails and LFT",
+        "order_2: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The plan does not start with the required global setup pair. Instead of beginning with the mandated two shared operations, it starts with the automatic-chain operation S40_02001 and then continues with S40_04001.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Insert the missing global setup operations at the very beginning of the plan in this exact order: first add S40_00001_Jig in, then add S40_01001_Set up working environment. Keep the existing automatic joint chain starting with S40_02001 after those two setup steps, and leave the current automatic sections, manual sections, and final shared closeout sequence unchanged."
+    }
+  ]
+}

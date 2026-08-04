@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3: S40_04003_Drilling template install"
+      ],
+      "reason": "The first joint-chain operation in the generated plan is a manual-chain operation. The required structure is to execute one automatic joint chain first, followed by three manual joint chains in serial. No automatic joint-chain operations appear before this manual chain begins, so the generated plan starts the joint work with the manual chain and also omits the required automatic 1/4 fuselage section.",
+      "evidence": "The plan first executes one automatic joint chains in serial, and then executes three manual joint chains in serial. 3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain. 5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Modify the global plan so that after the shared setup operations, one complete automatic joint chain is inserted before the existing three serial manual joint chains. Add the automatic-chain operations from \"S40_02001_Set in position Rails and LFT\" through \"S40_04014_Deinstall LFT and rails\", respecting all precedence dependencies. Immediately after \"S40_04014_Deinstall LFT and rails\", add \"S40_02002_Cleanup and add sealant\" followed by \"S40_02003_Inspection\". Then execute the three existing manual joint chains in serial, followed by a single cleanup and inspection after the final \"S40_04013_Deburring int, positioning, attach them manual\". Keep \"S40_00001_Jig in\" first, \"S40_01001_Set up working environment\" second, and \"S40_00002_Jig out\" as the final operation."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This is a second execution of the shared automatic-chain start operation. The plan already uses the shared start once before the first automatic chain, so repeating it before the second automatic chain violates the requirement that the shared start appear only once.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "9: S40_04014_Deinstall LFT and rails",
+        "16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The shared automatic-chain end operation appears twice instead of once. The first occurrence closes the first automatic section too early, and the second occurrence duplicates the required final shared end operation.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic block into one continuous serial sequence: keep a single shared \"S40_02001_Set in position Rails and LFT\" at the very beginning, run the two automatic quarter-section chains back-to-back with only the per-section automatic operations repeated, and keep a single shared \"S40_04014_Deinstall LFT and rails\" only after the second automatic chain. Remove the duplicate intermediate \"S40_02001\" and the premature intermediate \"S40_04014\" so the manual parallel block can remain unchanged."
+    }
+  ]
+}

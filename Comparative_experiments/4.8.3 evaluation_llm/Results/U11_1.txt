@@ -1,0 +1,20 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "14: S40_04006_Deinstall drilling template",
+        "21: S40_04006_Deinstall drilling template",
+        "28: S40_04006_Deinstall drilling template"
+      ],
+      "reason": "Each listed deinstallation operation is executed without its prerequisite operation S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template appearing and being completed beforehand in the same manual joint chain. Therefore, the precedence dependency for S40_04006 is not satisfied in Quarter sections 2, 3, and 4.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed. Dependency knowledge: \"S40_04006_Deinstall drilling template\": [\"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add the missing operation S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template once in each manual joint chain, after S40_04004_Fixation drilling template suite manual and before S40_04006_Deinstall drilling template. Specifically, insert it between orders 13 and 14 for Quarter section 2, between orders 20 and 21 for Quarter section 3, and between orders 27 and 28 for Quarter section 4. Then shift all subsequent operations as needed while preserving the serial order, keeping the final manual cleanup and inspection only once after the last S40_04013 operation, and keeping S40_00002_Jig out as the final operation."
+    }
+  ]
+}

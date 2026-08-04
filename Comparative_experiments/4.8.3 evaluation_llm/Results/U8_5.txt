@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This automatic-chain shared operation is executed after the first automatic section, but the plan still has another automatic section afterward. It therefore occurs before the last automatic chain is complete, which violates the required shared placement of the deinstall step.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This automatic-chain shared operation is repeated at the start of the second automatic section. The setup step is supposed to appear only once before the first automatic chain, not before every automatic section.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion into one continuous serial block across the two automatic sections: keep the single \"S40_02001_Set in position Rails and LFT\" only at the start of the first automatic chain, remove the premature \"S40_04014_Deinstall LFT and rails\" at order 9, and keep only the final \"S40_04014_Deinstall LFT and rails\" after the second automatic chain. Preserve the two manual chains as already sequenced, with no extra shared automatic setup/deinstall operations inserted between the automatic sections."
+    }
+  ]
+}

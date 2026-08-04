@@ -1,0 +1,9 @@
+{
+  "violation_list": [],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add one additional automatic joint chain before the manual chains so the plan contains two serial automatic chains followed by two parallel manual chains, completing all four 1/4 fuselage sections. Keep `S40_02001_Set in position Rails and LFT` only once at the beginning of the automatic phase and `S40_04014_Deinstall LFT and rails` only once after the second automatic chain; duplicate the intermediate automatic operations (`S40_04001` through `S40_04013`) for the added automatic section, then retain the two manual chains in parallel, followed by the shared cleanup, inspection, and jig-out operations."
+    }
+  ]
+}

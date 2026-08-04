@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "27: S40_02002_Cleanup and add sealant",
+        "28: S40_02003_Inspection"
+      ],
+      "reason": "The plan ends after inspection and never performs the required final operation `S40_00002_Jig out`. Therefore the required final three-operation sequence is incomplete and the terminal order is not satisfied.",
+      "evidence": "The final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Append `S40_00002_Jig out` immediately after `S40_02003_Inspection` as the last shared operation, and ensure no other operations follow it. Keep the existing shared cleanup and inspection operations in place so the plan ends with the exact required terminal sequence."
+    }
+  ]
+}

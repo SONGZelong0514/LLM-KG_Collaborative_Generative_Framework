@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10: S40_04013_Deburring int, positioning, attach them manual",
+        "order_11: S40_04003_Drilling template install"
+      ],
+      "reason": "The plan contains only three quarter-section joint chains (Quarter section 1, 3, and 4), so it does not complete the required four 1/4 fuselage sections. The transition from order 10 to order 11 shows that a required quarter-section chain is missing between the first and second listed chains.",
+      "evidence": "The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Insert one additional complete quarter-section joint chain so the plan has four sections in total, with the new chain placed between the existing Quarter section 1 and Quarter section 3 blocks. Keep the shared start/end operations unchanged, and make sure the added section uses a valid full chain from S40_04003_Drilling template install through S40_04013_Deburring int, positioning, attach them manual."
+    }
+  ]
+}

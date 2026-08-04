@@ -1,0 +1,21 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3a: S40_04003_Drilling template install",
+        "3b: S40_04003_Drilling template install",
+        "11: S40_04003_Drilling template install",
+        "19: S40_04003_Drilling template install"
+      ],
+      "reason": "The plan starts all four quarter sections with the manual joint chain and contains no automatic joint chain at all. This violates the required overall execution pattern, which requires the plan to first execute two manual joint chains in parallel and then execute two manual joint chains in parallel.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two manual joint chains in parallel."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan into two parallel manual batches. Keep the shared start and end operations exactly once: keep orders 1 and 2 at the beginning, and keep orders 27, 28, and 29 at the end in the same order. For the fuselage section work, arrange four manual joint chains so that quarter sections 1 and 2 run in parallel as the first batch, and quarter sections 3 and 4 also run in parallel as the second batch. Concretely, align the start/end times of the second manual batch so that the corresponding operations for quarter sections 3 and 4 overlap in time, instead of executing quarter section 4 only after quarter section 3 is fully completed. No automatic-chain operations need to be added, but the schedule of the existing manual operations for quarter section 4 must be shifted earlier to run in parallel with quarter section 3 while still preserving all intra-chain precedence dependencies."
+    }
+  ]
+}

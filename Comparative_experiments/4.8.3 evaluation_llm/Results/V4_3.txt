@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The plan repeats the automatic-chain boundary shared operations across two serial automatic joint chains. `S40_02001_Set in position Rails and LFT` should appear only once before the first automatic chain, but it appears again at order 10. `S40_04014_Deinstall LFT and rails` should appear only once after the last automatic chain, but it appears prematurely at order 9 as well as again at the end.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Revise the automatic portion so the shared boundary operations are not duplicated: keep `S40_02001_Set in position Rails and LFT` only once at the start of the first automatic chain, and keep `S40_04014_Deinstall LFT and rails` only once after the second automatic chain. Remove the intermediate duplicate `S40_02001...` from quarter section 2 and the early duplicate `S40_04014...` from quarter section 1, while leaving the per-section automatic operations in place."
+    }
+  ]
+}

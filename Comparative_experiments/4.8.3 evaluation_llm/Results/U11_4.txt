@@ -1,0 +1,20 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "14: S40_04006_Deinstall drilling template",
+        "21: S40_04006_Deinstall drilling template",
+        "28: S40_04006_Deinstall drilling template"
+      ],
+      "reason": "Each listed 'S40_04006_Deinstall drilling template' operation is executed without its required prerequisite operation 'S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template' having been completed in the same manual joint chain. The prerequisite operation does not appear before these operations in the generated plan.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed. Dependency knowledge: \"S40_04006_Deinstall drilling template\": [\"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add the missing operation 'S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template' into each manual joint chain for Quarter section 2, Quarter section 3, and Quarter section 4. In each chain, place it after 'S40_04004_Fixation drilling template suite manual' and before 'S40_04006_Deinstall drilling template'. Then shift the downstream operations accordingly while keeping the three manual joint chains in serial order. No existing operation needs to be removed."
+    }
+  ]
+}

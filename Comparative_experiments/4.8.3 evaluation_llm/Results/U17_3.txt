@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_30: S40_04002_Drilling orbital 4,8",
+        "order_31: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The generated plan schedules S40_04002_Drilling orbital 4,8 before its prerequisite S40_04001_Camera at stating holes has been completed. In the plan, order_30 starts at 1790 and ends at 1915, while its required predecessor order_31 starts only at 1915 and ends at 1930. Therefore, order_30 starts before all prerequisite operations are complete.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed. Dependency knowledge: \"S40_04002_Drilling orbital 4,8\": [\"S40_04001_Camera at stating holes\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Repair the automatic joint chain by moving order_31: S40_04001_Camera at stating holes so that it occurs after order_29: S40_02001_Set in position Rails and LFT and before order_30: S40_04002_Drilling orbital 4,8. Then shift S40_04002_Drilling orbital 4,8 and all subsequent automatic-chain operations accordingly so their precedence order is preserved. No operations need to be added or removed; the issue is the ordering of the automatic camera and drilling operations."
+    }
+  ]
+}

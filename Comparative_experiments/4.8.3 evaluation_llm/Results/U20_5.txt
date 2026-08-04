@@ -1,0 +1,32 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "10: S40_02001_Set in position Rails and LFT",
+        "17: S40_02001_Set in position Rails and LFT",
+        "9: S40_04014_Deinstall LFT and rails",
+        "16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "For three consecutive automatic joint chains, the automatic-chain boundary operations must be shared: S40_02001 should be executed only once before the first automatic chain, and S40_04014 should be executed only once after the last automatic chain. The plan repeats S40_02001 for Quarter sections 2 and 3, and repeats S40_04014 after Quarter sections 1 and 2 before the final automatic chain is complete.",
+      "evidence": "5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "9: S40_04014_Deinstall LFT and rails",
+        "10: S40_02001_Set in position Rails and LFT",
+        "16: S40_04014_Deinstall LFT and rails",
+        "17: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "Whenever S40_04014 is completed, cleanup and inspection must occur immediately afterward. In the plan, order 9 is followed by order 10 instead of cleanup and inspection, and order 16 is followed by order 17 instead of cleanup and inspection.",
+      "evidence": "7. Immediately after \"S40_04014_Deinstall LFT and rails\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion so that the three automatic joint chains share their boundary operations. Keep only one S40_02001_Set in position Rails and LFT before the first automatic chain, then execute the internal automatic operations for Quarter sections 1, 2, and 3 in serial, and keep only one S40_04014_Deinstall LFT and rails after the final automatic internal operation. Remove the extra S40_02001 operations at orders 10 and 17 and the premature S40_04014 operations at orders 9 and 16. After the single final S40_04014, execute S40_02002_Cleanup and add sealant and S40_02003_Inspection immediately, then proceed with the manual joint chain for Quarter section 4, followed by its required cleanup and inspection, and finally S40_00002_Jig out."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_02001_Set in position Rails and LFT",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint chain is executed serially for two quarter sections, so the shared automatic start operation must appear only once before the first automatic chain. The plan repeats it for the second automatic section, which violates the shared-operation rule.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint chain is executed serially for two quarter sections, so the shared automatic end operation must appear only once after the last automatic chain. The plan repeats it after the first automatic section as well, which violates the shared-operation rule.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall structure of the plan as one serial automatic block followed by one parallel manual block, but remove the duplicated automatic shared operations. Specifically, retain a single \"S40_02001_Set in position Rails and LFT\" before the first automatic quarter section and a single \"S40_04014_Deinstall LFT and rails\" after the second automatic quarter section; do not repeat those two operations for each automatic section."
+    }
+  ]
+}

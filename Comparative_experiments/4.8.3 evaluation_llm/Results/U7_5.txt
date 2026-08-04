@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_1: S40_02001_Set in position Rails and LFT",
+        "order_2: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The plan does not start with the required two global shared operations. Instead, it begins with an automatic-chain operation and then the next automatic step, so the mandated startup sequence is violated and the required shared operations are missing from the first two positions.",
+      "evidence": "2. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed. 2. The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Globally reorder the front of the plan so that `S40_00001_Jig in` is added first and `S40_01001_Set up working environment` second. Then place the current automatic-chain start (`S40_02001_Set in position Rails and LFT`) after those two shared setup operations, followed by the rest of the automatic chain. Keep the two automatic quarter sections in serial, then keep the two manual quarter sections in serial, and preserve the final shared closeout sequence (`S40_02002_Cleanup and add sealant`, `S40_02003_Inspection`, `S40_00002_Jig out`) at the end."
+    }
+  ]
+}

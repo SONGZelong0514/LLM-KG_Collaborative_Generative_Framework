@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_04004_Fixation drilling template suite manual",
+        "order_4: S40_04003_Drilling template install"
+      ],
+      "reason": "In Quarter section 1, the drilling template suite manual operation is scheduled before its prerequisite drilling template install operation. This reverses the required precedence for the manual joint chain.",
+      "evidence": "\"S40_04004_Fixation drilling template suite manual\": [\"S40_04003_Drilling template install\"]"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_10: S40_04013_Deburring int, positioning, attach them manual",
+        "order_11: S40_04003_Drilling template install"
+      ],
+      "reason": "The plan jumps from Quarter section 1 to Quarter section 3 without any Quarter section 2 chain, so only three 1/4 fuselage sections are completed instead of four.",
+      "evidence": "\"The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\""
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Reorder the first manual chain so each section starts with S40_04003_Drilling template install before S40_04004_Fixation drilling template suite manual, then insert one complete missing Quarter section 2 joint chain between the current Quarter section 1 and Quarter section 3 blocks so the plan contains four sections total. Keep the shared start and end operations unchanged."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "3: S40_02001_Set in position Rails and LFT",
+        "10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint block is executed in two serial quarter sections, so the automatic chain start operation must be shared and appear only once before the first automatic chain. The plan repeats it in quarter sections 1 and 2.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "9: S40_04014_Deinstall LFT and rails",
+        "16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint block is executed in two serial quarter sections, so the automatic chain end operation must be shared and appear only once after the last automatic chain. The plan repeats it in quarter sections 1 and 2.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the current overall ordering of shared -> automatic -> manual -> shared operations, but collapse the duplicated automatic boundary steps: retain one `S40_02001_Set in position Rails and LFT` before the first automatic quarter section, retain one `S40_04014_Deinstall LFT and rails` after the last automatic quarter section, and leave the internal automatic steps (`S40_04001` through `S40_04013`) repeated once per quarter section. No changes are needed for the manual chain sequence."
+    }
+  ]
+}

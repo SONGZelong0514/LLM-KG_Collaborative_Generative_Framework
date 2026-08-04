@@ -1,0 +1,48 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_02001_Set in position Rails and LFT",
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10: S40_02001_Set in position Rails and LFT",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The plan executes two automatic joint chains in serial, but it repeats the automatic-chain shared boundary operations. For serial automatic chains, `S40_02001_Set in position Rails and LFT` must appear only once before the first automatic chain, and `S40_04014_Deinstall LFT and rails` must appear only once after the last automatic chain. Here both operations appear twice.",
+      "evidence": "The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_17: S40_04003_Drilling template install",
+        "order_18: S40_04004_Fixation drilling template suite manual",
+        "order_19: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_20: S40_04006_Deinstall drilling template",
+        "order_21: S40_04007_Set in position temporary fastener",
+        "order_22: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_23: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_24: S40_04013_Deburring int, positioning, attach them manual",
+        "order_25: S40_04003_Drilling template install",
+        "order_26: S40_04004_Fixation drilling template suite manual",
+        "order_27: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_28: S40_04006_Deinstall drilling template",
+        "order_29: S40_04007_Set in position temporary fastener",
+        "order_30: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_31: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_32: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The two manual joint chains are executed strictly one after the other instead of in parallel. Quarter section 3 runs from 710 to 1250, and quarter section 4 starts only at 1250, so there is no overlap between the two manual chains. This violates the required execution pattern that, after the two serial automatic chains, the two manual chains must run in parallel.",
+      "evidence": "The plan first executes two automatic joint chains in serial, and then executes two manual joint chains in parallel. Execution patterns of these joint chains can be either serial or parallel. Serial execution means that one joint chain starts only after the previous joint chain is completed, while parallel execution means that multiple joint chains are executed during overlapping time intervals."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion into two serial automatic section-specific subchains wrapped by one pair of shared boundary operations. Keep a single `S40_02001_Set in position Rails and LFT` before the first automatic section, keep the repeated section-specific automatic operations for both quarter sections, and keep a single `S40_04014_Deinstall LFT and rails` after the second automatic section. This requires removing one duplicated `S40_02001_Set in position Rails and LFT` and one duplicated `S40_04014_Deinstall LFT and rails`, then resequencing the remaining automatic operations so both quarter sections are completed serially between those shared start/end operations."
+    },
+    {
+      "id": "R2",
+      "advice": "Reschedule the manual portion so the quarter section 3 manual chain and quarter section 4 manual chain overlap in time while preserving each chain's internal precedence order from `S40_04003_Drilling template install` through `S40_04013_Deburring int, positioning, attach them manual`. Do not remove manual-chain operations; instead, shift the start of the second manual chain earlier and interleave both manual chains so they execute in parallel, then keep the shared ending operations `S40_02002_Cleanup and add sealant`, `S40_02003_Inspection`, and `S40_00002_Jig out` after both manual chains finish."
+    }
+  ]
+}

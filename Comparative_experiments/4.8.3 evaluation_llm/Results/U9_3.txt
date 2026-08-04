@@ -1,0 +1,33 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10a: S40_04003_Drilling template install",
+        "order_10b: S40_04003_Drilling template install",
+        "order_11a: S40_04004_Fixation drilling template suite manual",
+        "order_11b: S40_04004_Fixation drilling template suite manual",
+        "order_12a: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_12b: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_13a: S40_04006_Deinstall drilling template",
+        "order_13b: S40_04006_Deinstall drilling template",
+        "order_14a: S40_04007_Set in position temporary fastener",
+        "order_14b: S40_04007_Set in position temporary fastener",
+        "order_15a: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_15b: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_16a: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_16b: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_17a: S40_04013_Deburring int, positioning, attach them manual",
+        "order_17b: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan starts the manual joint chains after only one automatic joint chain, but the required structure is two automatic joint chains in serial followed by two manual joint chains in parallel. Because the second automatic chain is missing, these manual operations start too early and the plan covers only three quarter sections instead of four.",
+      "evidence": "The plan first executes two automatic joint chains in serial, and then executes two manual joint chains in parallel.\nThe plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Insert a second automatic joint chain before the manual phase, so the plan has two automatic quarter sections in serial and only then the two manual quarter sections in parallel. Keep `S40_02001_Set in position Rails and LFT` once at the start of the automatic block and `S40_04014_Deinstall LFT and rails` once after the last automatic section, while repeating the intermediate automatic operations for each automatic section. After that, keep the existing manual chains parallel, and preserve the final shared cleanup/inspection/jig-out sequence exactly once."
+    }
+  ]
+}

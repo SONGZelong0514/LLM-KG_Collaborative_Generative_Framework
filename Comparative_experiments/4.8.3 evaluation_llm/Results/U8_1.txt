@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_02001_Set in position Rails and LFT",
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint start operation is repeated across two serial automatic sections, but it is required to be a shared operation that appears only once before the first automatic chain.",
+      "evidence": "Automatic joint chains must be executed in serial relative to other automatic joint chains. When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_16: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint end operation is repeated after each automatic section, but it is required to be a shared operation that appears only once after the last automatic chain.",
+      "evidence": "Automatic joint chains must be executed in serial relative to other automatic joint chains. When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion into one shared start and one shared end: keep a single \"S40_02001_Set in position Rails and LFT\" at the beginning of the automatic block, remove the second occurrence before quarter section 2, keep the per-section automatic steps for both quarter sections in order, and keep only one \"S40_04014_Deinstall LFT and rails\" after the last automatic section by removing the earlier occurrence after quarter section 1. Leave the manual block and the final shared cleanup/inspection/jig-out operations unchanged."
+    }
+  ]
+}

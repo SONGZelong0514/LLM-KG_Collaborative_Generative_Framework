@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_04004_Fixation drilling template suite manual",
+        "order_4: S40_04003_Drilling template install"
+      ],
+      "reason": "In Quarter section 1, the plan schedules S40_04004 before its prerequisite S40_04003, so the required precedence is reversed.",
+      "evidence": "All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed.\n\"S40_04004_Fixation drilling template suite manual\": [\"S40_04003_Drilling template install\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Reorder Quarter section 1 so it follows the same manual chain sequence as the later sections, with S40_04003 before S40_04004, then keep the remaining manual operations in dependency order. Also add one complete missing quarter section chain so the plan covers four 1/4 fuselage sections in total, while preserving the required shared start operations at the beginning and the cleanup/inspection/jig-out sequence at the end."
+    }
+  ]
+}

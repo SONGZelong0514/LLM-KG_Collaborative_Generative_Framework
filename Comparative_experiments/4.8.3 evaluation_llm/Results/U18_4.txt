@@ -1,0 +1,30 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "21: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint chain starts after only two completed manual joint chains, while the user requires three manual joint chains to be executed in serial before the automatic joint chain begins.",
+      "evidence": "The plan first executes three manual joint chains in serial, and then executes one automatic joint chains in serial."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "27: S40_04001_Camera at stating holes",
+        "28: S40_04002_Drilling orbital 4,8",
+        "29: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "30: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "31: S40_04012_Deburring int, positioning, attach them automatic"
+      ],
+      "reason": "The generated plan executes automatic joint-chain internal operations for both Quarter section 3 and Quarter section 4, resulting in two automatic quarter-section chains. The user requires only one automatic joint chain after the three serial manual joint chains.",
+      "evidence": "The plan first executes three manual joint chains in serial, and then executes one automatic joint chains in serial."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the plan to contain exactly three serial manual joint chains followed by exactly one automatic joint chain. Keep the first two shared operations and the final Jig out operation as they are. After the current second manual chain, add one complete third manual chain consisting of S40_04003_Drilling template install through S40_04013_Deburring int, positioning, attach them manual. Move the manual cleanup and inspection operations so they occur only once immediately after this third and final manual deburring operation. Then execute only one automatic joint chain: keep one set of automatic internal operations and remove the extra repeated automatic internal operations currently listed as orders 27 to 31. Place S40_04014_Deinstall LFT and rails after the single automatic chain, followed immediately by S40_02002_Cleanup and add sealant and S40_02003_Inspection, then S40_00002_Jig out."
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "1: S40_02001_Set in position Rails and LFT",
+        "2: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The generated plan starts directly with the automatic joint chain. The first operation is not \"S40_00001_Jig in\" and the second operation is not \"S40_01001_Set up working environment\". Therefore, the required global shared startup operations are missing from the beginning of the plan.",
+      "evidence": "2. The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final operation must be \"S40_00002_Jig out\", in that order. These three operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add the missing global shared startup operations before the current automatic chain: insert \"S40_00001_Jig in\" as the first operation and \"S40_01001_Set up working environment\" as the second operation. Then shift the existing operations starting from current order 1 later in time so that \"S40_02001_Set in position Rails and LFT\" starts only after the setup operation is complete. Keep the existing final \"S40_00002_Jig out\" as the last operation and ensure the added startup operations appear exactly once."
+    }
+  ]
+}

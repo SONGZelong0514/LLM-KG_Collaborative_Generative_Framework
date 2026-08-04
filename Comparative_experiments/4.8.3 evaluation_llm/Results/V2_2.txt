@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_3: S40_04004_Fixation drilling template suite manual"
+      ],
+      "reason": "This operation is scheduled before its prerequisite `S40_04003_Drilling template install` has been completed, so the precedence dependency is violated.",
+      "evidence": "\"S40_04004_Fixation drilling template suite manual\": [\"S40_04003_Drilling template install\"]"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the plan so the manual chain starts in the correct order for each quarter section: place `S40_04003_Drilling template install` before `S40_04004_Fixation drilling template suite manual` in Quarter section 1, then keep the remaining manual chain operations in dependency order. Also add one complete missing quarter section manual chain so the plan covers four 1/4 fuselage sections total, while keeping the shared start/end operations exactly once at the beginning and end."
+    }
+  ]
+}

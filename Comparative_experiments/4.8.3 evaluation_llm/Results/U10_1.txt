@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "The automatic joint chain start operation is repeated. For consecutive serial automatic chains, this shared operation must appear only once before the first chain, but it appears again before quarter section 2.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The automatic joint chain end operation is executed too early. This shared operation must occur only once after the last automatic chain, but it is already executed at the end of quarter section 1, before the second automatic chain is completed.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the plan structure of two serial automatic quarter-section chains followed by two parallel manual quarter-section chains, but make the automatic shared endpoints unique: remove the repeated start operation at order_10, keep only the initial S40_02001 at order_3, remove the premature S40_04014 at order_9, and keep the single final S40_04014 at order_16 after the second automatic chain. Leave the remaining automatic per-section steps duplicated across both quarter sections and keep the manual chains unchanged."
+    }
+  ]
+}

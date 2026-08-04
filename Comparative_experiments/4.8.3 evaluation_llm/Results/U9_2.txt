@@ -1,0 +1,23 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_4: S40_04001_Camera at stating holes",
+        "order_5: S40_04002_Drilling orbital 4,8",
+        "order_6: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "order_7: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "order_8: S40_04012_Deburring int, positioning, attach them automatic",
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "The plan contains only one automatic joint chain, but the engineering constraints require two automatic joint chains in serial and four 1/4 fuselage sections in total. The automatic chain-specific steps appear only once instead of once per automatic section, and the shared deinstall step is placed after the first and only automatic chain rather than after the last automatic chain.",
+      "evidence": "3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\n5. The automatic joint chain is defined as a sequence of automatic operations starting from \"S40_02001_Set in position Rails and LFT\" and ending at \"S40_04014_Deinstall LFT and rails\". When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rebuild the middle of the plan around two serial automatic sections followed by two parallel manual sections. Add a second automatic chain by duplicating the automatic section-specific operations for another quarter section (repeat S40_04001, S40_04002, S40_04008, S40_04010, and S40_04012 once more), keep S40_02001 only once before the first automatic chain, and move S40_04014 so it appears only once after the last automatic chain. After both automatic sections are complete, keep the two manual chains in parallel, then retain the final shared cleanup, inspection, and jig-out operations."
+    }
+  ]
+}

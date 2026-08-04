@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "11: Quarter section 3,S40_04003_Drilling template install",
+        "19: Quarter section 4,S40_04003_Drilling template install"
+      ],
+      "reason": "The first pair of manual joint chains is parallel, but the second pair is scheduled serially: quarter section 4 starts only after quarter section 3 finishes, so the plan does not follow the required parallel execution pattern for the second two manual joint chains.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two manual joint chains in parallel."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "27: Shared,S40_02002_Cleanup and add sealant",
+        "28: Shared,S40_02003_Inspection"
+      ],
+      "reason": "The plan ends after inspection and never executes the required final shared operation `S40_00002_Jig out`, so the required final three-operation sequence is incomplete and the shared tail is not executed exactly once as specified.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the shared start operations unchanged, then reschedule the section plan so the last two manual joint chains overlap instead of running back-to-back: move quarter section 4 to run in parallel with quarter section 3 while preserving each chain's internal precedence order. Also add a single `S40_00002_Jig out` after `S40_02003_Inspection` so the shared ending becomes `Cleanup -> Inspection -> Jig out` exactly once."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails",
+        "order_10a: S40_04003_Drilling template install",
+        "order_10b: S40_04003_Drilling template install"
+      ],
+      "reason": "The plan jumps directly from the first automatic joint chain in Quarter section 1 to the two manual chains in Quarter sections 3 and 4, so only three 1/4 fuselage sections are present. This violates the requirement to complete four 1/4 fuselage sections in total and the required overall pattern of two automatic chains followed by two manual chains.",
+      "evidence": "The plan first executes two automatic joint chains in serial, and then executes two manual joint chains in parallel. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add one missing automatic joint chain between the current automatic block (orders 3-9) and the manual chains so the plan contains four 1/4 sections total: two automatic sections in serial, then the two existing manual sections in parallel. Keep the shared automatic boundary operations `S40_02001_Set in position Rails and LFT` and `S40_04014_Deinstall LFT and rails` only once for the automatic block, and duplicate the internal automatic operations for the added quarter section. No existing operations need to be removed."
+    }
+  ]
+}

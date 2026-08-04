@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "32: S40_00002_Jig out"
+      ],
+      "reason": "The plan terminates with Jig out after completing only three automatic quarter-section joint chains. It does not include the required fourth 1/4 fuselage section completed by one manual joint chain after the three automatic joint chains. Therefore, Jig out is executed prematurely before the complete four-section fuselage joint plan has been completed.",
+      "evidence": "The plan first executes three automatic joint chains in serial, and then executes one manual joint chains in serial. / The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain. / The manual joint chain is defined as the sequence of manual operations starting from \"S40_04003_Drilling template install\" and ending at \"S40_04013_Deburring int, positioning, attach them manual\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the existing first two shared operations and the three serial automatic joint chains. Before the final Jig out, add one complete manual joint chain for the fourth quarter section, including the manual sequence from \"S40_04003_Drilling template install\" through \"S40_04013_Deburring int, positioning, attach them manual\" while respecting all listed dependencies. After the final manual deburring operation, add the required shared cleanup and inspection sequence: \"S40_02002_Cleanup and add sealant\" followed by \"S40_02003_Inspection\". Then place \"S40_00002_Jig out\" as the final operation. If the existing cleanup and inspection after \"S40_04014_Deinstall LFT and rails\" are retained, the plan will contain one cleanup/inspection pair for the automatic chain completion and one cleanup/inspection pair after the manual chain completion."
+    }
+  ]
+}

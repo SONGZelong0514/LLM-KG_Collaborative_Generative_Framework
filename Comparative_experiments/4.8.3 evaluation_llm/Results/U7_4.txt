@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_1: S40_02001_Set in position Rails and LFT",
+        "order_2: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The plan does not start with the required two global shared operations. Instead, the first two listed operations are section-specific automatic steps, so the required initial sequence is violated.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Add the two missing global shared start operations at the beginning: first \"S40_00001_Jig in\", then \"S40_01001_Set up working environment\". Keep the rest of the plan in the same relative order, shifting the current operations down by two orders so the automatic chain still begins immediately after the shared setup, while preserving the existing final three shared closing operations unchanged."
+    }
+  ]
+}

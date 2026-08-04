@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_7: S40_04012_Deburring int, positioning, attach them automatic",
+        "order_8: S40_04010_Riveting buttstraps and stabiliser automatic"
+      ],
+      "reason": "For Quarter section 1, S40_04012_Deburring int, positioning, attach them automatic is executed before its prerequisite S40_04010_Riveting buttstraps and stabiliser automatic has been completed.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_25: S40_02002_Cleanup and add sealant",
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "These operations form only the last two operations of the plan. The required final operation S40_00002_Jig out is absent, so Cleanup is not the third-to-last operation and Inspection is not the second-to-last operation as required.",
+      "evidence": "2. The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Preserve the four automatic chains in serial execution, but repair Quarter section 1 by placing S40_04010_Riveting buttstraps and stabiliser automatic immediately after S40_04008_Set up the fixations LGP/Hi-Lite automatic and before S40_04012_Deburring int, positioning, attach them automatic. Shift and renumber subsequent operations and times accordingly while retaining serial execution. Add exactly one shared S40_00002_Jig out operation immediately after S40_02003_Inspection so that the required final three operations are Cleanup, Inspection, and Jig out in that order. No existing operation needs to be removed."
+    }
+  ]
+}

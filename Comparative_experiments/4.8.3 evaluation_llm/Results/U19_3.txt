@@ -1,0 +1,18 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "32: S40_00002_Jig out"
+      ],
+      "reason": "The plan terminates with Jig out after completing only three automatic quarter-section joint chains. No manual joint chain is present, so the required fourth 1/4 fuselage section is not completed before the final global Jig out operation.",
+      "evidence": "The plan first executes three automatic joint chains in serial, and then executes one manual joint chains in serial. The plan must satisfy the following constraints.\n3. The joint system contains an automatic joint chain and a manual joint chain. The plan must complete four 1/4 fuselage sections in total. Each 1/4 fuselage section must be completed by one joint chain, either the automatic joint chain or the manual joint chain.\n6. The manual joint chain is defined as the sequence of manual operations starting from \"S40_04003_Drilling template install\" and ending at \"S40_04013_Deburring int, positioning, attach them manual\"."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the three existing automatic joint chains in serial and keep the shared automatic start/end operations as planned. Before the final Jig out, add one complete manual joint chain for the fourth quarter section, including the manual sequence from \"S40_04003_Drilling template install\" through \"S40_04013_Deburring int, positioning, attach them manual\" while respecting all listed precedence dependencies. After the final manual deburring operation, add the required \"S40_02002_Cleanup and add sealant\" followed immediately by \"S40_02003_Inspection\" for the manual chain. Move \"S40_00002_Jig out\" to occur only after this added manual chain and its cleanup/inspection are completed."
+    }
+  ]
+}

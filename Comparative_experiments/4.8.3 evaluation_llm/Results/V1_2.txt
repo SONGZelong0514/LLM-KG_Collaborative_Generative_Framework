@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_7: S40_04012_Deburring int, positioning, attach them automatic",
+        "order_8: S40_04010_Riveting buttstraps and stabiliser automatic"
+      ],
+      "reason": "For Quarter section 1, the deburring operation is executed before its prerequisite riveting operation. S40_04012_Deburring int, positioning, attach them automatic depends on S40_04010_Riveting buttstraps and stabiliser automatic.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_25: S40_02002_Cleanup and add sealant",
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "The required terminal sequence is incomplete because S40_00002_Jig out is absent. Consequently, cleanup and inspection are not followed by the required final Jig out operation, and the five global shared operations do not each appear exactly once.",
+      "evidence": "2. The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Preserve the four serial automatic chains and their shared rail installation and deinstallation operations. Within Quarter section 1, move S40_04010_Riveting buttstraps and stabiliser automatic before S40_04012_Deburring int, positioning, attach them automatic so the chain follows drilling, fixation setup, riveting, and then deburring. After S40_02003_Inspection, add exactly one S40_00002_Jig out operation as the final operation. No existing operations need to be removed."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This operation repeats the automatic-chain shared start step inside the second serial automatic chain. The shared start step is allowed only once before the first automatic chain, so this second occurrence violates the automatic-chain boundary rule.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This operation closes the first automatic section too early. The shared automatic-chain end step must appear only once after the last automatic chain, so placing it after quarter section 1 breaks the required serial automatic-chain structure.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively, while all other operations in the automatic joint chain must be executed once for each 1/4 fuselage section."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the overall structure as two serial automatic chains followed by two parallel manual chains, but remove the duplicated automatic boundary operations from the middle of the automatic block: execute S40_02001 only once before quarter section 1, execute the section-specific automatic steps for quarter sections 1 and 2, and keep S40_04014 only once after quarter section 2 before the manual chains begin."
+    }
+  ]
+}

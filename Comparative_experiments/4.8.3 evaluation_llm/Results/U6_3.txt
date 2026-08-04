@@ -1,0 +1,25 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "19: S40_04003_Drilling template install",
+        "20: S40_04004_Fixation drilling template suite manual",
+        "21: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "22: S40_04006_Deinstall drilling template",
+        "23: S40_04007_Set in position temporary fastener",
+        "24: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "25: S40_04011_Riveting buttstraps and stabiliser manual",
+        "26: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The fourth manual joint chain is scheduled only after the third manual joint chain finishes, so the last two manual joint chains are executed serially instead of in parallel as required by the plan structure.",
+      "evidence": "The plan first executes two manual joint chains in parallel, and then executes two manual joint chains in parallel."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Keep the same operation set and internal precedence inside each quarter section, but reschedule quarter section 4 (orders 19-26) to start at the same time as quarter section 3 (orders 11-18) after the shared setup finishes. No operations need to be added or removed; the global change is to make the second pair of manual chains overlap in time."
+    }
+  ]
+}

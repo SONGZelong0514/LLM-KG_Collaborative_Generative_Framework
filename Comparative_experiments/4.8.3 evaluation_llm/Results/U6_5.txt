@@ -1,0 +1,36 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_11: S40_04003_Drilling template install",
+        "order_12: S40_04004_Fixation drilling template suite manual",
+        "order_13: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_14: S40_04006_Deinstall drilling template",
+        "order_15: S40_04007_Set in position temporary fastener",
+        "order_16: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_17: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_18: S40_04013_Deburring int, positioning, attach them manual",
+        "order_19: S40_04003_Drilling template install",
+        "order_20: S40_04004_Fixation drilling template suite manual",
+        "order_21: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+        "order_22: S40_04006_Deinstall drilling template",
+        "order_23: S40_04007_Set in position temporary fastener",
+        "order_24: S40_04009_Set up the fixations LGP/Hi-Lite manual",
+        "order_25: S40_04011_Riveting buttstraps and stabiliser manual",
+        "order_26: S40_04013_Deburring int, positioning, attach them manual"
+      ],
+      "reason": "The plan does not execute the second two manual joint chains in parallel as required. Quarter section 3 runs to completion before quarter section 4 starts, so the last two chains are serial rather than overlapping.",
+      "evidence": [
+        "The plan first executes two manual joint chains in parallel, and then executes two manual joint chains in parallel.",
+        "Execution patterns of these joint chains can be either serial or parallel. Serial execution means that one joint chain starts only after the previous joint chain is completed, while parallel execution means that multiple joint chains are executed during overlapping time intervals."
+      ]
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Rework the schedule so quarter section 3 and quarter section 4 form a parallel pair after quarter sections 1 and 2 finish. Keep the shared start operations and the final cleanup/inspection/jig-out sequence unchanged, but shift the section 4 manual chain to overlap with section 3 instead of starting only after section 3 ends. Preserve each chain's internal precedence order."
+    }
+  ]
+}

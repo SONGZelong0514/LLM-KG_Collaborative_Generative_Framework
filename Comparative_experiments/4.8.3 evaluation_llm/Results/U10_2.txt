@@ -1,0 +1,26 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_9: S40_04014_Deinstall LFT and rails"
+      ],
+      "reason": "This automatic-chain end operation is placed after quarter section 1, but the engineering rule says the shared automatic end operation must occur only once after the last automatic chain, not between serial automatic chains.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively"
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_10: S40_02001_Set in position Rails and LFT"
+      ],
+      "reason": "This automatic-chain start operation is repeated for quarter section 2, but the engineering rule says the shared automatic start operation must occur only once before the first automatic chain.",
+      "evidence": "When multiple automatic joint chains are executed consecutively in serial, \"S40_02001_Set in position Rails and LFT\" and \"S40_04014_Deinstall LFT and rails\" are shared operations that must be executed only once before the first chain and after the last chain respectively"
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Restructure the automatic portion as one shared start and one shared end around both automatic quarter sections: keep a single \"S40_02001_Set in position Rails and LFT\" at the beginning of the automatic block, remove the duplicate \"S40_02001_Set in position Rails and LFT\" from quarter section 2, remove the intermediate \"S40_04014_Deinstall LFT and rails\" from quarter section 1, and keep only one final \"S40_04014_Deinstall LFT and rails\" after the last automatic quarter section. The per-section automatic middle operations should remain duplicated once per quarter section, and the manual parallel chains can remain unchanged."
+    }
+  ]
+}

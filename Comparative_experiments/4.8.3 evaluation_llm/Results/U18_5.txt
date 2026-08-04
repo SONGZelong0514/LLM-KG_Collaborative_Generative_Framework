@@ -1,0 +1,32 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_21: S40_02001_Set in position Rails and LFT",
+        "order_22: S40_04001_Camera at stating holes",
+        "order_23: S40_04002_Drilling orbital 4,8",
+        "order_24: S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+        "order_25: S40_04010_Riveting buttstraps and stabiliser automatic",
+        "order_26: S40_04012_Deburring int, positioning, attach them automatic"
+      ],
+      "reason": "The plan starts and executes an automatic joint chain for Quarter section 3 after only two manual joint chains have been completed. The required structure is three manual joint chains in serial first, followed by one automatic joint chain. Therefore, Quarter section 3 should be completed by a manual joint chain, not by these automatic operations.",
+      "evidence": "The plan first executes three manual joint chains in serial, and then executes one automatic joint chains in serial."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_19: S40_02002_Cleanup and add sealant",
+        "order_20: S40_02003_Inspection"
+      ],
+      "reason": "The manual-chain cleanup and inspection are executed after only two manual joint chains. Because the required plan has three manual joint chains in serial, these operations are premature and should occur only after the final, third manual-chain deburring operation has been completed.",
+      "evidence": "Immediately after \"S40_04013_Deburring int, positioning, attach them manual\" is completed, \"S40_02002_Cleanup and add sealant\" must be executed, followed by \"S40_02003_Inspection\". When multiple manual joint chains are executed in parallel or in series, these two operations must be executed only once, after the final \"S40_04013_Deburring int, positioning, attach them manual\" operation has been completed."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Modify the global plan structure to three serial manual joint chains followed by one automatic joint chain. After the existing Quarter section 1 and Quarter section 2 manual chains, add a complete third manual joint chain before any automatic-chain execution: S40_04003_Drilling template install, S40_04004_Fixation drilling template suite manual, S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template, S40_04006_Deinstall drilling template, S40_04007_Set in position temporary fastener, S40_04009_Set up the fixations LGP/Hi-Lite manual, S40_04011_Riveting buttstraps and stabiliser manual, and S40_04013_Deburring int, positioning, attach them manual. Move the manual cleanup and inspection operations currently at orders 19 and 20 so they occur immediately after this added third manual chain. Remove the automatic core operations currently used for Quarter section 3 at orders 22 through 26, because only one automatic joint chain should remain. Then execute the single automatic joint chain for the remaining quarter section using S40_02001_Set in position Rails and LFT before the automatic core operations, followed by S40_04014_Deinstall LFT and rails, then S40_02002_Cleanup and add sealant, S40_02003_Inspection, and finally S40_00002_Jig out."
+    }
+  ]
+}

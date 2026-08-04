@@ -1,0 +1,28 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_7: S40_04012_Deburring int, positioning, attach them automatic",
+        "order_8: S40_04010_Riveting buttstraps and stabiliser automatic"
+      ],
+      "reason": "In Quarter section 1, S40_04012_Deburring int, positioning, attach them automatic starts before its prerequisite S40_04010_Riveting buttstraps and stabiliser automatic has been completed. The prerequisite must precede the deburring operation.",
+      "evidence": "All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_25: S40_02002_Cleanup and add sealant",
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "The required final sequence is incomplete because S40_00002_Jig out does not appear after the inspection. Therefore, the five required global shared operations do not each appear exactly once, and the plan does not contain the mandated final three-operation block.",
+      "evidence": "The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Correct Quarter section 1 by moving S40_04010_Riveting buttstraps and stabiliser automatic before S40_04012_Deburring int, positioning, attach them automatic, preserving the sequence setup fixations → riveting → deburring. Keep the four automatic chains serial, retain the single shared S40_02001_Set in position Rails and LFT before the first chain and the single shared S40_04014_Deinstall LFT and rails after the fourth chain, and add S40_00002_Jig out immediately after S40_02003_Inspection as the new final operation. No existing operation needs to be removed."
+    }
+  ]
+}

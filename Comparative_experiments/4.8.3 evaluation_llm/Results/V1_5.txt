@@ -1,0 +1,27 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_7: S40_04012_Deburring int, positioning, attach them automatic",
+        "order_8: S40_04010_Riveting buttstraps and stabiliser automatic"
+      ],
+      "reason": "In Quarter section 1, the deburring operation starts at minute 240 and finishes at minute 265, before its prerequisite riveting operation starts at minute 265. S40_04012_Deburring int, positioning, attach them automatic must occur after S40_04010_Riveting buttstraps and stabiliser automatic.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed."
+    },
+    {
+      "id": "V2",
+      "involved_operations": [
+        "order_26: S40_02003_Inspection"
+      ],
+      "reason": "The plan ends with the inspection operation and omits the required global operation S40_00002_Jig out. Therefore, the required final three-operation sequence is incomplete, and Jig out does not appear exactly once.",
+      "evidence": "2. The first two operations must be \"S40_00001_Jig in\" and \"S40_01001_Set up working environment\", and the final three operations must be \"S40_02002_Cleanup and add sealant\", \"S40_02003_Inspection\", and \"S40_00002_Jig out\", in that order. These five operations are global shared operations and must each appear exactly once."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Globally resequence Quarter section 1 so that order_8: S40_04010_Riveting buttstraps and stabiliser automatic is completed before order_7: S40_04012_Deburring int, positioning, attach them automatic, then shift and reschedule all downstream operations while preserving serial execution of the four automatic chains. Add S40_00002_Jig out exactly once immediately after order_26: S40_02003_Inspection, making Cleanup, Inspection, and Jig out the final three operations in that order. No existing operations need to be removed."
+    }
+  ]
+}

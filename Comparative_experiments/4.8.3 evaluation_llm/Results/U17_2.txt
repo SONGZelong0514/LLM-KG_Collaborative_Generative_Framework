@@ -1,0 +1,19 @@
+{
+  "violation_list": [
+    {
+      "id": "V1",
+      "involved_operations": [
+        "order_30: S40_04002_Drilling orbital 4,8",
+        "order_31: S40_04001_Camera at stating holes"
+      ],
+      "reason": "The operation 'S40_04002_Drilling orbital 4,8' is scheduled before its prerequisite 'S40_04001_Camera at stating holes' has been completed. In the generated plan, order_30 runs from 1790 to 1915, while order_31 runs from 1915 to 1930. Therefore, order_30 starts and finishes before its required predecessor is completed.",
+      "evidence": "1. All operations must respect their precedence dependencies. An operation can start only after all its prerequisite operations have been completed."
+    }
+  ],
+  "repair_advice": [
+    {
+      "id": "R1",
+      "advice": "Globally repair the automatic joint chain sequence for Quarter section 4 by moving 'S40_04001_Camera at stating holes' before 'S40_04002_Drilling orbital 4,8'. Keep 'S40_02001_Set in position Rails and LFT' before both operations, then execute 'S40_04001_Camera at stating holes', followed by 'S40_04002_Drilling orbital 4,8', and then continue with 'S40_04008_Set up the fixations LGP/Hi-Lite automatic', 'S40_04010_Riveting buttstraps and stabiliser automatic', 'S40_04012_Deburring int, positioning, attach them automatic', and 'S40_04014_Deinstall LFT and rails'. No operations need to be removed; only the ordering and corresponding start/end times of the automatic chain should be adjusted."
+    }
+  ]
+}
