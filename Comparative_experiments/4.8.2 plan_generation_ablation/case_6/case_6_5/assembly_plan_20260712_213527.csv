@@ -1,0 +1,38 @@
+﻿Order,Section,Operation,Type,Required Resources,Duration (min),Start Time (min),End Time (min),Cost (€)
+1,Shared,S40_00001_Jig in,Manual,"Crane (1),  Transportation Tooling  (1)",60,0,60,110.00
+2,Shared,S40_01001_Set up working environment,Manual,"Station (1), Mechanical Operator (1), Station Platform (1)",10,60,70,42.50
+3,Quarter section 1,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,70,95,106.25
+4,Quarter section 1,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,95,125,132.50
+5,Quarter section 1,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,125,310,822.92
+6,Quarter section 1,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,310,335,110.42
+7,Quarter section 1,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,335,350,63.75
+8,Quarter section 1,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,350,385,116.67
+9,Quarter section 1,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,385,565,600.00
+10,Quarter section 1,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,565,610,150.00
+11,Quarter section 2,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,610,635,106.25
+12,Quarter section 2,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,635,665,132.50
+13,Quarter section 2,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,665,850,822.92
+14,Quarter section 2,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,850,875,110.42
+15,Quarter section 2,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,875,890,63.75
+16,Quarter section 2,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,890,925,116.67
+17,Quarter section 2,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,925,1105,600.00
+18,Quarter section 2,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,1105,1150,150.00
+19,Quarter section 3,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,1150,1175,106.25
+20,Quarter section 3,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,1175,1205,132.50
+21,Quarter section 3,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,1205,1390,822.92
+22,Quarter section 3,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,1390,1415,110.42
+23,Quarter section 3,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,1415,1430,63.75
+24,Quarter section 3,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,1430,1465,116.67
+25,Quarter section 3,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,1465,1645,600.00
+26,Quarter section 3,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,1645,1690,150.00
+27,Quarter section 4,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,1690,1715,106.25
+28,Quarter section 4,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,1715,1745,132.50
+29,Quarter section 4,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,1745,1930,822.92
+30,Quarter section 4,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,1930,1955,110.42
+31,Quarter section 4,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,1955,1970,63.75
+32,Quarter section 4,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,1970,2005,116.67
+33,Quarter section 4,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,2005,2185,600.00
+34,Quarter section 4,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,2185,2230,150.00
+35,Shared,S40_02002_Cleanup and add sealant,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",35,2230,2265,148.75
+36,Shared,S40_02003_Inspection,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",55,2265,2320,233.75
+37,Shared,S40_00002_Jig out,Manual,"Crane (1),  Transportation Tooling  (1)",60,2320,2380,110.00
