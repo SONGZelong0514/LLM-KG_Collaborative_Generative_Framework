@@ -1,1 +1,0 @@
-Yes, the knowledge graph defines hierarchical relationships between processes and sub-processes using the object property `hasSubprocess`. However, the ontology content provided does not enumerate specific processes together with their sub-processes.

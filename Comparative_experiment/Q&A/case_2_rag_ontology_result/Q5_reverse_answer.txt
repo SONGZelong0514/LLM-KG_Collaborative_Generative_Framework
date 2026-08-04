@@ -1,1 +1,0 @@
-Yes, the knowledge graph encodes precedence relations between operations. The property "hasPredecessors" is used to indicate such relations. However, the specific operations and their predecessors are not listed in the provided context.
