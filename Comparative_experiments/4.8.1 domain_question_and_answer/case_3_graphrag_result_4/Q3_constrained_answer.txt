@@ -1,0 +1,74 @@
+## Resource Catalog
+
+### Crane
+- **Name:** Crane
+- **Calendar:** 24x7
+- **Capacity:** 1
+- **Cost per Hour:** $30
+[Data: Entities (35)].
+
+### Transportation Tooling
+- **Name:** Transportation tooling
+- **Calendar:** 24x7
+- **Capacity:** 1
+- **Cost per Hour:** $80
+[Data: Entities (36)].
+
+### Station
+- **Name:** Station
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $80
+[Data: Entities (29)].
+
+### Station Platform
+- **Name:** Station platform
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $75
+[Data: Entities (28)].
+
+### Light Flex Track Robot
+- **Name:** Light Flex Track Robot
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $75
+[Data: Entities (31)].
+
+### Automation Operator
+- **Name:** Automation Operator
+- **Calendar:** Shift 40h/week
+- **Capacity:** 8
+- **Cost per Hour:** $100
+[Data: Entities (30)].
+
+### Light Flex Track Rail
+- **Name:** Light Flex Track Rail
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $5
+[Data: Entities (32)].
+
+### Mechanical Operator
+- **Name:** Mechanical Operator
+- **Calendar:** Shift 40h/week
+- **Capacity:** 8
+- **Cost per Hour:** $100
+[Data: Entities (27)].
+
+### Drilling Template
+- **Name:** Drilling Template
+- **Calendar:** 24x7
+- **Capacity:** 5
+- **Cost per Hour:** $10
+[Data: Entities (33)].
+
+### Hand Drilling Machine
+- **Name:** Hand drilling machine
+- **Calendar:** 24x7
+- **Capacity:** 6
+- **Cost per Hour:** $10
+[Data: Entities (34)].  
+
+This catalog details the resources used within various processes and operations, highlighting their scheduling, availability, and operational costs. These parameters are crucial for effective resource management and operational planning within complex workflows [Data: Reports (0, 1)].
+[0m

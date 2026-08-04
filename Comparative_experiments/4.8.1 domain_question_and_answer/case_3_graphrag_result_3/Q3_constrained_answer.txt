@@ -1,0 +1,64 @@
+The provided knowledge graph outlines several resources utilized in the S40 Orbital Joint Processes and Operations. Here is the detailed resource catalog including the name, calendar, number (capacity), and hourly cost for each resource:
+
+1. **Station**
+   - **Calendar**: 24x7
+   - **Capacity**: 2
+   - **Cost per Hour**: $80
+   - **Relationships**: Station is required by a multitude of operations, making it a highly utilized resource in the processes [Data: Entities (29); Relationships (30, 38, 49, 6, 20, +more)].
+
+2. **Crane**
+   - **Calendar**: 24x7
+   - **Capacity**: 1
+   - **Cost per Hour**: $30
+   - **Relationships**: Crane is a critical resource for jig operations like S40_00001_Jig in and S40_00002_Jig out, highlighting its importance in resource coordination [Data: Entities (35); Relationships (0, 1, 2, +more)].
+
+3. **Transportation Tooling**
+   - **Calendar**: 24x7
+   - **Capacity**: 1
+   - **Cost per Hour**: $80
+   - **Relationships**: Similar to the Crane, Transportation Tooling is essential for jig operations [Data: Entities (36); Relationships (1, 2, +more)].
+
+4. **Drilling Template**
+   - **Calendar**: 24x7
+   - **Capacity**: 5
+   - **Cost per Hour**: $10
+   - **Relationships**: The Drilling template is involved in various drilling operations requiring precision [Data: Entities (33); Relationships (31, 40, +more)].
+
+5. **Station Platform**
+   - **Calendar**: 24x7
+   - **Capacity**: 2
+   - **Cost per Hour**: $75
+   - **Relationships**: A supporting resource for multiple operations that demand station setups [Data: Entities (28); Relationships (35, 39, +more)].
+
+6. **Light Flex Track Robot**
+   - **Calendar**: 24x7
+   - **Capacity**: 2
+   - **Cost per Hour**: $75
+   - **Relationships**: Utilized in various operations that require automation, highlighting its integration into the automated workflow [Data: Entities (31); Relationships (56, 14, 9, +more)].
+
+7. **Light Flex Track Rail**
+   - **Calendar**: 24x7
+   - **Capacity**: 2
+   - **Cost per Hour**: $5
+   - **Relationships**: Engaged in operations involving light rail setups, particularly in automated contexts [Data: Entities (32); Relationships (39, 51, 15, +more)].
+
+8. **Automation Operator**
+   - **Calendar**: Shift_40h_Week
+   - **Capacity**: 8
+   - **Cost per Hour**: $100
+   - **Relationships**: Essential for operations requiring automation guidance, indicating a high reliance on skilled automation workforce [Data: Entities (30); Relationships (43, 8, 13, +more)].
+
+9. **Mechanical Operator**
+   - **Calendar**: Shift_40h_Week
+   - **Capacity**: 8
+   - **Cost per Hour**: $100
+   - **Relationships**: An indispensable resource for manual operations, ensuring the smooth execution of tasks that require precision and manual intervention [Data: Entities (27); Relationships (42, 63, 0, +more)].
+
+10. **Hand Drilling Machine**
+    - **Calendar**: 24x7
+    - **Capacity**: 6
+    - **Cost per Hour**: $10
+    - **Relationships**: Vital for drilling operations that demand a high degree of manual control and precision [Data: Entities (34); Relationships (26, +more)].
+
+This comprehensive resource catalog provides insight into the dependencies and cost structures involved in the S40 Orbital Joint Process operations, highlighting the importance of strategic resource management to maintain efficiency and cost-effectiveness.
+[0m

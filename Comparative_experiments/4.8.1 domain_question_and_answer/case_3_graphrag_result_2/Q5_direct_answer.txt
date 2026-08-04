@@ -1,0 +1,109 @@
+### Operations and Their Predecessor Operations
+
+Below is a detailed list of operations and their respective predecessor operations based on the provided data:
+
+---
+
+#### **S40_01001_Set up working environment**
+- **Predecessor:** None (This operation is the initial step in the workflow) [Data: Relationships (84)].
+
+---
+
+#### **S40_00001_Jig in**
+- **Predecessor:** S40_01001_Set up working environment [Data: Relationships (5)].
+
+---
+
+#### **S40_00002_Jig out**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_02001_Set in position Rails and LFT**
+- **Predecessor:** S40_04001_Camera at stating holes [Data: Relationships (23)].
+
+---
+
+#### **S40_02002_Cleanup and add sealant**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_02003_Inspection**
+- **Predecessor:** S40_02002_Cleanup and add sealant [Data: Relationships (73)].
+
+---
+
+#### **S40_04001_Camera at stating holes**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04002_Drilling orbital 4,8**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04003_Drilling template install**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04004_Fixation drilling template suite manual**
+- **Predecessor:** S40_04003_Drilling template install [Data: Relationships (77)].
+
+---
+
+#### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Predecessor:** S40_04004_Fixation drilling template suite manual [Data: Relationships (70)].
+
+---
+
+#### **S40_04006_Deinstall drilling template**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04007_Set in position temporary fastener**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+#### **S40_04010_Riveting buttstraps and stabiliser automatic**
+- **Predecessor:** S40_04012_Deburring int, positioning, attach them automatic [Data: Relationships (78)].
+
+---
+
+#### **S40_04011_Riveting buttstraps and stabiliser manual**
+- **Predecessor:** S40_04013_Deburring int, positioning, attach them manual [Data: Relationships (82)].
+
+---
+
+#### **S40_04012_Deburring int, positioning, attach them automatic**
+- **Predecessor:** S40_04014_Deinstall LFT and rails [Data: Relationships (76)].
+
+---
+
+#### **S40_04013_Deburring int, positioning, attach them manual**
+- **Predecessor:** S40_04011_Riveting buttstraps and stabiliser manual [Data: Relationships (82)].
+
+---
+
+#### **S40_04014_Deinstall LFT and rails**
+- **Predecessor:** None (No predecessor operation is explicitly listed for this operation) [Data: Relationships (none)].
+
+---
+
+### Commentary
+The operations within the S40 Orbital Joint Process Community are interconnected through a series of predecessor relationships that define the workflow. Some operations, such as **S40_01001_Set up working environment**, serve as foundational steps, while others, like **S40_04012_Deburring int, positioning, attach them automatic**, are dependent on prior operations to ensure seamless execution. Understanding these relationships is crucial for optimizing scheduling and resource allocation.
+[0m

@@ -1,0 +1,74 @@
+## Resource List
+
+### Station
+- **Name**: Station
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $80
+- **Number of Relationships**: 15
+
+### Crane
+- **Name**: Crane
+- **Calendar**: 24x7
+- **Capacity**: 1
+- **Cost per Hour**: $30
+- **Number of Relationships**: 2
+
+### Drilling Template
+- **Name**: Drilling Template
+- **Calendar**: 24x7
+- **Capacity**: 5
+- **Cost per Hour**: $10
+- **Number of Relationships**: 3
+
+### Transportation tooling
+- **Name**: Transportation tooling
+- **Calendar**: 24x7
+- **Capacity**: 1
+- **Cost per Hour**: $80
+- **Number of Relationships**: 2
+
+### Station Platform
+- **Name**: Station platform
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $75
+- **Number of Relationships**: 15
+
+### Automation Operator
+- **Name**: Automation Operator
+- **Calendar**: Shift, 40 hours per week
+- **Capacity**: 8
+- **Cost per Hour**: $100
+- **Number of Relationships**: 7
+
+### Light Flex Track Robot
+- **Name**: Light Flex Track Robot
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $75
+- **Number of Relationships**: 7
+
+### Light Flex Track Rail
+- **Name**: Light Flex Track Rail
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $5
+- **Number of Relationships**: 7
+
+### Mechanical Operator
+- **Name**: Mechanical Operator
+- **Calendar**: Shift, 40 hours per week
+- **Capacity**: 8
+- **Cost per Hour**: $100
+- **Number of Relationships**: 11
+
+### Hand Drilling Machine
+- **Name**: Hand drilling machine
+- **Calendar**: 24x7
+- **Capacity**: 6
+- **Cost per Hour**: $10
+- **Number of Relationships**: 1
+
+This list provides an overview of the various resources utilized within the processes described, along with their respective operational details [Data: Entities (29, 35, 33, 36, 28, 30, 31, 32, 27, 34)].
+[0m

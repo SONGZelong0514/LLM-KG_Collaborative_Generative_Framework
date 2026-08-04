@@ -1,0 +1,36 @@
+# Overview of Processes and Sub-Processes
+
+In the context of the S40 Orbital Joint operations community, several processes and sub-processes play critical roles in the overall workflow. Below is a detailed outline of these processes along with their associated sub-processes. This information is vital for understanding the interconnected workflow within the orbital joint operations.
+
+## S40 Orbital Joint Process
+
+The **S40 Orbital Joint Process** serves as a central and integrating entity, combining various operations to ensure efficient workflow execution. It encompasses the following sub-processes:
+
+- **S40 Lower Orbital Joint Process**: This process further branches into sub-processes:
+  - **S40 Lower Left Orbital Joint Process**
+  - **S40 Lower Right Orbital Joint Process** [Data: Relationships (150, 151); Sources (153, 108, +more)].
+
+- **S40 Upper Orbital Joint Process**: Similar to the lower counterpart, it includes sub-processes:
+  - **S40 Upper Left Orbital Joint Process**
+  - **S40 Upper Right Orbital Joint Process** [Data: Relationships (121, 148); Sources (152, 95)].
+
+These sub-processes highlight the segmentation within the orbital processes, addressing specific operations with a focus on both the lower and upper joint structures.
+
+## S40 Lower Left Orbital Joint Process
+
+The **S40 Lower Left Orbital Joint Process** is a component of the lower orbital joint process. It does not itself branch into further sub-processes, but its connectivity to operations implies a subset of operational dependencies [Data: Entities (20); Relationships (102)].
+
+## S40 Lower Right Orbital Joint Process
+
+Similar to its left counterpart, the **S40 Lower Right Orbital Joint Process** does not branch into further sub-processes directly. However, it plays a critical role within the lower orbital joint process with particular operational dependencies [Data: Entities (23); Relationships (103)].
+
+## S40 Upper Left Orbital Joint Process
+
+Operating within the upper orbital joint framework, the **S40 Upper Left Orbital Joint Process** is crucial for the functionality of the orbital joint system. It connects various optional operations which contribute to operational flexibility and efficiency [Data: Entities (24); Relationships (139)].
+
+## S40 Upper Right Orbital Joint Process
+
+Fulfilling its role within the upper orbital framework, the **S40 Upper Right Orbital Joint Process** demonstrates integrated operations contributing to the broader orbital joint system [Data: Entities (21); Relationships (140)].
+
+These processes and sub-processes are integral to maintaining the S40 Orbital Joint Process's efficiency, reflecting the community's reliance on structured operations and the integration of skilled labor and strategic resource management. Each process functions with unique contributions to the overarching goal of streamlined operational success.
+[0m

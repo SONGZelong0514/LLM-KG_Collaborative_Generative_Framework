@@ -1,0 +1,156 @@
+Yes, the knowledge graph defines the resources required for each operation, along with the quantities. Below is a detailed list of operation–resource–quantity relationships grouped by operation:
+
+---
+
+### **S40_00001_Jig in**
+- **Crane**: Quantity = 1 [Data: Relationships (0)].
+- **Transportation tooling**: Quantity = 1 [Data: Relationships (1)].
+
+---
+
+### **S40_00002_Jig out**
+- **Crane**: Quantity = 1 [Data: Relationships (2)].
+- **Transportation tooling**: Quantity = 1 [Data: Relationships (3)].
+
+---
+
+### **S40_01001_Set up working environment**
+- **Station**: Quantity = 1 [Data: Relationships (6)].
+- **Station platform**: Quantity = 1 [Data: Relationships (7)].
+- **Mechanical Operator**: Quantity = 1 [Data: Relationships (4)].
+
+---
+
+### **S40_02001_Set in position Rails and LFT**
+- **Station**: Quantity = 1 [Data: Relationships (11)].
+- **Station platform**: Quantity = 1 [Data: Relationships (12)].
+- **Automation Operator**: Quantity = 2 [Data: Relationships (8)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (9)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (10)].
+
+---
+
+### **S40_02002_Cleanup and add sealant**
+- **Station**: Quantity = 1 [Data: Relationships (14)].
+- **Station platform**: Quantity = 1 [Data: Relationships (15)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (13)].
+
+---
+
+### **S40_02003_Inspection**
+- **Station**: Quantity = 1 [Data: Relationships (18)].
+- **Station platform**: Quantity = 1 [Data: Relationships (19)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (16)].
+
+---
+
+### **S40_04001_Camera at stating holes**
+- **Station**: Quantity = 1 [Data: Relationships (24)].
+- **Station platform**: Quantity = 1 [Data: Relationships (25)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (20)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (21)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (22)].
+
+---
+
+### **S40_04002_Drilling orbital 4,8**
+- **Station**: Quantity = 1 [Data: Relationships (30)].
+- **Station platform**: Quantity = 1 [Data: Relationships (31)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (26)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (27)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (28)].
+
+---
+
+### **S40_04003_Drilling template install**
+- **Station**: Quantity = 1 [Data: Relationships (33)].
+- **Station platform**: Quantity = 1 [Data: Relationships (34)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (32)].
+
+---
+
+### **S40_04004_Fixation drilling template suite manual**
+- **Station**: Quantity = 1 [Data: Relationships (38)].
+- **Station platform**: Quantity = 1 [Data: Relationships (39)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (36)].
+- **Drilling Template**: Quantity = 1 [Data: Relationships (35)].
+
+---
+
+### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Station**: Quantity = 1 [Data: Relationships (44)].
+- **Station platform**: Quantity = 1 [Data: Relationships (45)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (42)].
+- **Drilling Template**: Quantity = 1 [Data: Relationships (40)].
+- **Hand drilling machine**: Quantity = 2 [Data: Relationships (41)].
+
+---
+
+### **S40_04006_Deinstall drilling template**
+- **Station**: Quantity = 1 [Data: Relationships (49)].
+- **Station platform**: Quantity = 1 [Data: Relationships (50)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (47)].
+- **Drilling Template**: Quantity = 1 [Data: Relationships (46)].
+
+---
+
+### **S40_04007_Set in position temporary fastener**
+- **Station**: Quantity = 1 [Data: Relationships (53)].
+- **Station platform**: Quantity = 1 [Data: Relationships (54)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (51)].
+
+---
+
+### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Station**: Quantity = 1 [Data: Relationships (59)].
+- **Station platform**: Quantity = 1 [Data: Relationships (60)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (55)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (56)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (57)].
+
+---
+
+### **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (61)].
+
+---
+
+### **S40_04010_Riveting buttstraps and stabiliser automatic**
+- **Station**: Quantity = 1 [Data: Relationships (67)].
+- **Station platform**: Quantity = 1 [Data: Relationships (68)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (63)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (64)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (65)].
+
+---
+
+### **S40_04011_Riveting buttstraps and stabiliser manual**
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (69)].
+
+---
+
+### **S40_04012_Deburring int, positioning, attach them automatic**
+- **Station**: Quantity = 1 [Data: Relationships (75)].
+- **Station platform**: Quantity = 1 [Data: Relationships (76)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (71)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (72)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (73)].
+
+---
+
+### **S40_04013_Deburring int, positioning, attach them manual**
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (77)].
+
+---
+
+### **S40_04014_Deinstall LFT and rails**
+- **Station**: Quantity = 1 [Data: Relationships (83)].
+- **Station platform**: Quantity = 1 [Data: Relationships (84)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (79)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (80)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (81)].
+
+---
+
+This comprehensive list shows the resources and their respective quantities required for each operation, as defined in the knowledge graph.
+[0m

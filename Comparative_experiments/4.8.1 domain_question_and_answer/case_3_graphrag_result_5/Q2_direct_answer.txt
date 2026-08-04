@@ -1,0 +1,106 @@
+Here is a comprehensive list of all operations, including their names, types (manual or automated), and durations:
+
+### Operations List
+
+1. **S40_02001_Set in position Rails and LFT**  
+   - **Type:** Automated  
+   - **Duration:** 10 minutes  
+   [Data: Entities (1)]
+
+2. **S40_02002_Cleanup and add sealant**  
+   - **Type:** Manual  
+   - **Duration:** 35 minutes  
+   [Data: Entities (16)]
+
+3. **S40_02003_Inspection**  
+   - **Type:** Manual  
+   - **Duration:** 55 minutes  
+   [Data: Entities (17)]
+
+4. **S40_00001_Jig in**  
+   - **Type:** Manual  
+   - **Duration:** 60 minutes  
+   [Data: Entities (18)]
+
+5. **S40_00002_Jig out**  
+   - **Type:** Manual  
+   - **Duration:** 60 minutes  
+   [Data: Entities (19)]
+
+6. **S40_01001_Set up working environment**  
+   - **Type:** Manual  
+   - **Duration:** 10 minutes  
+   [Data: Entities (0)]
+
+7. **S40_04001_Camera at stating holes**  
+   - **Type:** Automated  
+   - **Duration:** 15 minutes  
+   [Data: Reports (2)]
+
+8. **S40_04002_Drilling orbital 4,8**  
+   - **Type:** Automated  
+   - **Duration:** 125 minutes  
+   [Data: Entities (3)]
+
+9. **S40_04003_Drilling template install**  
+   - **Type:** Manual  
+   - **Duration:** 25 minutes  
+   [Data: Entities (4)]
+
+10. **S40_04004_Fixation drilling template suite manual**  
+    - **Type:** Manual  
+    - **Duration:** 30 minutes  
+    [Data: Entities (5)]
+
+11. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**  
+    - **Type:** Manual  
+    - **Duration:** 30 minutes  
+    [Data: Relationships (70); Entities (33)]
+
+12. **S40_04006_Deinstall drilling template**  
+    - **Type:** Manual  
+    - **Duration:** 25 minutes  
+    [Data: Entities (7)]
+
+13. **S40_04007_Set in position temporary fastener**  
+    - **Type:** Manual  
+    - **Duration:** 15 minutes  
+    [Data: Entities (8)]
+
+14. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**  
+    - **Type:** Automated  
+    - **Duration:** 20 minutes  
+    [Data: Entities (9)]
+
+15. **S40_04009_Set up the fixations LGP/Hi-Lite manual**  
+    - **Type:** Manual  
+    - **Duration:** 35 minutes  
+    [Data: Reports (1); Relationships (61)]
+
+16. **S40_04010_Riveting buttstraps and stabiliser automatic**  
+    - **Type:** Automated  
+    - **Duration:** 90 minutes  
+    [Data: Entities (11)]
+
+17. **S40_04011_Riveting buttstraps and stabiliser manual**  
+    - **Type:** Manual  
+    - **Duration:** 180 minutes  
+    [Data: Entities (12)]
+
+18. **S40_04012_Deburring int, positioning, attach them automatic**  
+    - **Type:** Automated  
+    - **Duration:** 25 minutes  
+    [Data: Entities (13)]
+
+19. **S40_04013_Deburring int, positioning, attach them manual**  
+    - **Type:** Manual  
+    - **Duration:** 45 minutes  
+    [Data: Entities (14)]
+
+20. **S40_04014_Deinstall LFT and rails**  
+    - **Type:** Automated  
+    - **Duration:** 35 minutes  
+    [Data: Entities (15)]
+
+This list provides a detailed overview of the operations, their nature, and the time required for their completion. If you need further details about any specific operation, feel free to ask!
+[0m

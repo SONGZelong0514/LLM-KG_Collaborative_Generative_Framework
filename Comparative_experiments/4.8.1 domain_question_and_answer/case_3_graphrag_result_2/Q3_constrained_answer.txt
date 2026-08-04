@@ -1,0 +1,66 @@
+### Resource Catalog
+
+Below is the complete catalog of resources, including their names, calendars, capacities, and hourly costs, as derived from the knowledge graph:
+
+1. **Station**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 2  
+   - **Cost per Hour**: $80  
+   [Data: Entities (29)]
+
+2. **Station Platform**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 2  
+   - **Cost per Hour**: $75  
+   [Data: Entities (28)]
+
+3. **Crane**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 1  
+   - **Cost per Hour**: $30  
+   [Data: Entities (35)]
+
+4. **Transportation Tooling**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 1  
+   - **Cost per Hour**: $80  
+   [Data: Entities (36)]
+
+5. **Drilling Template**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 5  
+   - **Cost per Hour**: $10  
+   [Data: Entities (33)]
+
+6. **Hand Drilling Machine**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 6  
+   - **Cost per Hour**: $10  
+   [Data: Entities (34)]
+
+7. **Light Flex Track Robot**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 2  
+   - **Cost per Hour**: $75  
+   [Data: Entities (31)]
+
+8. **Light Flex Track Rail**  
+   - **Calendar**: 24x7  
+   - **Capacity**: 2  
+   - **Cost per Hour**: $5  
+   [Data: Entities (32)]
+
+9. **Automation Operator**  
+   - **Calendar**: Shift (40 hours per week)  
+   - **Capacity**: 8  
+   - **Cost per Hour**: $100  
+   [Data: Entities (30)]
+
+10. **Mechanical Operator**  
+    - **Calendar**: Shift (40 hours per week)  
+    - **Capacity**: 8  
+    - **Cost per Hour**: $100  
+    [Data: Entities (27)]
+
+This catalog provides a comprehensive overview of the resources available, their operational schedules, and associated costs.
+[0m

@@ -1,0 +1,26 @@
+In the S40 Orbital Joint Processes and Operations Community, several operations have predecessor operations that are crucial for their successful execution. Understanding these predecessor relationships can help in optimizing workflow and resource scheduling.
+
+## Manual Operations
+
+1. **S40_04004_Fixation Drilling Template Suite Manual**  
+   - **Predecessor:** S40_04003_Drilling Template Install [Data: Sources (77); Relationships (70); Entities (5)].
+   
+2. **S40_02003_Inspection**  
+   - **Predecessor:** S40_02002_Cleanup and Add Sealant [Data: Sources (73); Entities (17)].
+   
+3. **S40_04013_Deburring int, Positioning, Attach Them Manual**  
+   - **Predecessor:** S40_04011_Riveting Buttstraps and Stabiliser Manual [Data: Sources (82); Relationships (78); Entities (14)].
+   
+4. **S40_01001_Set Up Working Environment**  
+   - **Predecessor:** S40_00001_Jig In [Data: Sources (84); Relationships (5); Entities (0)].
+
+## Automated Operations
+
+5. **S40_04014_Deinstall LFT and Rails**  
+   - **Predecessor:** S40_04012_Deburring int, Positioning, Attach Them Automatic [Data: Sources (76); Relationships (82)].
+   
+6. **S40_04012_Deburring int, Positioning, Attach Them Automatic**  
+   - **Predecessor:** S40_04010_Riveting Buttstraps and Stabiliser Automatic [Data: Sources (78); Relationships (74)].
+
+Each of these operations follows the completion of specific tasks ensuring proper continuation of the workflow within the orbital joint process community. This setup highlights the interconnected nature of the operations and underscores the importance of precise resource and time management to ensure seamless transitions between each operation [Data: Reports (0, 1); Entities (1, 3, 5, 14, +more); Relationships (117, 16, 82, 78, +more)].
+[0m

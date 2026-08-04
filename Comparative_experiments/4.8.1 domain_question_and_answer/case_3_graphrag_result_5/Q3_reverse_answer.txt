@@ -1,0 +1,70 @@
+Yes, calendars, capacities, and hourly costs are defined for resources in the knowledge graph. Below is a detailed list of these attributes for each resource:
+
+---
+
+### **Resource Details**
+
+#### **1. Station**
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $80
+[Data: Entities (29)]
+
+#### **2. Station Platform**
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $75
+[Data: Entities (28)]
+
+#### **3. Automation Operator**
+- **Calendar**: Shift (40 hours per week)
+- **Capacity**: 8
+- **Cost per Hour**: $100
+[Data: Entities (30)]
+
+#### **4. Mechanical Operator**
+- **Calendar**: Shift (40 hours per week)
+- **Capacity**: 8
+- **Cost per Hour**: $100
+[Data: Entities (27)]
+
+#### **5. Light Flex Track Robot**
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $75
+[Data: Entities (31)]
+
+#### **6. Light Flex Track Rail**
+- **Calendar**: 24x7
+- **Capacity**: 2
+- **Cost per Hour**: $5
+[Data: Entities (32)]
+
+#### **7. Drilling Template**
+- **Calendar**: 24x7
+- **Capacity**: 5
+- **Cost per Hour**: $10
+[Data: Entities (33)]
+
+#### **8. Hand Drilling Machine**
+- **Calendar**: 24x7
+- **Capacity**: 6
+- **Cost per Hour**: $10
+[Data: Entities (34)]
+
+#### **9. Crane**
+- **Calendar**: 24x7
+- **Capacity**: 1
+- **Cost per Hour**: $30
+[Data: Entities (35)]
+
+#### **10. Transportation Tooling**
+- **Calendar**: 24x7
+- **Capacity**: 1
+- **Cost per Hour**: $80
+[Data: Entities (36)]
+
+---
+
+This information provides a comprehensive overview of the defined calendars, capacities, and hourly costs for all resources in the knowledge graph. Let me know if you need further details!
+[0m

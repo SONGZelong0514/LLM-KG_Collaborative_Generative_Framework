@@ -1,0 +1,78 @@
+Here is a detailed enumeration of all operations from the knowledge graph, including their type and duration:
+
+---
+
+### **Manual Operations**
+1. **S40_00001_Jig in**  
+   - **Type**: Manual  
+   - **Duration**: 60 minutes  
+   [Data: Entities (18)]
+
+2. **S40_00002_Jig out**  
+   - **Type**: Manual  
+   - **Duration**: 60 minutes  
+   [Data: Entities (19)]
+
+3. **S40_01001_Set up working environment**  
+   - **Type**: Manual  
+   - **Duration**: 10 minutes  
+   [Data: Entities (0)]
+
+4. **S40_02003_Inspection**  
+   - **Type**: Manual  
+   - **Duration**: 55 minutes  
+   [Data: Entities (17)]
+
+5. **S40_04003_Drilling template install**  
+   - **Type**: Manual  
+   - **Duration**: 25 minutes  
+   [Data: Entities (4)]
+
+6. **S40_04004_Fixation drilling template suite manual**  
+   - **Type**: Manual  
+   - **Duration**: 30 minutes  
+   [Data: Entities (5)]
+
+7. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**  
+   - **Type**: Manual  
+   - **Duration**: 185 minutes  
+   [Data: Entities (6)]
+
+8. **S40_04006_Deinstall drilling template**  
+   - **Type**: Manual  
+   - **Duration**: 25 minutes  
+   [Data: Entities (7)]
+
+9. **S40_04009_Set up the fixations LGP/Hi-Lite manual**  
+   - **Type**: Manual  
+   - **Duration**: 35 minutes  
+   [Data: Relationships (61); Reports (1)]
+
+10. **S40_04013_Deburring int, positioning, attach them manual**  
+    - **Type**: Manual  
+    - **Duration**: 45 minutes  
+    [Data: Entities (14)]
+
+---
+
+### **Automated Operations**
+1. **S40_02001_Set in position Rails and LFT**  
+   - **Type**: Automated  
+   - **Duration**: 10 minutes  
+   [Data: Entities (1)]
+
+2. **S40_04002_Drilling orbital 4,8**  
+   - **Type**: Automated  
+   - **Duration**: 125 minutes  
+   [Data: Entities (3)]
+
+3. **S40_04014_Deinstall LFT and rails**  
+   - **Type**: Automated  
+   - **Duration**: 35 minutes  
+   [Data: Entities (15)]
+
+---
+
+### **Summary**
+The operations in the S40 Orbital Joint Process Community are a mix of manual and automated tasks, with durations ranging from 10 minutes to 185 minutes. Manual operations are more prevalent and often require skilled labor, while automated operations are typically shorter in duration but involve specialized equipment. This highlights the importance of balancing manual and automated processes to optimize efficiency and resource allocation.
+[0m

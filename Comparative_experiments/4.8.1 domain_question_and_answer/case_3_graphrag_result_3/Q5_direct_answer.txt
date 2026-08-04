@@ -1,0 +1,30 @@
+### Predecessor Operations for Each Task
+
+In the S40 Orbital Joint Process Community, several operations have defined predecessor tasks that are crucial for ensuring the proper sequence and integrity of the workflow. Below are the operations along with their respective predecessor operations:
+
+1. **S40_02003_Inspection**  
+   - **Predecessor:** S40_02002_Cleanup and add sealant involves a crucial cleanup operation that ensures quality and integrity before inspection can proceed [Data: Relationships (73), Sources (63, 65)].
+
+2. **S40_04001_Camera at stating holes**  
+   - **Predecessor:** S40_02001_Set in position Rails and LFT is an automated operation that facilitates the setup before camera operations [Data: Relationships (23); Sources (8, 3)].
+
+3. **S40_04013_Deburring int, positioning, attach them manual**  
+   - **Predecessor:** S40_04011_Riveting buttstraps and stabiliser manual needs to be completed before the deburring and positioning tasks can begin manually [Data: Relationships (78); Sources (48, 54)].
+
+4. **S40_04012_Deburring int, positioning, attach them automatic**  
+   - **Predecessor:** S40_04010_Riveting buttstraps and stabiliser automatic ensures all riveting tasks are finalized before the automated deburring starts [Data: Relationships (74); Sources (43, 77)].
+
+5. **S40_04014_Deinstall LFT and rails**  
+   - **Predecessor:** S40_04012_Deburring int, positioning, attach them automatic needs to be completed to maintain the sequence in the deinstallation process [Data: Relationships (82); Sources (55, 76)].
+
+6. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**  
+   - **Predecessor:** S40_04004_Fixation drilling template suite manual ensures that templates are correctly fixed before any drilling operation begins [Data: Relationships (70); Sources (21, 22)].
+
+7. **S40_04004_Fixation drilling template suite manual**  
+   - **Predecessor:** S40_04003_Drilling template install involves setting up the drilling templates, which is a necessary step before fixing them adequately [Data: Relationships (77); Sources (18, 24)].
+
+8. **S40_00001_Jig in**  
+   - **Predecessor:** S40_01001_Set up working environment involves creating the necessary conditions for the "Jig in" operation [Data: Relationships (5); Sources (84, 67, 66)].
+
+The relationships between each operation show an intricate and interconnected system that requires precise coordination and scheduling to ensure operational efficiency. Proper adherence to these predecessors is crucial in maintaining the workflow integrity in the S40 Orbital Joint Process Community.
+[0m

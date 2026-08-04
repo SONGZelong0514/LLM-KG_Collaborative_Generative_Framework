@@ -1,0 +1,27 @@
+Yes, the knowledge graph specifies operation types and durations. Below is a list of operations along with their respective types and durations:
+
+---
+
+### **Manual Operations**
+1. **S40_00001_Jig in**: Duration = 60 minutes [Data: Entities (18)].
+2. **S40_00002_Jig out**: Duration = 60 minutes [Data: Entities (19)].
+3. **S40_01001_Set up working environment**: Duration = 10 minutes [Data: Entities (0)].
+4. **S40_02003_Inspection**: Duration = 55 minutes [Data: Entities (17)].
+5. **S40_04003_Drilling template install**: Duration = 25 minutes [Data: Entities (4)].
+6. **S40_04004_Fixation drilling template suite manual**: Duration = 30 minutes [Data: Entities (5)].
+7. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**: Duration = 185 minutes [Data: Entities (6)].
+8. **S40_04006_Deinstall drilling template**: Duration = 25 minutes [Data: Entities (7)].
+9. **S40_04007_Set in position temporary fastener**: Duration = 15 minutes [Data: Entities (8)].
+10. **S40_04009_Set up the fixations LGP/Hi-Lite manual**: Duration = 35 minutes [Data: Reports (1)].
+11. **S40_04013_Deburring int, positioning, attach them manual**: Duration = 45 minutes [Data: Entities (14)].
+
+---
+
+### **Automated Operations**
+1. **S40_02001_Set in position Rails and LFT**: Duration = 10 minutes [Data: Entities (1)].
+2. **S40_04002_Drilling orbital 4,8**: Duration = 125 minutes [Data: Entities (3)].
+
+---
+
+This categorization highlights the reliance on both manual and automated operations within the S40 Orbital Joint Process Community. Manual operations tend to have longer durations and require skilled labor, while automated operations are generally shorter and rely on specialized equipment.
+[0m

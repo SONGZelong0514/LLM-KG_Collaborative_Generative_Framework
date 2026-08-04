@@ -1,0 +1,30 @@
+Here is a detailed list of processes along with their respective sub-processes:
+
+### **Main Processes**
+
+#### S40_Orbital Joint Process
+The S40_Orbital Joint Process is a central entity that integrates several sub-processes to ensure efficient workflow execution. It consists of:
+
+- **S40_Lower Orbital Joint Process**: A subprocess within the community that is critical for maintaining process integrity [Data: Reports (0); Relationships (120)].
+- **S40_Upper Orbital Joint Process**: Another subprocess that plays a crucial role in the coordination and efficiency of the larger orbital joint process [Data: Reports (0); Relationships (121)].
+
+#### S40_Lower Orbital Joint Process
+The S40_Lower Orbital Joint Process has a number of associated subprocesses:
+
+- **S40_Lower Left Orbital Joint Process**
+- **S40_Lower Right Orbital Joint Process**
+
+Both of these are integral components of the larger S40_Lower Orbital Joint Process, ensuring seamless execution of operations essential to the workflow [Data: Reports (0, 1); Entities (25); Relationships (102, 103)].
+
+#### S40_Upper Orbital Joint Process
+Similarly, the S40_Upper Orbital Joint Process encompasses:
+
+- **S40_Upper Left Orbital Joint Process**
+- **S40_Upper Right Orbital Joint Process**
+
+These subprocesses are key to the overall workflow, ensuring the community operates smoothly and effectively [Data: Reports (0, 1); Entities (22); Relationships (139, 140)].
+
+### **Sub-process Details**
+
+Each subprocess within the larger processes is connected to various critical operations and resources, emphasizing the importance of effective management and coordination. However, other entities such as operations within S40_Lower Left Orbital Joint Process or S40_Lower Right Orbital Joint Process do not explicitly serve as subprocesses themselves. Instead, these components underscore the interconnected nature of operations within the community and require careful integration and oversight to prevent bottlenecks and ensure efficient execution [Data: Reports (1); Entities (20, 23), +more; Relationships (85, 97, 109, 139, +more)].
+[0m

@@ -1,0 +1,29 @@
+### Hierarchy of Processes and Sub-Processes in the S40 Orbital Joint Process Community
+
+The S40 Orbital Joint Process Community is structured as a hierarchy of interconnected processes and sub-processes. Below is the complete hierarchy:
+
+---
+
+#### **1. S40_Orbital Joint Process**
+The **S40_Orbital Joint Process** is the central process that integrates multiple sub-processes to ensure seamless workflow execution. It has two primary sub-processes:
+
+- **1.1 S40_Lower Orbital Joint Process**
+  - **1.1.1 S40_Lower Left Orbital Joint Process**
+  - **1.1.2 S40_Lower Right Orbital Joint Process**
+
+- **1.2 S40_Upper Orbital Joint Process**
+  - **1.2.1 S40_Upper Left Orbital Joint Process**
+  - **1.2.2 S40_Upper Right Orbital Joint Process**
+
+---
+
+### Commentary on the Hierarchy
+
+1. **Top-Level Process**: The **S40_Orbital Joint Process** serves as the overarching framework, integrating both lower and upper orbital joint processes. This integration is critical for maintaining the operational integrity and efficiency of the community [Data: Reports (0, 1); Entities (26); Relationships (120, 121)].
+
+2. **Second-Level Sub-Processes**: The **S40_Lower Orbital Joint Process** and **S40_Upper Orbital Joint Process** are the two main branches under the top-level process. These processes are further divided into left and right sub-processes, reflecting the physical or functional segmentation of the operations [Data: Entities (25, 22); Relationships (102, 103, 139, 140)].
+
+3. **Third-Level Sub-Processes**: The **Lower Left**, **Lower Right**, **Upper Left**, and **Upper Right Orbital Joint Processes** represent the most granular level of the hierarchy. These sub-processes are highly interconnected and involve specific operations and resources critical to the overall workflow [Data: Entities (20, 23, 24, 21); Relationships (85, 86, 120, 121, +more)].
+
+This hierarchical structure highlights the complexity and interdependence of the processes within the S40 Orbital Joint Process Community. Each level plays a vital role in ensuring the efficiency and effectiveness of the overall system.
+[0m

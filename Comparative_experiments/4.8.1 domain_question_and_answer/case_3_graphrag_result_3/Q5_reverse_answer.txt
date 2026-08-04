@@ -1,0 +1,28 @@
+Yes, the knowledge graph does encode precedence relations between operations. Here is a list of operations along with their predecessors:
+
+### S40_00001_Jig in 
+- **Predecessor:** S40_01001_Set up working environment [Data: Relationships (5); Sources (84)].
+
+### S40_02003_Inspection 
+- **Predecessor:** S40_02002_Cleanup and add sealant [Data: Relationships (17); Sources (73)].
+
+### S40_04002_Drilling orbital 4,8
+- **Predecessor:** S40_04001_Camera at stating holes [Data: Relationships (29); Sources (71)].
+
+### S40_04004_Fixation drilling template suite manual
+- **Predecessor:** S40_04003_Drilling template install [Data: Relationships (37); Sources (77)].
+
+### S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template
+- **Predecessor:** S40_04004_Fixation drilling template suite manual [Data: Relationships (43); Sources (70)].
+
+### S40_04008_Set up the fixations LGP/Hi-Lite automatic
+- **Predecessor:** S40_04002_Drilling orbital 4,8 [Data: Relationships (58); Sources (75)].
+
+### S40_02001_Set in position Rails and LFT
+- **Predecessor:** S40_04001_Camera at stating holes [Data: Relationships (80)].
+
+### S40_04013_Deburring int, positioning, attach them manual
+- **Predecessor:** S40_04011_Riveting buttstraps and stabiliser manual [Data: Sources (82)]. 
+
+These precedence relationships highlight the sequence in which operations are performed within the workflow. Such encoding is crucial for ensuring that all necessary steps are followed and dependencies are acknowledged in the process execution.
+[0m

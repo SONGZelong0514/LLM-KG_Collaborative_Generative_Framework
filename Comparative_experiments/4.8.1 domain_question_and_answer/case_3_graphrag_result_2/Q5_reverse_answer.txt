@@ -1,0 +1,45 @@
+Yes, the knowledge graph encodes precedence relations between operations. Below is a list of operations along with their respective predecessors:
+
+---
+
+### **Precedence Relations Between Operations**
+
+#### **S40_00001_Jig in**
+- **Predecessor:** S40_01001_Set up working environment  
+  This operation is essential for the S40_Orbital Joint Process and requires resources such as the Crane and Transportation tooling [Data: Relationships (5); Sources (84)].
+
+#### **S40_04002_Drilling orbital 4,8**
+- **Predecessor:** S40_04001_Camera at stating holes  
+  This automated operation is linked to the S40_Lower Left Orbital Joint Process and requires resources such as the Automation Operator, Station, and Light Flex Track Rail [Data: Relationships (29); Sources (71)].
+
+#### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Predecessor:** S40_04002_Drilling orbital 4,8  
+  This operation is part of the S40_Lower Left Orbital Joint Process and relies on the Automation Operator for execution [Data: Relationships (58); Sources (75)].
+
+#### **S40_02003_Inspection**
+- **Predecessor:** S40_02002_Cleanup and add sealant  
+  This manual operation is critical for quality assurance and requires two Mechanical Operators and resources such as Station and Station platform [Data: Relationships (17); Sources (73)].
+
+#### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Predecessor:** S40_04004_Fixation drilling template suite manual  
+  This operation is linked to the S40_Lower Left Orbital Joint Process and requires resources such as the Mechanical Operator and Drilling Template [Data: Relationships (43); Sources (70)].
+
+#### **S40_04004_Fixation drilling template suite manual**
+- **Predecessor:** S40_04003_Drilling template install  
+  This manual operation is part of the S40_Lower Left Orbital Joint Process and requires two Mechanical Operators and Station resources [Data: Relationships (37); Sources (77)].
+
+#### **S40_04013_Deburring int, positioning, attach them manual**
+- **Predecessor:** S40_04011_Riveting buttstraps and stabiliser manual  
+  This manual operation is linked to the S40_Lower Left Orbital Joint Process and requires two Mechanical Operators [Data: Relationships (82); Sources (82)].
+
+#### **S40_04001_Camera at stating holes**
+- **Predecessor:** S40_02001_Set in position Rails and LFT  
+  This automated operation is part of the S40_Lower Left Orbital Joint Process and requires resources such as the Automation Operator and Light Flex Track Robot [Data: Relationships (80); Sources (80)].
+
+---
+
+### **Commentary**
+The precedence relations encoded in the knowledge graph highlight the interconnected nature of operations within the S40 Orbital Joint Processes. These relations ensure that workflows are executed in a logical sequence, maintaining efficiency and quality. The reliance on specific resources and skilled labor further emphasizes the importance of resource management and scheduling in these processes.
+
+If you need further details about any specific operation or its dependencies, feel free to ask!
+[0m

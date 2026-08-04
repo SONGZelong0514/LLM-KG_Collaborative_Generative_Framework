@@ -1,0 +1,57 @@
+The hierarchy of processes and sub-processes within the S40 Orbital Joint Process Community is structured as follows:
+
+### Top-Level Process
+- **S40_Orbital Joint Process**
+  - This is the central process that integrates various operations and resources to ensure efficient workflow execution. It serves as the overarching process that encompasses several sub-processes [Data: Reports (0); Entities (26); Relationships (120, 121)].
+
+### Sub-Processes
+- **S40_Lower Orbital Joint Process**
+  - This sub-process is a component of the S40_Orbital Joint Process and further divides into more specific processes. It plays a crucial role in the overall workflow by managing operations related to the lower part of the orbital joint [Data: Reports (0); Entities (25); Relationships (120, 102, 103)].
+  - **S40_Lower Left Orbital Joint Process**
+    - A sub-process of the S40_Lower Orbital Joint Process, it is involved in various operations, both manual and automated, that are essential for maintaining the integrity and efficiency of the workflow [Data: Reports (1); Entities (20); Relationships (102, 85, 89, 91, 93, +more)].
+  - **S40_Lower Right Orbital Joint Process**
+    - Another sub-process under the S40_Lower Orbital Joint Process, it similarly handles operations critical to the workflow, ensuring that the right side of the lower orbital joint is properly managed [Data: Reports (0); Entities (23); Relationships (103, 104, 108, 110, 112, +more)].
+
+- **S40_Upper Orbital Joint Process**
+  - This sub-process is also part of the S40_Orbital Joint Process and is responsible for operations concerning the upper part of the orbital joint. It is integral to the seamless execution of the overall process [Data: Reports (0); Entities (22); Relationships (121, 139, 140)].
+  - **S40_Upper Left Orbital Joint Process**
+    - As a sub-process of the S40_Upper Orbital Joint Process, it manages operations that are vital for the left side of the upper orbital joint, contributing to the process's efficiency and effectiveness [Data: Reports (0); Entities (24); Relationships (139, 122, 126, 128, 130, +more)].
+  - **S40_Upper Right Orbital Joint Process**
+    - This sub-process is tasked with operations on the right side of the upper orbital joint, ensuring that all necessary tasks are completed to maintain the workflow's integrity [Data: Reports (0); Entities (21); Relationships (140, 141, 145, 147, 149, +more)].
+
+This hierarchy illustrates the structured approach to managing the S40 Orbital Joint Process Community, with each level of the hierarchy playing a specific role in the overall workflow [Data: Reports (0, 1); Entities (26, 25, 22, 20, 23, 24, 21); Relationships (120, 121, 102, 103, 139, 140, 85, 89, 91, 93, +more)].
+[0m
+
+--- STDERR (non-fatal) ---
+Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x0000027CB51B1840>
+transport: <_ProactorSocketTransport fd=-1 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+Exception ignored in: <function _SSLProtocolTransport.__del__ at 0x0000027C0152D750>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 321, in __del__
+    self.close()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 316, in close
+    self._ssl_protocol._start_shutdown()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 599, in _start_shutdown
+    self._write_appdata(b'')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 604, in _write_appdata
+    self._process_write_backlog()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 712, in _process_write_backlog
+    self._fatal_error(exc, 'Fatal error on SSL transport')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 726, in _fatal_error
+    self._transport._force_close(exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 152, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 753, in call_soon
+    self._check_closed()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed

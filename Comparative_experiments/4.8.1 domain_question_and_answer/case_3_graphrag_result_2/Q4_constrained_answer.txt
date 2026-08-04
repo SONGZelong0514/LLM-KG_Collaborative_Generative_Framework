@@ -1,0 +1,156 @@
+Here is the complete operation–resource requirement mapping, grouped by operation and including the quantity needed per resource:
+
+---
+
+### **S40_00001_Jig in**
+- **Crane**: 1 unit [Data: Relationships (0)].
+- **Transportation tooling**: 1 unit [Data: Relationships (1)].
+
+---
+
+### **S40_00002_Jig out**
+- **Crane**: 1 unit [Data: Relationships (2)].
+- **Transportation tooling**: 1 unit [Data: Relationships (3)].
+
+---
+
+### **S40_01001_Set up working environment**
+- **Station**: 1 unit [Data: Relationships (6)].
+- **Station platform**: 1 unit [Data: Relationships (7)].
+- **Mechanical Operator**: 1 unit [Data: Relationships (4)].
+
+---
+
+### **S40_02001_Set in position Rails and LFT**
+- **Station**: 1 unit [Data: Relationships (11)].
+- **Station platform**: 1 unit [Data: Relationships (12)].
+- **Automation Operator**: 2 units [Data: Relationships (8)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (9)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (10)].
+
+---
+
+### **S40_02002_Cleanup and add sealant**
+- **Station**: 1 unit [Data: Relationships (14)].
+- **Station platform**: 1 unit [Data: Relationships (15)].
+- **Mechanical Operator**: 2 units [Data: Relationships (13)].
+
+---
+
+### **S40_02003_Inspection**
+- **Station**: 1 unit [Data: Relationships (18)].
+- **Station platform**: 1 unit [Data: Relationships (19)].
+- **Mechanical Operator**: 2 units [Data: Relationships (16)].
+
+---
+
+### **S40_04001_Camera at stating holes**
+- **Station**: 1 unit [Data: Relationships (24)].
+- **Station platform**: 1 unit [Data: Relationships (25)].
+- **Automation Operator**: 1 unit [Data: Relationships (20)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (21)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (22)].
+
+---
+
+### **S40_04002_Drilling orbital 4,8**
+- **Station**: 1 unit [Data: Relationships (30)].
+- **Station platform**: 1 unit [Data: Relationships (31)].
+- **Automation Operator**: 1 unit [Data: Relationships (26)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (27)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (28)].
+
+---
+
+### **S40_04003_Drilling template install**
+- **Station**: 1 unit [Data: Relationships (33)].
+- **Station platform**: 1 unit [Data: Relationships (34)].
+- **Mechanical Operator**: 2 units [Data: Relationships (32)].
+
+---
+
+### **S40_04004_Fixation drilling template suite manual**
+- **Station**: 1 unit [Data: Relationships (38)].
+- **Station platform**: 1 unit [Data: Relationships (39)].
+- **Mechanical Operator**: 2 units [Data: Relationships (36)].
+- **Drilling Template**: 1 unit [Data: Relationships (35)].
+
+---
+
+### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Station**: 1 unit [Data: Relationships (44)].
+- **Station platform**: 1 unit [Data: Relationships (45)].
+- **Mechanical Operator**: 2 units [Data: Relationships (42)].
+- **Drilling Template**: 1 unit [Data: Relationships (40)].
+- **Hand drilling machine**: 2 units [Data: Relationships (41)].
+
+---
+
+### **S40_04006_Deinstall drilling template**
+- **Station**: 1 unit [Data: Relationships (49)].
+- **Station platform**: 1 unit [Data: Relationships (50)].
+- **Mechanical Operator**: 2 units [Data: Relationships (47)].
+- **Drilling Template**: 1 unit [Data: Relationships (46)].
+
+---
+
+### **S40_04007_Set in position temporary fastener**
+- **Station**: 1 unit [Data: Relationships (53)].
+- **Station platform**: 1 unit [Data: Relationships (54)].
+- **Mechanical Operator**: 2 units [Data: Relationships (51)].
+
+---
+
+### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Station**: 1 unit [Data: Relationships (59)].
+- **Station platform**: 1 unit [Data: Relationships (60)].
+- **Automation Operator**: 1 unit [Data: Relationships (55)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (56)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (57)].
+
+---
+
+### **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+- **Mechanical Operator**: 2 units [Data: Relationships (61)].
+
+---
+
+### **S40_04010_Riveting buttstraps and stabiliser automatic**
+- **Station**: 1 unit [Data: Relationships (67)].
+- **Station platform**: 1 unit [Data: Relationships (68)].
+- **Automation Operator**: 1 unit [Data: Relationships (63)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (64)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (65)].
+
+---
+
+### **S40_04011_Riveting buttstraps and stabiliser manual**
+- **Mechanical Operator**: 2 units [Data: Relationships (69)].
+
+---
+
+### **S40_04012_Deburring int, positioning, attach them automatic**
+- **Station**: 1 unit [Data: Relationships (75)].
+- **Station platform**: 1 unit [Data: Relationships (76)].
+- **Automation Operator**: 1 unit [Data: Relationships (71)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (72)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (73)].
+
+---
+
+### **S40_04013_Deburring int, positioning, attach them manual**
+- **Mechanical Operator**: 2 units [Data: Relationships (77)].
+
+---
+
+### **S40_04014_Deinstall LFT and rails**
+- **Station**: 1 unit [Data: Relationships (83)].
+- **Station platform**: 1 unit [Data: Relationships (84)].
+- **Automation Operator**: 1 unit [Data: Relationships (79)].
+- **Light Flex Track Rail**: 1 unit [Data: Relationships (80)].
+- **Light Flex Track Robot**: 1 unit [Data: Relationships (81)].
+
+---
+
+This mapping provides a detailed overview of the resources required for each operation, along with the quantities needed.
+[0m

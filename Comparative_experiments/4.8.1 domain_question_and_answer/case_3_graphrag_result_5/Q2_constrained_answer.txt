@@ -1,0 +1,90 @@
+Certainly! Below is an enumeration of various operations extracted from the knowledge graph, along with their types and durations:
+
+### Manual Operations
+
+1. **S40_00001_Jig in**
+   - Type: Manual
+   - Duration: 60 minutes
+   - [Data: Entities (18); Sources (67, 84, 147)]
+
+2. **S40_00002_Jig out**
+   - Type: Manual
+   - Duration: 60 minutes
+   - [Data: Entities (19); Sources (145, 69, 68)]
+
+3. **S40_01001_Set up working environment**
+   - Type: Manual
+   - Duration: 10 minutes
+   - [Data: Entities (0); Sources (84, 146)]
+
+4. **S40_02003_Inspection**
+   - Type: Manual
+   - Duration: 55 minutes
+   - [Data: Entities (17); Sources (63, 143, 141, 73)]
+
+5. **S40_04003_Drilling template install**
+   - Type: Manual
+   - Duration: 25 minutes
+   - [Data: Entities (4); Sources (18)]
+
+6. **S40_04004_Fixation drilling template suite manual**
+   - Type: Manual
+   - Duration: 30 minutes
+   - [Data: Entities (5); Sources (21)]
+
+7. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+   - Type: Manual
+   - Duration: 185 minutes
+   - [Data: Entities (6); Sources (40, 25, 28, 29)]
+
+8. **S40_04006_Deinstall drilling template**
+   - Type: Manual
+   - Duration: 25 minutes
+   - [Data: Entities (7); Sources (30, 31, 32, 33)]
+
+9. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+   - Type: Manual
+   - Duration: 35 minutes
+   - [Data: Reports (1); Relationships (61)]
+
+10. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - Type: Manual
+    - Requires: 2 Mechanical Operators
+    - [Data: Sources (48)]
+
+11. **S40_04013_Deburring int, positioning, attach them manual**
+    - Type: Manual
+    - Duration: 45 minutes
+    - [Data: Sources (54); Relationships (82)]
+
+### Automated Operations
+
+12. **S40_02001_Set in position Rails and LFT**
+    - Type: Automation
+    - Duration: 10 minutes
+    - [Data: Sources (3); Entities (1)]
+
+13. **S40_04001_Camera at stating holes**
+    - Type: Automation
+    - Involves: S40_Lower Orbital Joint Process
+    - [Data: Sources (8, 80)]
+
+14. **S40_04002_Drilling orbital 4,8**
+    - Type: Automation
+    - Duration: 125 minutes
+    - [Data: Entities (3); Sources (16, 71, 15)]
+
+15. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - Type: Automation
+    - [Data: Sources (37, 75)]
+
+16. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - Type: Automation
+    - [Data: Sources (43)]
+
+17. **S40_04012_Deburring int, positioning, attach them automatic**
+    - Type: Automation
+    - [Data: Sources (49)]
+
+These operations are interconnected within the S40 Orbital Joint Processes, often requiring manual intervention for resource setup, inspection, and other manual handling operations [Data: Reports (1, 0); Relationships (117, 0, 1, 61, 13, 16)].
+[0m

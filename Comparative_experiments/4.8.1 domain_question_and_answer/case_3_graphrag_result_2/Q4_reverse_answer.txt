@@ -1,0 +1,91 @@
+Yes, the knowledge graph defines the resources required for each operation along with their respective quantities. Below is a detailed list of operation–resource–quantity relationships, grouped by operation.
+
+## S40_02001_Set in Position Rails and LFT
+- **Station**: Requires 1 [Data: Sources (7); Relationships (11, 6)]
+- **Station Platform**: Requires 1 [Data: Sources (6); Relationships (12, 6)]
+- **Automation Operator**: Requires 2 [Data: Sources (3); Relationships (8, 10)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (5); Relationships (9)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (4); Relationships (10)]
+
+## S40_04001_Camera at Stating Holes
+- **Station**: Requires 1 [Data: Sources (12); Relationships (24)]
+- **Station Platform**: Requires 1 [Data: Sources (11); Relationships (25)]
+- **Automation Operator**: Requires 1 [Data: Sources (8); Relationships (20)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (10); Relationships (21)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (9); Relationships (22)]
+
+## S40_04002_Drilling Orbital 4.8
+- **Station**: Requires 1 [Data: Sources (17); Relationships (30)]
+- **Station Platform**: Requires 1 [Data: Sources (16); Relationships (31)]
+- **Automation Operator**: Requires 1 [Data: Sources (13); Relationships (26)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (15); Relationships (27)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (14); Relationships (28)]
+
+## S40_04003_Drilling Template Install
+- **Station**: Requires 1 [Data: Sources (20); Relationships (33)]
+- **Station Platform**: Requires 1 [Data: Sources (19); Relationships (34)]
+- **Mechanical Operator**: Requires 2 [Data: Sources (18); Relationships (32)]
+
+## S40_04004_Fixation Drilling Template Suite Manual
+- **Station**: Requires 1 [Data: Sources (24); Relationships (38)]
+- **Station Platform**: Requires 1 [Data: Sources (23); Relationships (39)]
+- **Mechanical Operator**: Requires 2 [Data: Sources (21); Relationships (36)]
+- **Drilling Template**: Requires 1 [Data: Sources (22); Relationships (35)]
+
+## S40_04005_Drilling (With Adapter) 3.2 on Stringers Int and Drilling Template
+- **Station**: Requires 1 [Data: Sources (29); Relationships (44)]
+- **Station Platform**: Requires 1 [Data: Sources (28); Relationships (45)]
+- **Mechanical Operator**: Requires 2 [Data: Sources (25); Relationships (42)]
+- **Drilling Template**: Requires 1 [Data: Sources (27); Relationships (40)]
+- **Hand Drilling Machine**: Requires 2 [Data: Sources (26); Relationships (41)]
+
+## S40_04006_Deinstall Drilling Template
+- **Station**: Requires 1 [Data: Sources (33); Relationships (49)]
+- **Station Platform**: Requires 1 [Data: Sources (32); Relationships (50)]
+- **Mechanical Operator**: Requires 2 [Data: Sources (30); Relationships (47)]
+- **Drilling Template**: Requires 1 [Data: Sources (31); Relationships (46)]
+
+## S40_04007_Set in Position Temporary Fastener
+- **Station**: Requires 1 [Data: Sources (36); Relationships (53)]
+- **Station Platform**: Requires 1 [Data: Sources (35); Relationships (54)]
+- **Mechanical Operator**: Requires 2 [Data: Sources (34); Relationships (51)]
+
+## S40_04008_Set up the Fixations LGP/Hi-Lite Automatic
+- **Station**: Requires 1 [Data: Sources (41); Relationships (59)]
+- **Station Platform**: Requires 1 [Data: Sources (40); Relationships (60)]
+- **Automation Operator**: Requires 1 [Data: Sources (37); Relationships (55)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (39); Relationships (56)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (38); Relationships (57)]
+
+## S40_04009_Set up the Fixations LGP/Hi-Lite Manual
+- **Mechanical Operator**: Requires 2 [Data: Sources (42); Relationships (61)]
+
+## S40_04010_Riveting Buttstraps and Stabiliser Automatic
+- **Station**: Requires 1 [Data: Sources (47); Relationships (67)]
+- **Station Platform**: Requires 1 [Data: Sources (46); Relationships (68)]
+- **Automation Operator**: Requires 1 [Data: Sources (43); Relationships (63)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (45); Relationships (64)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (44); Relationships (65)]
+
+## S40_04011_Riveting Buttstraps and Stabiliser Manual
+- **Mechanical Operator**: Requires 2 [Data: Sources (48); Relationships (69)]
+
+## S40_04012_Deburring Int, Positioning, Attach Them Automatic
+- **Station**: Requires 1 [Data: Sources (53); Relationships (75)]
+- **Station Platform**: Requires 1 [Data: Sources (52); Relationships (76)]
+- **Automation Operator**: Requires 1 [Data: Sources (49); Relationships (71)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (51); Relationships (72)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (50); Relationships (73)]
+
+## S40_04013_Deburring Int, Positioning, Attach Them Manual
+- **Mechanical Operator**: Requires 2 [Data: Sources (54); Relationships (77)]
+
+## S40_04014_Deinstall LFT and Rails
+- **Station**: Requires 1 [Data: Sources (59); Relationships (83)]
+- **Station Platform**: Requires 1 [Data: Sources (58); Relationships (84)]
+- **Automation Operator**: Requires 1 [Data: Sources (55); Relationships (79)]
+- **Light Flex Track Rail**: Requires 1 [Data: Sources (57); Relationships (80)]
+- **Light Flex Track Robot**: Requires 1 [Data: Sources (56); Relationships (81)]
+
+Each operation is interconnected through a series of required resources, which are critical for its execution and smooth functioning within the community's processes [Data: Reports (1, 2); Relationships (70, 37, 43, 81, 84, +more)].
+[0m

@@ -1,0 +1,68 @@
+Here is a detailed list of all resources, including their name, calendar, capacity, and cost per hour:
+
+### **Resources Overview**
+
+#### **1. Station**
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $80  
+[Data: Entities (29)]
+
+#### **2. Station Platform**
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $75  
+[Data: Entities (28)]
+
+#### **3. Automation Operator**
+- **Calendar:** Shift (40 hours per week)
+- **Capacity:** 8
+- **Cost per Hour:** $100  
+[Data: Entities (30)]
+
+#### **4. Light Flex Track Robot**
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $75  
+[Data: Entities (31)]
+
+#### **5. Light Flex Track Rail**
+- **Calendar:** 24x7
+- **Capacity:** 2
+- **Cost per Hour:** $5  
+[Data: Entities (32)]
+
+#### **6. Mechanical Operator**
+- **Calendar:** Shift (40 hours per week)
+- **Capacity:** 8
+- **Cost per Hour:** $100  
+[Data: Entities (27)]
+
+#### **7. Crane**
+- **Calendar:** 24x7
+- **Capacity:** 1
+- **Cost per Hour:** $30  
+[Data: Entities (35)]
+
+#### **8. Transportation Tooling**
+- **Calendar:** 24x7
+- **Capacity:** 1
+- **Cost per Hour:** $80  
+[Data: Entities (36)]
+
+#### **9. Drilling Template**
+- **Calendar:** 24x7
+- **Capacity:** 5
+- **Cost per Hour:** $10  
+[Data: Entities (33)]
+
+#### **10. Hand Drilling Machine**
+- **Calendar:** 24x7
+- **Capacity:** 6
+- **Cost per Hour:** $10  
+[Data: Entities (34)]
+
+---
+
+This list provides a comprehensive view of the resources used in the operations, highlighting their availability, capacity, and associated costs. Let me know if you need further details about their roles in specific operations!
+[0m

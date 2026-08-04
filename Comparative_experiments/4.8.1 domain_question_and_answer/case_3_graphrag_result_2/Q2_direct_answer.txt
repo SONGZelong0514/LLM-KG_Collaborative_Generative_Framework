@@ -1,0 +1,96 @@
+Certainly! Here's a list of the operations, along with their name, type (manual/auto), and duration:
+
+### Automated Operations
+1. **S40_02001_Set in position Rails and LFT** 
+   - Type: Auto
+   - Duration: 10 min
+   - [Data: Entities (1)]
+
+2. **S40_04002_Drilling orbital 4,8**
+   - Type: Auto
+   - Duration: 125 min
+   - [Data: Entities (3)]
+
+3. **S40_04010_Riveting buttstraps and stabiliser automatic**
+   - Type: Auto
+   - Duration: 90 min
+   - [Data: Entities (11)]
+
+4. **S40_04012_Deburring int, positioning, attach them automatic**
+   - Type: Auto
+   - Duration: 25 min
+   - [Data: Entities (13)]
+
+5. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+   - Type: Auto
+   - Duration: 20 min
+   - [Data: Entities (9)]
+
+6. **S40_04014_Deinstall LFT and rails**
+   - Type: Auto
+   - Duration: 35 min
+   - [Data: Entities (15)]
+
+### Manual Operations
+1. **S40_02003_Inspection**
+   - Type: Manual
+   - Duration: 55 min
+   - [Data: Entities (17)]
+
+2. **S40_00001_Jig in**
+   - Type: Manual
+   - Duration: 60 min
+   - [Data: Entities (18)]
+
+3. **S40_00002_Jig out**
+   - Type: Manual
+   - Duration: 60 min
+   - [Data: Entities (19)]
+
+4. **S40_04004_Fixation drilling template suite manual**
+   - Type: Manual
+   - Duration: 30 min
+   - [Data: Entities (5)]
+
+5. **S40_01001_Set up working environment**
+   - Type: Manual
+   - Duration: 10 min
+   - [Data: Entities (0)]
+
+6. **S40_04013_Deburring int, positioning, attach them manual**
+   - Type: Manual
+   - Duration: 45 min
+   - [Data: Entities (14)]
+
+7. **S40_04003_Drilling template install**
+   - Type: Manual
+   - Duration: 25 min
+   - [Data: Entities (4)]
+
+8. **S40_04006_Deinstall drilling template**
+   - Type: Manual
+   - Duration: 25 min
+   - [Data: Entities (7)]
+
+9. **S40_04011_Riveting buttstraps and stabiliser manual**
+   - Type: Manual
+   - Duration: 180 min
+   - [Data: Entities (12)]
+
+10. **S40_02002_Cleanup and add sealant**
+    - Type: Manual
+    - Duration: 35 min
+    - [Data: Entities (16)]
+
+11. **S40_04007_Set in position temporary fastener**
+    - Type: Manual
+    - Duration: 15 min
+    - [Data: Entities (8)]
+
+12. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - Type: Manual
+    - Duration: 35 min
+    - [Data: Relationships (48, 70), Entities (1, 33)] 
+
+Please let me know if you need further details on any of these operations!
+[0m

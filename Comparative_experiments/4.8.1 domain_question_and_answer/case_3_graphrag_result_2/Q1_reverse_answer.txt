@@ -1,0 +1,37 @@
+Yes, the knowledge graph defines hierarchical relationships between processes and sub-processes. Below is a detailed enumeration of each process and its associated sub-processes:
+
+---
+
+### **1. S40_Orbital Joint Process**
+The **S40_Orbital Joint Process** is the central process in the community and integrates two main sub-processes:
+- **S40_Lower Orbital Joint Process** [Data: Relationships (120); Sources (153)].
+- **S40_Upper Orbital Joint Process** [Data: Relationships (121); Sources (152)].
+
+---
+
+### **2. S40_Lower Orbital Joint Process**
+The **S40_Lower Orbital Joint Process** is a sub-process of the S40_Orbital Joint Process and further includes the following sub-processes:
+- **S40_Lower Left Orbital Joint Process** [Data: Relationships (102); Sources (150)].
+- **S40_Lower Right Orbital Joint Process** [Data: Relationships (103); Sources (151)].
+
+---
+
+### **3. S40_Upper Orbital Joint Process**
+The **S40_Upper Orbital Joint Process** is another sub-process of the S40_Orbital Joint Process and includes the following sub-processes:
+- **S40_Upper Left Orbital Joint Process** [Data: Relationships (139); Sources (149)].
+- **S40_Upper Right Orbital Joint Process** [Data: Relationships (140); Sources (148)].
+
+---
+
+### **Summary of Hierarchy**
+The hierarchy can be summarized as follows:
+1. **S40_Orbital Joint Process**
+   - **S40_Lower Orbital Joint Process**
+     - **S40_Lower Left Orbital Joint Process**
+     - **S40_Lower Right Orbital Joint Process**
+   - **S40_Upper Orbital Joint Process**
+     - **S40_Upper Left Orbital Joint Process**
+     - **S40_Upper Right Orbital Joint Process**
+
+This hierarchical structure highlights the layered organization of processes within the S40 Orbital Joint Process community, with each level contributing to the overall workflow and operational integrity [Data: Reports (0, 1); Relationships (120, 121, 102, 103, 139, 140); Sources (153, 152, 150, 151, 149, 148)].
+[0m

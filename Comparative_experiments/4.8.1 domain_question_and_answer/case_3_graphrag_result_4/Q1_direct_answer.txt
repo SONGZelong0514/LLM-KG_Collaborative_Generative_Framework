@@ -1,0 +1,47 @@
+Here is a detailed list of all processes and their respective sub-processes based on the provided data:
+
+---
+
+### **Processes and Their Sub-Processes**
+
+#### **1. S40_Orbital Joint Process**
+The **S40_Orbital Joint Process** is a central process that integrates multiple sub-processes to ensure seamless workflow execution. Its sub-processes include:
+- **S40_Lower Orbital Joint Process**
+- **S40_Upper Orbital Joint Process**  
+[Data: Entities (26); Relationships (120, 121)]
+
+#### **2. S40_Lower Orbital Joint Process**
+The **S40_Lower Orbital Joint Process** is a critical sub-process of the S40_Orbital Joint Process. It further includes the following sub-processes:
+- **S40_Lower Left Orbital Joint Process**
+- **S40_Lower Right Orbital Joint Process**  
+[Data: Entities (25); Relationships (102, 103)]
+
+#### **3. S40_Upper Orbital Joint Process**
+The **S40_Upper Orbital Joint Process** is another key sub-process of the S40_Orbital Joint Process. It includes the following sub-processes:
+- **S40_Upper Left Orbital Joint Process**
+- **S40_Upper Right Orbital Joint Process**  
+[Data: Entities (22); Relationships (139, 140)]
+
+#### **4. S40_Lower Left Orbital Joint Process**
+The **S40_Lower Left Orbital Joint Process** does not have any explicitly listed sub-processes but is highly interconnected with other operations and resources in the workflow.  
+[Data: Entities (20)]
+
+#### **5. S40_Lower Right Orbital Joint Process**
+The **S40_Lower Right Orbital Joint Process** also does not have explicitly listed sub-processes but plays a vital role in the overall workflow.  
+[Data: Entities (23)]
+
+#### **6. S40_Upper Left Orbital Joint Process**
+The **S40_Upper Left Orbital Joint Process** does not have explicitly listed sub-processes but is integral to the upper orbital joint operations.  
+[Data: Entities (24)]
+
+#### **7. S40_Upper Right Orbital Joint Process**
+The **S40_Upper Right Orbital Joint Process** similarly does not have explicitly listed sub-processes but is a key component of the upper orbital joint operations.  
+[Data: Entities (21)]
+
+---
+
+### **Summary**
+The **S40_Orbital Joint Process** serves as the overarching process, with two main sub-processes: the **S40_Lower Orbital Joint Process** and the **S40_Upper Orbital Joint Process**. These, in turn, are further divided into left and right orbital joint processes, creating a hierarchical structure that ensures operational efficiency and integration across the workflow [Data: Reports (0, 1); Entities (25, 22, 26, 20, 23, 24, 21); Relationships (120, 121, 102, 103, 139, 140)].
+
+If you need further details about specific operations or resources within these processes, feel free to ask!
+[0m

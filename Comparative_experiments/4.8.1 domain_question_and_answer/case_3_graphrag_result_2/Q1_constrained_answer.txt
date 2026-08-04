@@ -1,0 +1,42 @@
+### Hierarchy of Processes and Sub-Processes in the S40 Orbital Joint Process Community
+
+The S40 Orbital Joint Process Community is structured as a hierarchy of interconnected processes and sub-processes. Below is the complete hierarchy:
+
+---
+
+#### **1. S40_Orbital Joint Process**
+The **S40_Orbital Joint Process** is the central process in the community, integrating multiple sub-processes to ensure seamless workflow execution. It has two primary sub-processes:
+
+1. **S40_Lower Orbital Joint Process**  
+   - **S40_Lower Left Orbital Joint Process**  
+     - Includes optional operations such as:
+       - S40_04001_Camera at stating holes (Auto)
+       - S40_04002_Drilling orbital 4,8 (Auto)
+       - S40_04003_Drilling template install (Manual)
+       - S40_04004_Fixation drilling template suite manual (Manual)
+       - S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template (Manual)
+       - S40_04006_Deinstall drilling template (Manual)
+       - S40_04007_Set in position temporary fastener (Manual)
+       - S40_04008_Set up the fixations LGP/Hi-Lite automatic (Auto)
+       - S40_04009_Set up the fixations LGP/Hi-Lite manual (Manual)
+       - S40_04010_Riveting buttstraps and stabiliser automatic (Auto)
+       - S40_04011_Riveting buttstraps and stabiliser manual (Manual)
+       - S40_04012_Deburring int, positioning, attach them automatic (Auto)
+       - S40_04013_Deburring int, positioning, attach them manual (Manual)  
+   - **S40_Lower Right Orbital Joint Process**  
+     - Includes the same optional operations as the S40_Lower Left Orbital Joint Process [Data: Relationships (85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, +more)].
+
+2. **S40_Upper Orbital Joint Process**  
+   - **S40_Upper Left Orbital Joint Process**  
+     - Includes the same optional operations as the S40_Lower Left Orbital Joint Process [Data: Relationships (122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, +more)].
+   - **S40_Upper Right Orbital Joint Process**  
+     - Includes the same optional operations as the S40_Lower Left Orbital Joint Process [Data: Relationships (141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, +more)].
+
+---
+
+### Commentary on the Hierarchy
+
+The hierarchy of the S40 Orbital Joint Process Community demonstrates a well-structured system of processes and sub-processes. The **S40_Orbital Joint Process** serves as the overarching framework, with two main branches: the **S40_Lower Orbital Joint Process** and the **S40_Upper Orbital Joint Process**. Each of these branches is further divided into left and right sub-processes, which are highly interconnected and share a common set of optional operations.
+
+The high degree of connectivity and the presence of both manual and automated operations highlight the complexity of the system. Effective resource management and coordination are critical to maintaining the operational integrity of this hierarchical structure.
+[0m

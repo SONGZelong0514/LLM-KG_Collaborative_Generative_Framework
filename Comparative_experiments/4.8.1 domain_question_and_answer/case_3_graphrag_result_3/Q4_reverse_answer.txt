@@ -1,0 +1,156 @@
+Yes, the knowledge graph defines the resources required for each operation, along with the quantities. Below is a detailed list of operation–resource–quantity relationships grouped by operation:
+
+---
+
+### **S40_00001_Jig in**
+- **Crane**: Quantity = 1 [Data: Relationships (0); Sources (66)].
+- **Transportation tooling**: Quantity = 1 [Data: Relationships (1); Sources (67)].
+
+---
+
+### **S40_00002_Jig out**
+- **Crane**: Quantity = 1 [Data: Relationships (2); Sources (68)].
+- **Transportation tooling**: Quantity = 1 [Data: Relationships (3); Sources (69)].
+
+---
+
+### **S40_01001_Set up working environment**
+- **Station**: Quantity = 1 [Data: Relationships (6); Sources (2)].
+- **Station platform**: Quantity = 1 [Data: Relationships (7); Sources (1)].
+- **Mechanical Operator**: Quantity = 1 [Data: Relationships (4); Sources (0)].
+
+---
+
+### **S40_02001_Set in position Rails and LFT**
+- **Station**: Quantity = 1 [Data: Relationships (11); Sources (7)].
+- **Station platform**: Quantity = 1 [Data: Relationships (12); Sources (6)].
+- **Automation Operator**: Quantity = 2 [Data: Relationships (8); Sources (3)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (9); Sources (5)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (10); Sources (4)].
+
+---
+
+### **S40_02002_Cleanup and add sealant**
+- **Station**: Quantity = 1 [Data: Relationships (14); Sources (62)].
+- **Station platform**: Quantity = 1 [Data: Relationships (15); Sources (61)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (13); Sources (60)].
+
+---
+
+### **S40_02003_Inspection**
+- **Station**: Quantity = 1 [Data: Relationships (18); Sources (65)].
+- **Station platform**: Quantity = 1 [Data: Relationships (19); Sources (64)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (16); Sources (63)].
+
+---
+
+### **S40_04001_Camera at stating holes**
+- **Station**: Quantity = 1 [Data: Relationships (24); Sources (12)].
+- **Station platform**: Quantity = 1 [Data: Relationships (25); Sources (11)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (20); Sources (8)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (21); Sources (10)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (22); Sources (9)].
+
+---
+
+### **S40_04002_Drilling orbital 4,8**
+- **Station**: Quantity = 1 [Data: Relationships (30); Sources (17)].
+- **Station platform**: Quantity = 1 [Data: Relationships (31); Sources (16)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (26); Sources (13)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (27); Sources (15)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (28); Sources (14)].
+
+---
+
+### **S40_04003_Drilling template install**
+- **Station**: Quantity = 1 [Data: Relationships (33); Sources (20)].
+- **Station platform**: Quantity = 1 [Data: Relationships (34); Sources (19)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (32); Sources (18)].
+
+---
+
+### **S40_04004_Fixation drilling template suite manual**
+- **Station**: Quantity = 1 [Data: Relationships (38); Sources (24)].
+- **Station platform**: Quantity = 1 [Data: Relationships (39); Sources (23)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (36); Sources (21)].
+- **Drilling Template**: Quantity = 1 [Data: Relationships (35); Sources (22)].
+
+---
+
+### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Station**: Quantity = 1 [Data: Relationships (44); Sources (29)].
+- **Station platform**: Quantity = 1 [Data: Relationships (45); Sources (28)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (42); Sources (25)].
+- **Drilling Template**: Quantity = 1 [Data: Relationships (40); Sources (27)].
+- **Hand drilling machine**: Quantity = 2 [Data: Relationships (41); Sources (26)].
+
+---
+
+### **S40_04006_Deinstall drilling template**
+- **Station**: Quantity = 1 [Data: Relationships (49); Sources (33)].
+- **Station platform**: Quantity = 1 [Data: Relationships (50); Sources (32)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (47); Sources (30)].
+- **Drilling Template**: Quantity = 1 [Data: Relationships (46); Sources (31)].
+
+---
+
+### **S40_04007_Set in position temporary fastener**
+- **Station**: Quantity = 1 [Data: Relationships (53); Sources (36)].
+- **Station platform**: Quantity = 1 [Data: Relationships (54); Sources (35)].
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (51); Sources (34)].
+
+---
+
+### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Station**: Quantity = 1 [Data: Relationships (59); Sources (41)].
+- **Station platform**: Quantity = 1 [Data: Relationships (60); Sources (40)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (55); Sources (37)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (56); Sources (39)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (57); Sources (38)].
+
+---
+
+### **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (61); Sources (42)].
+
+---
+
+### **S40_04010_Riveting buttstraps and stabiliser automatic**
+- **Station**: Quantity = 1 [Data: Relationships (67); Sources (47)].
+- **Station platform**: Quantity = 1 [Data: Relationships (68); Sources (46)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (63); Sources (43)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (64); Sources (45)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (65); Sources (44)].
+
+---
+
+### **S40_04011_Riveting buttstraps and stabiliser manual**
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (69); Sources (48)].
+
+---
+
+### **S40_04012_Deburring int, positioning, attach them automatic**
+- **Station**: Quantity = 1 [Data: Relationships (75); Sources (53)].
+- **Station platform**: Quantity = 1 [Data: Relationships (76); Sources (52)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (71); Sources (49)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (72); Sources (51)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (73); Sources (50)].
+
+---
+
+### **S40_04013_Deburring int, positioning, attach them manual**
+- **Mechanical Operator**: Quantity = 2 [Data: Relationships (77); Sources (54)].
+
+---
+
+### **S40_04014_Deinstall LFT and rails**
+- **Station**: Quantity = 1 [Data: Relationships (83); Sources (59)].
+- **Station platform**: Quantity = 1 [Data: Relationships (84); Sources (58)].
+- **Automation Operator**: Quantity = 1 [Data: Relationships (79); Sources (55)].
+- **Light Flex Track Rail**: Quantity = 1 [Data: Relationships (80); Sources (57)].
+- **Light Flex Track Robot**: Quantity = 1 [Data: Relationships (81); Sources (56)].
+
+---
+
+This comprehensive list shows the detailed mapping of operations to their required resources and the respective quantities. Let me know if you need further clarification!
+[0m

@@ -1,0 +1,148 @@
+Yes, the knowledge graph defines the resources required for each operation, along with the quantities needed. Below is a detailed list of operation–resource–quantity relationships, grouped by operation:
+
+### S40_00001_Jig in
+- **Crane**: 1 unit [Data: Sources (66); Relationships (0)]
+- **Transportation tooling**: 1 unit [Data: Sources (67); Relationships (1)]
+
+### S40_00002_Jig out
+- **Crane**: 1 unit [Data: Sources (68); Relationships (2)]
+- **Transportation tooling**: 1 unit [Data: Sources (69); Relationships (3)]
+
+### S40_01001_Set up working environment
+- **Station**: 1 unit [Data: Sources (2); Relationships (6)]
+- **Station platform**: 1 unit [Data: Sources (1); Relationships (7)]
+- **Mechanical Operator**: 1 unit [Data: Sources (0); Relationships (4)]
+
+### S40_02001_Set in position Rails and LFT
+- **Station**: 1 unit [Data: Sources (7); Relationships (11)]
+- **Station platform**: 1 unit [Data: Sources (6); Relationships (12)]
+- **Automation Operator**: 2 units [Data: Sources (3); Relationships (8)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (5); Relationships (9)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (4); Relationships (10)]
+
+### S40_02002_Cleanup and add sealant
+- **Station**: 1 unit [Data: Sources (62); Relationships (14)]
+- **Station platform**: 1 unit [Data: Sources (61); Relationships (15)]
+- **Mechanical Operator**: 2 units [Data: Sources (60); Relationships (13)]
+
+### S40_02003_Inspection
+- **Station**: 1 unit [Data: Sources (65); Relationships (18)]
+- **Station platform**: 1 unit [Data: Sources (64); Relationships (19)]
+- **Mechanical Operator**: 2 units [Data: Sources (63); Relationships (16)]
+
+### S40_04001_Camera at stating holes
+- **Station**: 1 unit [Data: Sources (12); Relationships (24)]
+- **Station platform**: 1 unit [Data: Sources (11); Relationships (25)]
+- **Automation Operator**: 1 unit [Data: Sources (8); Relationships (20)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (10); Relationships (21)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (9); Relationships (22)]
+
+### S40_04002_Drilling orbital 4,8
+- **Station**: 1 unit [Data: Sources (17); Relationships (30)]
+- **Station platform**: 1 unit [Data: Sources (16); Relationships (31)]
+- **Automation Operator**: 1 unit [Data: Sources (13); Relationships (26)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (15); Relationships (27)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (14); Relationships (28)]
+
+### S40_04003_Drilling template install
+- **Station**: 1 unit [Data: Sources (20); Relationships (33)]
+- **Station platform**: 1 unit [Data: Sources (19); Relationships (34)]
+- **Mechanical Operator**: 2 units [Data: Sources (18); Relationships (32)]
+
+### S40_04004_Fixation drilling template suite manual
+- **Station**: 1 unit [Data: Sources (24); Relationships (38)]
+- **Station platform**: 1 unit [Data: Sources (23); Relationships (39)]
+- **Mechanical Operator**: 2 units [Data: Sources (21); Relationships (36)]
+- **Drilling Template**: 1 unit [Data: Sources (22); Relationships (35)]
+
+### S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template
+- **Station**: 1 unit [Data: Sources (29); Relationships (44)]
+- **Station platform**: 1 unit [Data: Sources (28); Relationships (45)]
+- **Mechanical Operator**: 2 units [Data: Sources (25); Relationships (42)]
+- **Drilling Template**: 1 unit [Data: Sources (27); Relationships (40)]
+- **Hand drilling machine**: 2 units [Data: Sources (26); Relationships (41)]
+
+### S40_04006_Deinstall drilling template
+- **Station**: 1 unit [Data: Sources (33); Relationships (49)]
+- **Station platform**: 1 unit [Data: Sources (32); Relationships (50)]
+- **Mechanical Operator**: 2 units [Data: Sources (30); Relationships (47)]
+- **Drilling Template**: 1 unit [Data: Sources (31); Relationships (46)]
+
+### S40_04007_Set in position temporary fastener
+- **Station**: 1 unit [Data: Sources (36); Relationships (53)]
+- **Station platform**: 1 unit [Data: Sources (35); Relationships (54)]
+- **Mechanical Operator**: 2 units [Data: Sources (34); Relationships (51)]
+
+### S40_04008_Set up the fixations LGP/Hi-Lite automatic
+- **Station**: 1 unit [Data: Sources (41); Relationships (59)]
+- **Station platform**: 1 unit [Data: Sources (40); Relationships (60)]
+- **Automation Operator**: 1 unit [Data: Sources (37); Relationships (55)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (39); Relationships (56)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (38); Relationships (57)]
+
+### S40_04009_Set up the fixations LGP/Hi-Lite manual
+- **Mechanical Operator**: 2 units [Data: Sources (42); Relationships (61)]
+
+### S40_04010_Riveting buttstraps and stabiliser automatic
+- **Station**: 1 unit [Data: Sources (47); Relationships (67)]
+- **Station platform**: 1 unit [Data: Sources (46); Relationships (68)]
+- **Automation Operator**: 1 unit [Data: Sources (43); Relationships (63)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (45); Relationships (64)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (44); Relationships (65)]
+
+### S40_04011_Riveting buttstraps and stabiliser manual
+- **Mechanical Operator**: 2 units [Data: Sources (48); Relationships (69)]
+
+### S40_04012_Deburring int, positioning, attach them automatic
+- **Station**: 1 unit [Data: Sources (53); Relationships (75)]
+- **Station platform**: 1 unit [Data: Sources (52); Relationships (76)]
+- **Automation Operator**: 1 unit [Data: Sources (49); Relationships (71)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (51); Relationships (72)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (50); Relationships (73)]
+
+### S40_04013_Deburring int, positioning, attach them manual
+- **Mechanical Operator**: 2 units [Data: Sources (54); Relationships (77)]
+
+### S40_04014_Deinstall LFT and rails
+- **Station**: 1 unit [Data: Sources (59); Relationships (83)]
+- **Station platform**: 1 unit [Data: Sources (58); Relationships (84)]
+- **Automation Operator**: 1 unit [Data: Sources (55); Relationships (79)]
+- **Light Flex Track Rail**: 1 unit [Data: Sources (57); Relationships (80)]
+- **Light Flex Track Robot**: 1 unit [Data: Sources (56); Relationships (81)]
+
+This comprehensive list provides a clear view of the resources and their quantities required for each operation, facilitating effective planning and resource management.
+[0m
+
+--- STDERR (non-fatal) ---
+Fatal error on SSL transport
+protocol: <asyncio.sslproto.SSLProtocol object at 0x00000288B51A42E0>
+transport: <_ProactorSocketTransport fd=7668 read=<_OverlappedFuture cancelled>>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 690, in _process_write_backlog
+    self._transport.write(chunk)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 365, in write
+    self._loop_writing(data=bytes(data))
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 401, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+AttributeError: 'NoneType' object has no attribute 'send'
+Exception ignored in: <function _SSLProtocolTransport.__del__ at 0x0000028857ACD750>
+Traceback (most recent call last):
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 321, in __del__
+    self.close()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 316, in close
+    self._ssl_protocol._start_shutdown()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 599, in _start_shutdown
+    self._write_appdata(b'')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 604, in _write_appdata
+    self._process_write_backlog()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 712, in _process_write_backlog
+    self._fatal_error(exc, 'Fatal error on SSL transport')
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\sslproto.py", line 726, in _fatal_error
+    self._transport._force_close(exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\proactor_events.py", line 152, in _force_close
+    self._loop.call_soon(self._call_connection_lost, exc)
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 753, in call_soon
+    self._check_closed()
+  File "D:\Anaconda\Anaconda3\envs\graphrag\lib\asyncio\base_events.py", line 515, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
