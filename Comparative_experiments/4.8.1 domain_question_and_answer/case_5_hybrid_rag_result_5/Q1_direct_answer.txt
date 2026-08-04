@@ -1,0 +1,36 @@
+Here is the list of processes and their respective sub-processes based on the provided context:
+
+1. **S40_Upper Orbital Joint Process**
+   - Sub-processes:
+     - S40_Upper Right Orbital Joint Process
+     - S40_Upper Left Orbital Joint Process
+     - S40_Orbital Joint Process
+
+2. **S40_Lower Orbital Joint Process**
+   - Sub-processes:
+     - S40_Orbital Joint Process
+     - S40_Lower Left Orbital Joint Process
+     - S40_Lower Right Orbital Joint Process
+
+3. **S40_Upper Right Orbital Joint Process**
+   - Sub-process:
+     - S40_Upper Orbital Joint Process
+
+4. **S40_Upper Left Orbital Joint Process**
+   - Sub-process:
+     - S40_Upper Orbital Joint Process
+
+5. **S40_Orbital Joint Process**
+   - Sub-processes:
+     - S40_Lower Orbital Joint Process
+     - S40_Upper Orbital Joint Process
+
+6. **S40_Lower Left Orbital Joint Process**
+   - Sub-process:
+     - S40_Lower Orbital Joint Process
+
+7. **S40_Lower Right Orbital Joint Process**
+   - Sub-process:
+     - S40_Lower Orbital Joint Process
+
+Note: The context does not specify any additional properties such as type, duration, calendar, number, cost, or predecessors for these processes; hence, these details are marked as "Not specified".

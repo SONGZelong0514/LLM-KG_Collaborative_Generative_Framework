@@ -1,0 +1,23 @@
+Based on the provided Knowledge Graph Context, here is a list of all resources with their name, calendar, number, and cost per hour:
+
+* Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* Station: Calendar=24x7, Number=2, Cost per hour=80
+
+* Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* Crane: Calendar=24x7, Number=1, Cost per hour=30
+
+* Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+
+* Drilling Template: Calendar=24x7, Number=5, Cost per hour=10
+
+* Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+
+* Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+
+* Transportation Tooling: Calendar=24x7, Number=1, Cost per hour=80
+
+* Hand Drilling Machine: Calendar=24x7, Number=6, Cost per hour=10
+
+If any data is missing or not specified within the provided context, it has been indicated as such.

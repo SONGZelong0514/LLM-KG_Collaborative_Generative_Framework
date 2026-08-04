@@ -1,0 +1,14 @@
+The complete hierarchy of processes and sub-processes based on the provided knowledge graph is as follows:
+
+1. **S40_Orbital Joint Process**
+   - Subprocesses:
+     - **S40_Lower Orbital Joint Process**
+       - Subprocesses:
+         - **S40_Lower Left Orbital Joint Process**
+         - **S40_Lower Right Orbital Joint Process**
+     - **S40_Upper Orbital Joint Process**
+       - Subprocesses:
+         - **S40_Upper Left Orbital Joint Process**
+         - **S40_Upper Right Orbital Joint Process**
+
+No additional data on type, duration, resources, or predecessors is specified in the provided context.

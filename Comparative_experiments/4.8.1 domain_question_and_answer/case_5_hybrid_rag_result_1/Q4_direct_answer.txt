@@ -1,0 +1,111 @@
+Here is the list of operations along with their required resources and quantities:
+
+* **S40_04007_Set in position temporary fastener**: Type=Manual, Duration=15
+  - Station: 1
+  - Mechanical Operator: 2
+  - Station platform: 1
+
+* **S40_04008_Set up the fixations LGP/Hi-Lite automatic**: Type=Auto, Duration=20
+  - Station platform: 1
+  - Light Flex Track Rail: 1
+  - Automation Operator: 1
+  - Light Flex Track Robot: 1
+  - Station: 1
+
+* **S40_04014_Deinstall LFT and rails**: Type=Auto, Duration=35
+  - Light Flex Track Rail: 1
+  - Automation Operator: 1
+  - Station: 1
+  - Light Flex Track Robot: 1
+  - Station platform: 1
+
+* **S40_04010_Riveting buttstraps and stabiliser automatic**: Type=Auto, Duration=90
+  - Station: 1
+  - Light Flex Track Robot: 1
+  - Station platform: 1
+  - Automation Operator: 1
+  - Light Flex Track Rail: 1
+
+* **S40_02003_Inspection**: Type=Manual, Duration=55
+  - Station: 1
+  - Station platform: 1
+  - Mechanical Operator: 2
+
+* **S40_04004_Fixation drilling template suite manual**: Type=Manual, Duration=30
+  - Station: 1
+  - Mechanical Operator: 2
+  - Drilling Template: 1
+  - Station platform: 1
+
+* **S40_04012_Deburring int, positioning, attach them automatic**: Type=Auto, Duration=25
+  - Station: 1
+  - Station platform: 1
+  - Light Flex Track Robot: 1
+  - Light Flex Track Rail: 1
+  - Automation Operator: 1
+
+* **S40_04011_Riveting buttstraps and stabiliser manual**: Type=Manual, Duration=180
+  - Mechanical Operator: 2
+
+* **S40_04001_Camera at stating holes**: Type=Auto, Duration=15
+  - Light Flex Track Rail: 1
+  - Station: 1
+  - Light Flex Track Robot: 1
+  - Station platform: 1
+  - Automation Operator: 1
+
+* **S40_01001_Set up working environment**: Type=Manual, Duration=10
+  - Mechanical Operator: 1
+  - Station: 1
+  - Station platform: 1
+
+* **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**: Type=Manual, Duration=185
+  - Station platform: 1
+  - Hand drilling machine: 2
+  - Station: 1
+  - Drilling Template: 1
+  - Mechanical Operator: 2
+
+* **S40_04003_Drilling template install**: Type=Manual, Duration=25
+  - Station platform: 1
+  - Mechanical Operator: 2
+  - Station: 1
+
+* **S40_00002_Jig out**: Type=Manual, Duration=60
+  - Crane: 1
+  - Transportation tooling: 1
+
+* **S40_04013_Deburring int, positioning, attach them manual**: Type=Manual, Duration=45
+  - Mechanical Operator: 2
+
+* **S40_04009_Set up the fixations LGP/Hi-Lite manual**: Type=Manual, Duration=35
+  - Mechanical Operator: 2
+
+* **S40_04002_Drilling orbital 4,8**: Type=Auto, Duration=125
+  - Station platform: 1
+  - Light Flex Track Rail: 1
+  - Station: 1
+  - Automation Operator: 1
+  - Light Flex Track Robot: 1
+
+* **S40_02001_Set in position Rails and LFT**: Type=Auto, Duration=10
+  - Station: 1
+  - Station platform: 1
+  - Light Flex Track Robot: 1
+  - Automation Operator: 2
+  - Light Flex Track Rail: 1
+
+* **S40_04006_Deinstall drilling template**: Type=Manual, Duration=25
+  - Mechanical Operator: 2
+  - Drilling Template: 1
+  - Station: 1
+  - Station platform: 1
+
+* **S40_02002_Cleanup and add sealant**: Type=Manual, Duration=35
+  - Station platform: 1
+  - Station: 1
+  - Mechanical Operator: 2
+
+* **S40_00001_Jig in**: Type=Manual, Duration=60
+  - Transportation tooling: 1
+  - Crane: 1

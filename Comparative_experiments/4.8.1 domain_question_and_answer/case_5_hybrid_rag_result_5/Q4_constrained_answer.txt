@@ -1,0 +1,111 @@
+Certainly! Here's the operation–resource requirement mapping grouped by operation, according to the provided knowledge graph context:
+
+* **S40_04007_Set in position temporary fastener**: Type=Manual, Duration=15
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+
+* **S40_04008_Set up the fixations LGP/Hi-Lite automatic**: Type=Auto, Duration=20
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+
+* **S40_04014_Deinstall LFT and rails**: Type=Auto, Duration=35
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+
+* **S40_04010_Riveting buttstraps and stabiliser automatic**: Type=Auto, Duration=90
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+
+* **S40_02003_Inspection**: Type=Manual, Duration=55
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_04004_Fixation drilling template suite manual**: Type=Manual, Duration=30
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Drilling Template: Calendar=24x7, Number=5, Cost per hour=10
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+
+* **S40_04012_Deburring int, positioning, attach them automatic**: Type=Auto, Duration=25
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_04011_Riveting buttstraps and stabiliser manual**: Type=Manual, Duration=180
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_04001_Camera at stating holes**: Type=Auto, Duration=15
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_01001_Set up working environment**: Type=Manual, Duration=10
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+
+* **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**: Type=Manual, Duration=185
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Hand Drilling Machine: Calendar=24x7, Number=6, Cost per hour=10
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Drilling Template: Calendar=24x7, Number=5, Cost per hour=10
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_04003_Drilling template install**: Type=Manual, Duration=25
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+
+* **S40_00002_Jig out**: Type=Manual, Duration=60
+  * Crane: Calendar=24x7, Number=1, Cost per hour=30
+  * Transportation Tooling: Calendar=24x7, Number=1, Cost per hour=80
+
+* **S40_04013_Deburring int, positioning, attach them manual**: Type=Manual, Duration=45
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_04009_Set up the fixations LGP/Hi-Lite manual**: Type=Manual, Duration=35
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_04002_Drilling orbital 4,8**: Type=Auto, Duration=125
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+
+* **S40_02001_Set in position Rails and LFT**: Type=Auto, Duration=10
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Light Flex Track Robot: Calendar=24x7, Number=2, Cost per hour=75
+  * Automation Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Light Flex Track Rail: Calendar=24x7, Number=2, Cost per hour=5
+
+* **S40_04006_Deinstall drilling template**: Type=Manual, Duration=25
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+  * Drilling Template: Calendar=24x7, Number=5, Cost per hour=10
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+
+* **S40_02002_Cleanup and add sealant**: Type=Manual, Duration=35
+  * Station Platform: Calendar=24x7, Number=2, Cost per hour=75
+  * Station: Calendar=24x7, Number=2, Cost per hour=80
+  * Mechanical Operator: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+* **S40_00001_Jig in**: Type=Manual, Duration=60
+  * Transportation Tooling: Calendar=24x7, Number=1, Cost per hour=80
+  * Crane: Calendar=24x7, Number=1, Cost per hour=30

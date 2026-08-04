@@ -1,0 +1,36 @@
+Yes, the knowledge graph defines hierarchical relationships between processes and sub-processes. Below is the enumeration of every process together with its sub-processes based on the provided context:
+
+1. **S40_Upper Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Upper Right Orbital Joint Process
+     * S40_Upper Left Orbital Joint Process
+     * S40_Orbital Joint Process
+
+2. **S40_Lower Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Lower Left Orbital Joint Process
+     * S40_Lower Right Orbital Joint Process
+     * S40_Orbital Joint Process
+
+3. **S40_Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Lower Orbital Joint Process
+     * S40_Upper Orbital Joint Process
+
+4. **S40_Upper Right Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Upper Orbital Joint Process
+
+5. **S40_Upper Left Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Upper Orbital Joint Process
+
+6. **S40_Lower Left Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Lower Orbital Joint Process
+
+7. **S40_Lower Right Orbital Joint Process**:
+   - Sub-processes:
+     * S40_Lower Orbital Joint Process
+
+No additional properties such as duration, type, calendar, number, cost, or quantity are specified in the provided context.

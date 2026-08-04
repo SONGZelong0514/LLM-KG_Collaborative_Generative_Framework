@@ -1,0 +1,20 @@
+Based on the provided knowledge graph context, here is the complete hierarchy of processes and sub-processes:
+
+1. **S40_Orbital Joint Process**
+   - Sub-processes:
+     * **S40_Upper Orbital Joint Process**
+       - Sub-processes:
+         * **S40_Upper Right Orbital Joint Process**
+         * **S40_Upper Left Orbital Joint Process**
+     * **S40_Lower Orbital Joint Process**
+       - Sub-processes:
+         * **S40_Lower Right Orbital Joint Process**
+         * **S40_Lower Left Orbital Joint Process**
+
+2. **Assembly Process**
+   - Sub-process:
+     * **ManufacturingOperation**: Type=[def. planned process that is part of a product production process and is prescribed by an operation specification.], Duration=[Not specified]
+
+### Notes:
+- No additional properties such as duration, type, calendar, number, cost, or quantity are specified for the processes or sub-processes in the provided context.
+- No resource mappings or predecessor relationships are mentioned in the provided context.

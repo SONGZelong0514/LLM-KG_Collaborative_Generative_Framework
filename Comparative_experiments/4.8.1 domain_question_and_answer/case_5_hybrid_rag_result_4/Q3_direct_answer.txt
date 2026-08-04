@@ -1,0 +1,21 @@
+Based on the provided context, here is a list of resources with their respective details:
+
+1. **Automation Operator**: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+2. **Station**: Calendar=24x7, Number=2, Cost per hour=80
+
+3. **Mechanical Operator**: Calendar=shift_40h_week, Number=8, Cost per hour=100
+
+4. **Crane**: Calendar=24x7, Number=1, Cost per hour=30
+
+5. **Light Flex Track Rail**: Calendar=24x7, Number=2, Cost per hour=5
+
+6. **Drilling Template**: Calendar=24x7, Number=5, Cost per hour=10
+
+7. **Light Flex Track Robot**: Calendar=24x7, Number=2, Cost per hour=75
+
+8. **Station Platform**: Calendar=24x7, Number=2, Cost per hour=75
+
+9. **Transportation Tooling**: Calendar=24x7, Number=1, Cost per hour=80
+
+10. **Hand Drilling Machine**: Calendar=24x7, Number=6, Cost per hour=10

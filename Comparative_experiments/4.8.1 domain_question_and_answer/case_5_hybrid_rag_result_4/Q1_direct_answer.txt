@@ -1,0 +1,44 @@
+Based on the provided Knowledge Graph Context, here is the list of all processes and their respective sub-processes:
+
+### Processes and Sub-Processes:
+
+1. **S40_Upper Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Upper Right Orbital Joint Process
+     * S40_Upper Left Orbital Joint Process
+     * S40_Orbital Joint Process
+
+2. **S40_Lower Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Orbital Joint Process
+     * S40_Lower Left Orbital Joint Process
+     * S40_Lower Right Orbital Joint Process
+
+3. **S40_Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Lower Orbital Joint Process
+     * S40_Upper Orbital Joint Process
+
+4. **S40_Upper Right Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Upper Orbital Joint Process
+
+5. **S40_Upper Left Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Upper Orbital Joint Process
+
+6. **S40_Lower Left Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Lower Orbital Joint Process
+
+7. **S40_Lower Right Orbital Joint Process**:
+   - Sub-Processes:
+     * S40_Lower Orbital Joint Process
+
+8. **Assembly Process**:
+   - Sub-Processes:
+     * ManufacturingOperation (Definition: "Planned process that is part of a product production process and is prescribed by an operation specification.")
+
+### Notes:
+- No additional properties such as duration, type, calendar, number, cost, or quantity are specified in the provided context.
+- If further details are required, they are "Not specified" in the current data.
