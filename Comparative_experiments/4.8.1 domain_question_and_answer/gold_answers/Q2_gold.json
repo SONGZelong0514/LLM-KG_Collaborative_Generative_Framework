@@ -1,0 +1,119 @@
+{
+  "question_id": "Q2",
+  "question_variants": [
+    {
+      "variant_id": "Q2_direct",
+      "question": "List all operations with their name, type (manual/auto), and duration."
+    },
+    {
+      "variant_id": "Q2_constrained",
+      "question": "From the knowledge graph, enumerate every operation and provide its type and duration."
+    },
+    {
+      "variant_id": "Q2_reverse",
+      "question": "Does the knowledge graph specify operation types and durations? If yes, list each operation together with its type and duration."
+    }
+  ],
+  "gold_answer": [
+    {
+      "operation_name": "S40_04007_Set in position temporary fastener",
+      "type": "Manual",
+      "duration_minutes": 15
+    },
+    {
+      "operation_name": "S40_04008_Set up the fixations LGP/Hi-Lite automatic",
+      "type": "Auto",
+      "duration_minutes": 20
+    },
+    {
+      "operation_name": "S40_04014_Deinstall LFT and rails",
+      "type": "Auto",
+      "duration_minutes": 35
+    },
+    {
+      "operation_name": "S40_04010_Riveting buttstraps and stabiliser automatic",
+      "type": "Auto",
+      "duration_minutes": 90
+    },
+    {
+      "operation_name": "S40_02003_Inspection",
+      "type": "Manual",
+      "duration_minutes": 55
+    },
+    {
+      "operation_name": "S40_04004_Fixation drilling template suite manual",
+      "type": "Manual",
+      "duration_minutes": 30
+    },
+    {
+      "operation_name": "S40_04012_Deburring int, positioning, attach them automatic",
+      "type": "Auto",
+      "duration_minutes": 25
+    },
+    {
+      "operation_name": "S40_04011_Riveting buttstraps and stabiliser manual",
+      "type": "Manual",
+      "duration_minutes": 180
+    },
+    {
+      "operation_name": "S40_04001_Camera at stating holes",
+      "type": "Auto",
+      "duration_minutes": 15
+    },
+    {
+      "operation_name": "S40_01001_Set up working environment",
+      "type": "Manual",
+      "duration_minutes": 10
+    },
+    {
+      "operation_name": "S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",
+      "type": "Manual",
+      "duration_minutes": 185
+    },
+    {
+      "operation_name": "S40_04003_Drilling template install",
+      "type": "Manual",
+      "duration_minutes": 25
+    },
+    {
+      "operation_name": "S40_00002_Jig out",
+      "type": "Manual",
+      "duration_minutes": 60
+    },
+    {
+      "operation_name": "S40_04013_Deburring int, positioning, attach them manual",
+      "type": "Manual",
+      "duration_minutes": 45
+    },
+    {
+      "operation_name": "S40_04009_Set up the fixations LGP/Hi-Lite manual",
+      "type": "Manual",
+      "duration_minutes": 35
+    },
+    {
+      "operation_name": "S40_04002_Drilling orbital 4,8",
+      "type": "Auto",
+      "duration_minutes": 125
+    },
+    {
+      "operation_name": "S40_02001_Set in position Rails and LFT",
+      "type": "Auto",
+      "duration_minutes": 10
+    },
+    {
+      "operation_name": "S40_04006_Deinstall drilling template",
+      "type": "Manual",
+      "duration_minutes": 25
+    },
+    {
+      "operation_name": "S40_02002_Cleanup and add sealant",
+      "type": "Manual",
+      "duration_minutes": 35
+    },
+    {
+      "operation_name": "S40_00001_Jig in",
+      "type": "Manual",
+      "duration_minutes": 60
+    }
+  ]
+}
