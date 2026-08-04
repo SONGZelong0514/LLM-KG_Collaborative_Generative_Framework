@@ -1,0 +1,121 @@
+Based on the ontology content, here is the operation–resource requirement mapping, including the quantity needed per resource, grouped by operation:
+
+1. **S40_00001_Jig in**
+   - Requires:
+     - Crane: 1
+     - Transportation tooling: 1
+
+2. **S40_00002_Jig out**
+   - Requires:
+     - Crane: 1
+     - Transportation tooling: 1
+
+3. **S40_01001_Set up working environment**
+   - Requires:
+     - Drilling Template: 1
+     - Hand drilling machine: 1
+     - Station: 1
+
+4. **S40_02001_Set in position Rails and LFT**
+   - Requires:
+     - Automation Operator: 2
+     - Light Flex Track Rail: 1
+     - Station platform: 1
+     - Light Flex Track Robot: 1
+
+5. **S40_02002_Cleanup and add sealant**
+   - Requires:
+     - Drilling Template: 1
+     - Hand drilling machine: 1
+     - Station: 1
+
+6. **S40_02003_Inspection**
+   - Requires:
+     - Drilling Template: 1
+     - Hand drilling machine: 1
+     - Station: 1
+
+7. **S40_04002_Drilling orbital 4,8**
+   - Requires:
+     - Automation Operator: 2
+     - Light Flex Track Rail: 1
+     - Station platform: 1
+     - Light Flex Track Robot: 1
+
+8. **S40_04003_Drilling template install**
+   - Requires:
+     - Drilling Template: 1
+     - Hand drilling machine: 1
+     - Station: 1
+
+9. **S40_04004_Fixation drilling template suite manual**
+   - Requires:
+     - Drilling Template: 1
+     - Hand drilling machine: 1
+     - Station: 1
+
+10. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - Requires:
+      - Drilling Template: 1
+      - Hand drilling machine: 1
+      - Station: 1
+
+11. **S40_04006_Deinstall drilling template**
+    - Requires:
+      - Drilling Template: 1
+      - Hand drilling machine: 1
+      - Station: 1
+
+12. **S40_04007_Set in position temporary fastener**
+    - Requires:
+      - Drilling Template: 1
+      - Hand drilling machine: 1
+      - Station: 1
+
+13. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - Requires:
+      - Automation Operator: 2
+      - Light Flex Track Rail: 1
+      - Station platform: 1
+      - Light Flex Track Robot: 1
+
+14. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - Requires:
+      - Drilling Template: 1
+      - Hand drilling machine: 1
+      - Station: 1
+
+15. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - Requires:
+      - Automation Operator: 2
+      - Light Flex Track Rail: 1
+      - Station platform: 1
+      - Light Flex Track Robot: 1
+
+16. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - Requires:
+      - Drilling Template: 1
+      - Hand drilling machine: 1
+      - Station: 1
+
+17. **S40_04012_Deburring int, positioning, attach them automatic**
+    - Requires:
+      - Automation Operator: 2
+      - Light Flex Track Rail: 1
+      - Station platform: 1
+      - Light Flex Track Robot: 1
+
+18. **S40_04013_Deburring int, positioning, attach them manual**
+    - Requires:
+      - Drilling Template: 1
+      - Hand drilling machine: 1
+      - Station: 1
+
+19. **S40_04014_Deinstall LFT and rails**
+    - Requires:
+      - Automation Operator: 2
+      - Light Flex Track Rail: 1
+      - Station platform: 1
+      - Light Flex Track Robot: 1
+
+This mapping includes the operations and the resources required for each, along with the quantity needed per resource.

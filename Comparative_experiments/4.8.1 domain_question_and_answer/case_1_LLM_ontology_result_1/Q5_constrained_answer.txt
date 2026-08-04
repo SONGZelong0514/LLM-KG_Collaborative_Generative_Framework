@@ -1,0 +1,60 @@
+The ontology provides information about precedence constraints between operations through the `hasPredecessors` property. Here are the operations and their predecessors:
+
+1. **S40_00001_Jig in**
+   - Predecessor: None specified.
+
+2. **S40_00002_Jig out**
+   - Predecessor: None specified.
+
+3. **S40_01001_Set up working environment**
+   - Predecessor: None specified.
+
+4. **S40_02001_Set in position Rails and LFT**
+   - Predecessor: None specified.
+
+5. **S40_02002_Cleanup and add sealant**
+   - Predecessor: None specified.
+
+6. **S40_02003_Inspection**
+   - Predecessor: None specified.
+
+7. **S40_04002_Drilling orbital 4,8**
+   - Predecessor: None specified.
+
+8. **S40_04003_Drilling template install**
+   - Predecessor: None specified.
+
+9. **S40_04004_Fixation drilling template suite manual**
+   - Predecessor: None specified.
+
+10. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - Predecessor: None specified.
+
+11. **S40_04006_Deinstall drilling template**
+    - Predecessor: None specified.
+
+12. **S40_04007_Set in position temporary fastener**
+    - Predecessor: None specified.
+
+13. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - Predecessor: None specified.
+
+14. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - Predecessor: None specified.
+
+15. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - Predecessor: None specified.
+
+16. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - Predecessor: None specified.
+
+17. **S40_04012_Deburring int, positioning, attach them automatic**
+    - Predecessor: None specified.
+
+18. **S40_04013_Deburring int, positioning, attach them manual**
+    - Predecessor: None specified.
+
+19. **S40_04014_Deinstall LFT and rails**
+    - Predecessor: None specified.
+
+The ontology does not specify explicit predecessors for these operations.

@@ -1,0 +1,20 @@
+The ontology provides the following predecessor operations for each operation:
+
+1. **S40_00002_Jig out** has predecessor: **S40_00001_Jig in**
+2. **S40_04014_Deinstall LFT and rails** has predecessor: **S40_02001_Set in position Rails and LFT**
+3. **S40_01001_Set up working environment** has predecessor: **S40_00002_Jig out**
+4. **S40_04003_Drilling template install** has predecessor: **S40_01001_Set up working environment**
+5. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template** has predecessor: **S40_04004_Fixation drilling template suite manual**
+6. **S40_04011_Riveting buttstraps and stabiliser manual** has predecessor: **S40_04010_Riveting buttstraps and stabiliser automatic**
+7. **S40_02003_Inspection** has predecessor: **S40_02002_Cleanup and add sealant**
+8. **S40_04006_Deinstall drilling template** has predecessor: **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+9. **S40_04007_Set in position temporary fastener** has predecessor: **S40_04006_Deinstall drilling template**
+10. **S40_04012_Deburring int, positioning, attach them automatic** has predecessor: **S40_04011_Riveting buttstraps and stabiliser manual**
+11. **S40_04013_Deburring int, positioning, attach them manual** has predecessor: **S40_04012_Deburring int, positioning, attach them automatic**
+12. **S40_04010_Riveting buttstraps and stabiliser automatic** has predecessor: **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+13. **S40_04001_Camera at stating holes** has predecessor: **S40_04013_Deburring int, positioning, attach them manual**
+14. **S40_04009_Set up the fixations LGP/Hi-Lite manual** has predecessor: **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+15. **S40_04008_Set up the fixations LGP/Hi-Lite automatic** has predecessor: **S40_04007_Set in position temporary fastener**
+16. **S40_04004_Fixation drilling template suite manual** has predecessor: **S40_04003_Drilling template install**
+17. **S40_04002_Drilling orbital 4,8** has predecessor: **S40_04001_Camera at stating holes**
+18. **S40_02002_Cleanup and add sealant** has predecessor: **S40_02001_Set in position Rails and LFT**

@@ -1,0 +1,51 @@
+Here are the resources with their name, calendar, number, and cost per hour:
+
+1. **Automation Operator**
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Cost per hour: 100
+
+2. **Mechanical Operator**
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Cost per hour: 100
+
+3. **Crane**
+   - Calendar: 24x7
+   - Number: 1
+   - Cost per hour: 30
+
+4. **Station platform**
+   - Calendar: 24x7
+   - Number: 2
+   - Cost per hour: 75
+
+5. **Light Flex Track Rail**
+   - Calendar: 24x7
+   - Number: 2
+   - Cost per hour: 5
+
+6. **Light Flex Track Robot**
+   - Calendar: 24x7
+   - Number: 2
+   - Cost per hour: 75
+
+7. **Station**
+   - Calendar: 7x24
+   - Number: 2
+   - Cost per hour: 80
+
+8. **Transportation tooling**
+   - Calendar: 27X7
+   - Number: Not specified
+   - Cost per hour: 80
+
+9. **Hand drilling machine**
+   - Calendar: 24x7
+   - Number: 6
+   - Cost per hour: 10
+
+10. **Drilling Template**
+    - Calendar: 24x7
+    - Number: Not specified
+    - Cost per hour: 10

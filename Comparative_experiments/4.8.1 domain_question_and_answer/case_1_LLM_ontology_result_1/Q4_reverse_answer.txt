@@ -1,0 +1,105 @@
+Yes, the knowledge graph defines which resources each operation requires, along with their quantities. Here are the operation–resource–quantity relationships grouped by operation:
+
+1. **S40_00001_Jig in**
+   - Requires: Crane (Quantity: 1)
+   - Requires: Transportation tooling (Quantity: 1)
+
+2. **S40_00002_Jig out**
+   - Requires: Crane (Quantity: 1)
+   - Requires: Transportation tooling (Quantity: 1)
+
+3. **S40_01001_Set up working environment**
+   - Requires: Drilling Template (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+4. **S40_02001_Set in position Rails and LFT**
+   - Requires: Automation Operator (Quantity: 1)
+   - Requires: Light Flex Track Rail (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Light Flex Track Robot (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+5. **S40_02002_Cleanup and add sealant**
+   - Requires: Drilling Template (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+6. **S40_02003_Inspection**
+   - Requires: Drilling Template (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+7. **S40_04002_Drilling orbital 4,8**
+   - Requires: Automation Operator (Quantity: 1)
+   - Requires: Light Flex Track Rail (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Light Flex Track Robot (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+8. **S40_04003_Drilling template install**
+   - Requires: Drilling Template (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+9. **S40_04004_Fixation drilling template suite manual**
+   - Requires: Drilling Template (Quantity: 1)
+   - Requires: Station platform (Quantity: 1)
+   - Requires: Station (Quantity: 1)
+
+10. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - Requires: Hand drilling machine (Quantity: 2)
+    - Requires: Drilling Template (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+11. **S40_04006_Deinstall drilling template**
+    - Requires: Hand drilling machine (Quantity: 2)
+    - Requires: Drilling Template (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+12. **S40_04007_Set in position temporary fastener**
+    - Requires: Hand drilling machine (Quantity: 2)
+    - Requires: Drilling Template (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+13. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - Requires: Automation Operator (Quantity: 1)
+    - Requires: Light Flex Track Rail (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Light Flex Track Robot (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+14. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - Requires: Hand drilling machine (Quantity: 2)
+    - Requires: Drilling Template (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+15. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - Requires: Automation Operator (Quantity: 1)
+    - Requires: Light Flex Track Rail (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Light Flex Track Robot (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+16. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - Requires: Hand drilling machine (Quantity: 2)
+    - Requires: Drilling Template (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+17. **S40_04012_Deburring int, positioning, attach them automatic**
+    - Requires: Automation Operator (Quantity: 1)
+    - Requires: Light Flex Track Rail (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Light Flex Track Robot (Quantity: 1)
+    - Requires: Station (Quantity: 1)
+
+18. **S40_04013_Deburring int, positioning, attach them manual**
+    - Requires: Hand drilling machine (Quantity: 2)
+    - Requires: Drilling Template (Quantity: 1)
+    - Requires: Station platform (Quantity: 1)
+    - Requires: Station (Quantity: 1)
