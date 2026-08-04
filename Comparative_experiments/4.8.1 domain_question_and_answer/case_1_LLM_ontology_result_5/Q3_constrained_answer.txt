@@ -1,0 +1,33 @@
+Based on the provided ontology, the following resources have some of the requested properties:
+
+1. **Automation Operator**
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+2. **Mechanical Operator**
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+3. **Hand drilling machine**
+   - Calendar: 24x7
+   - Number: 6
+   - Hourly Cost: 10
+
+4. **Station platform**
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 75
+
+5. **Light Flex Track Rail**
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 5
+
+6. **Light Flex Track Robot**
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 75
+
+For other resources and specifics, the ontology does not provide complete information for all requested attributes such as calendar or hourly cost.

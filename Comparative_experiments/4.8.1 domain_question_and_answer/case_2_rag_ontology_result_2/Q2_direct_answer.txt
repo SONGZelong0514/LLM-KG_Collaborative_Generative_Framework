@@ -1,0 +1,47 @@
+1. **S40_04014_Deinstall LFT and rails**  
+   - Type: Auto  
+   - Duration: 35 minutes  
+
+2. **S40_04010_Riveting buttstraps and stabiliser automatic**  
+   - Type: Auto  
+   - Duration: 90 minutes  
+
+3. **S40_04007_Set in position temporary fastener**  
+   - Type: Manual  
+   - Duration: 15 minutes  
+
+4. **S40_04004_Fixation drilling template suite manual**  
+   - Type: Manual  
+   - Duration: 30 minutes  
+
+5. **S40_04013_Deburring int, positioning, attach them manual**  
+   - Type: Manual  
+   - Duration: 45 minutes  
+
+6. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**  
+   - Type: Auto  
+   - Duration: 20 minutes  
+
+7. **S40_02002_Cleanup and add sealant**  
+   - Type: Manual  
+   - Duration: 35 minutes  
+
+8. **S40_04009_Set up the fixations LGP/Hi-Lite manual**  
+   - Type: Manual  
+   - Duration: 35 minutes  
+
+9. **S40_04006_Deinstall drilling template**  
+   - Type: Manual  
+   - Duration: 25 minutes  
+
+10. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**  
+    - Type: Manual  
+    - Duration: 185 minutes  
+
+11. **S40_02001_Set in position Rails and LFT**  
+    - Type: Manual  
+    - Duration: 10 minutes  
+
+12. **S40_04001_Camera at stating holes**  
+    - Type: Manual  
+    - Duration: 15 minutes

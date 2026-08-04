@@ -1,0 +1,104 @@
+The ontology provides information about operations and their required resources, including the quantity of each resource. Below is the merged information by operation:
+
+### Operations and Required Resources:
+
+1. **S40_00001_Jig in**
+   - **Crane**: Quantity = 1
+   - **Station platform**: Quantity = 2
+
+2. **S40_00002_Jig out**
+   - **Crane**: Quantity = 1
+   - **Light Flex Track Rail**: Quantity = 1
+
+3. **S40_01001_Set up working environment**
+   - **Station platform**: Quantity = 1
+   - **Hand drilling machine**: Quantity = 2
+   - **Station**: Quantity = 1
+
+4. **S40_02001_Set in position Rails and LFT**
+   - **Automation Operator**: Quantity = 1
+   - **Light Flex Track Rail**: Quantity = 1
+   - **Station platform**: Quantity = 1
+   - **Station**: Quantity = 1
+
+5. **S40_02002_Cleanup and add sealant**
+   - **Station platform**: Quantity = 1
+   - **Station**: Quantity = 1
+   - **Hand drilling machine**: Quantity = 2
+
+6. **S40_02003_Inspection**
+   - **Station platform**: Quantity = 1
+   - **Station**: Quantity = 1
+   - **Hand drilling machine**: Quantity = 2
+
+7. **S40_04001_Camera at stating holes**
+   - **Automation Operator**: Quantity = 1
+   - **Light Flex Track Rail**: Quantity = 1
+   - **Station platform**: Quantity = 1
+   - **Station**: Quantity = 1
+
+8. **S40_04002_Drilling orbital 4,8**
+   - **Automation Operator**: Quantity = 1
+   - **Light Flex Track Rail**: Quantity = 1
+   - **Station platform**: Quantity = 1
+   - **Station**: Quantity = 1
+
+9. **S40_04003_Drilling template install**
+   - **Station platform**: Quantity = 1
+   - **Station**: Quantity = 1
+   - **Hand drilling machine**: Quantity = 2
+
+10. **S40_04004_Fixation drilling template suite manual**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+11. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+12. **S40_04006_Deinstall drilling template**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+13. **S40_04007_Set in position temporary fastener**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+14. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - **Automation Operator**: Quantity = 1
+    - **Light Flex Track Rail**: Quantity = 1
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+
+15. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+16. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - **Automation Operator**: Quantity = 1
+    - **Light Flex Track Rail**: Quantity = 1
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+
+17. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+18. **S40_04012_Deburring int, positioning, attach them automatic**
+    - **Automation Operator**: Quantity = 1
+    - **Light Flex Track Rail**: Quantity = 1
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+
+19. **S40_04013_Deburring int, positioning, attach them manual**
+    - **Station platform**: Quantity = 1
+    - **Station**: Quantity = 1
+    - **Hand drilling machine**: Quantity = 2
+
+If additional operations or resources are needed, they are not specified in the ontology.

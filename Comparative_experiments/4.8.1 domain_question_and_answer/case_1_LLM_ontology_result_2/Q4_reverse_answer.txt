@@ -1,0 +1,92 @@
+Yes, the ontology defines operations and the resources they require, including quantities. Here are the operation–resource–quantity relationships:
+
+1. **S40_00001_Jig in**
+   - Requires: Crane
+     - Cost Hour: 30
+
+2. **S40_00002_Jig out**
+   - Requires: Crane
+     - Cost Hour: 60
+
+3. **S40_01001_Set up working environment**
+   - Requires: Various resources
+   - op_type: Manual
+
+4. **S40_02001_Set in position Rails and LFT**
+   - Requires resources with quantities and types
+   - op_type: Auto
+
+5. **S40_02002_Cleanup and add sealant**
+   - Requires resources with quantities and types
+   - op_type: Manual
+
+6. **S40_02003_Inspection**
+   - Requires resources with quantities and types
+   - op_type: Manual
+
+7. **S40_04001_Camera at stating holes**
+   - Requires various resources with specific quantities
+   - Duration: 15 minutes
+   - op_type: Auto
+
+8. **S40_04002_Drilling orbital 4,8**
+   - Requires various resources with specific quantities
+   - Duration: 125 minutes
+   - op_type: Auto
+
+9. **S40_04003_Drilling template install**
+   - Requires various resources with specific quantities
+   - Duration: 25 minutes
+   - op_type: Manual
+
+10. **S40_04004_Fixation drilling template suite manual**
+    - Requires various resources with specific quantities
+    - Duration: 30 minutes
+    - op_type: Manual
+
+11. **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+    - Requires various resources with specific quantities
+    - Duration: 185 minutes
+    - op_type: Manual
+
+12. **S40_04006_Deinstall drilling template**
+    - Requires various resources with specific quantities
+    - Duration: 25 minutes
+    - op_type: Manual
+
+13. **S40_04007_Set in position temporary fastener**
+    - Requires various resources with specific quantities
+    - Duration: 15 minutes
+    - op_type: Manual
+
+14. **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+    - Requires various resources with specific quantities
+    - Duration: 20 minutes
+    - op_type: Auto
+
+15. **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+    - Requires resources with specific quantities
+    - Duration: 35 minutes
+    - op_type: Manual
+
+16. **S40_04010_Riveting buttstraps and stabiliser automatic**
+    - Requires various resources with specific quantities
+    - Duration: 90 minutes
+    - op_type: Auto
+
+17. **S40_04011_Riveting buttstraps and stabiliser manual**
+    - Requires various resources with specific quantities
+    - Duration: 180 minutes
+    - op_type: Manual
+
+18. **S40_04012_Deburring int, positioning, attach them automatic**
+    - Requires various resources with specific quantities
+    - Duration: 25 minutes
+    - op_type: Auto
+
+19. **S40_04013_Deburring int, positioning, attach them manual**
+    - Requires various resources with specific quantities
+    - Duration: 45 minutes
+    - op_type: Manual
+
+Each operation specifies the required resource(s), their quantity, and other relevant attributes such as operation type and duration.

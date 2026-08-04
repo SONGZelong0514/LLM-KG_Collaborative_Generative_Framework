@@ -1,0 +1,49 @@
+Yes, calendars, numbers, and hourly costs are defined for some resources. Here are the details:
+
+1. **Crane**
+   - Cost/hour: 30 USD
+   - Number: 1
+   - Calendar: 24x7
+
+2. **Drilling Template**
+   - Cost/hour: 10 USD
+   - Calendar: 24x7
+
+3. **Hand Drilling Machine**
+   - Cost/hour: 10 USD
+   - Number: 6
+   - Calendar: 24x7
+
+4. **Light Flex Track Rail**
+   - Cost/hour: 5 USD
+   - Number: 2
+   - Calendar: 24x7
+
+5. **Light Flex Track Robot**
+   - Cost/hour: 75 USD
+   - Number: 2
+   - Calendar: 24x7
+
+6. **Station**
+   - Cost/hour: 80 USD
+   - Number: 2
+   - Calendar: 7x24
+
+7. **Station Platform**
+   - Cost/hour: 75 USD
+   - Number: 2
+   - Calendar: 24x7
+
+8. **Transportation Tooling**
+   - Cost/hour: 80 USD
+   - Calendar: 27x7
+
+9. **Automation Operator**
+   - Cost/hour: 100 USD
+   - Number: 8
+   - Calendar: shift_40h_week
+
+10. **Mechanical Operator**
+    - Cost/hour: 100 USD
+    - Number: 8
+    - Calendar: shift_40h_week

@@ -1,0 +1,3 @@
+The ontology contains the object property `http://webprotege.stanford.edu/RD2btbwu9M7sLLAJmKUKQeQ` labeled as `hasPredecessors`, which indicates precedence constraints between operations. However, the ontology does not provide specific instances or relationships that define the predecessor for each operation. 
+
+Thus, the precedence constraints between operations cannot be extracted from the provided ontology.

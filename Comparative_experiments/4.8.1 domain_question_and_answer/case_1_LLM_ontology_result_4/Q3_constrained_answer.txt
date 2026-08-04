@@ -1,0 +1,46 @@
+Based on the ontology provided, the resource catalog includes the following:
+
+1. **Automation Operator**
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+2. **Mechanical Operator**
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+3. **Crane**
+   - Calendar: 24x7
+   - Number: 1
+   - Hourly Cost: 30
+
+4. **Hand Drilling Machine**
+   - Calendar: 24x7
+   - Number: 6
+   - Hourly Cost: 10
+
+5. **Light Flex Track Rail**
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 5
+
+6. **Station Platform**
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 75
+
+7. **Light Flex Track Robot**
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 75
+
+8. **Station**
+   - Calendar: 7x24
+   - Number: 2
+   - Hourly Cost: 80
+
+9. **Transportation Tooling**
+   - Calendar: 27X7
+   - Number: Not specified
+   - Hourly Cost: 80

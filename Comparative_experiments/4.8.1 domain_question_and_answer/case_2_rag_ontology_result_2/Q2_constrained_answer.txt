@@ -1,0 +1,37 @@
+1. Operation: Fixing Operation
+   - Type: Positive Integer
+   - Duration: Positive Integer
+
+2. Operation: Fastening Operation
+   - Type: Positive Integer
+   - Duration: Positive Integer
+
+3. Operation: Sealing Operation
+   - Type: Positive Integer
+   - Duration: Positive Integer
+
+4. Operation: Drilling Operation
+   - Type: String
+   - Duration: Positive Integer
+
+5. Operation: Deburring Operation
+   - Type: Positive Integer
+   - Duration: Positive Integer
+
+6. Operation: Installation Operation
+   - Type: Positive Integer
+   - Duration: Positive Integer
+
+7. Operation: Cleaning Operation
+   - Duration: Positive Integer
+
+8. Operation: Inspection Operation
+   - Duration: Positive Integer
+
+9. Operation: Uninstallation Operation
+   - Type: Positive Integer
+   - Duration: Positive Integer
+
+10. Operation: Setup Operation
+    - Type: String
+    - Duration: Positive Integer

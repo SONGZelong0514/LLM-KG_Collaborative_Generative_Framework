@@ -1,0 +1,101 @@
+Yes, calendars, numbers, and hourly costs are defined for resources in the knowledge graph. Below is the list for every resource:
+
+1. **Crane**  
+   - Calendar: 24x7  
+   - Number: 1  
+   - Hourly Cost: 30  
+
+2. **Light Flex Track Rail**  
+   - Calendar: 24x7  
+   - Number: 2  
+   - Hourly Cost: 5  
+
+3. **Station platform**  
+   - Calendar: 24x7  
+   - Number: 2  
+   - Hourly Cost: 75  
+
+4. **Hand drilling machine**  
+   - Calendar: 24x7  
+   - Number: 6  
+   - Hourly Cost: 10  
+
+5. **Automation Operator**  
+   - Calendar: shift_40h_week  
+   - Number: 8  
+   - Hourly Cost: 100  
+
+6. **Mechanical Operator**  
+   - Calendar: shift_40h_week  
+   - Number: 8  
+   - Hourly Cost: 100  
+
+7. **Light Flex Track Robot**  
+   - Calendar: 24x7  
+   - Number: 2  
+   - Hourly Cost: 75  
+
+8. **Station**  
+   - Calendar: 7x24  
+   - Number: 2  
+   - Hourly Cost: 80  
+
+9. **Transportation tooling**  
+   - Calendar: 27X7  
+   - Hourly Cost: 80  
+
+10. **Drilling Template**  
+    - Calendar: 24x7  
+    - Hourly Cost: 10  
+
+11. **Hi-Lite Bolt**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+12. **LGP Fastener**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+13. **Temporary Fastener**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+14. **Sealant**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+15. **Frame**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+16. **Buttstrap**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+17. **Stabiliser**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+18. **Stringer**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+19. **Laser Tracker**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+20. **FlexTrack Robot**  
+    - Calendar: Not defined  
+    - Number: Not defined  
+    - Hourly Cost: Not defined  
+
+For resources where the calendar, number, or hourly cost is not defined, the ontology does not provide this information.

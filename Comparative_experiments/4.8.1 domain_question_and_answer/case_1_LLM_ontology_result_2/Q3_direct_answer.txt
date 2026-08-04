@@ -1,0 +1,1 @@
+The ontology provides information about resources, but it does not explicitly list all resources with their name, calendar, number, and cost per hour. Therefore, I cannot provide the requested list.

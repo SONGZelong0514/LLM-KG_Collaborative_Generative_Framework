@@ -1,0 +1,1 @@
+The provided context does not explicitly define operation–resource–quantity relationships or group them by operation.

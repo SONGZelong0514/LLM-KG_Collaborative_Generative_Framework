@@ -1,0 +1,192 @@
+The ontology provides information about operations and their associated resource requirements, including the quantity needed per resource. Below is the complete operation–resource requirement mapping grouped by operation:
+
+### **Operations and Resource Requirements**
+
+#### **S40_00001_Jig in**
+- **Resource:** Crane
+  - **Quantity Needed:** 1
+
+#### **S40_00002_Jig out**
+- **Resource:** Crane
+  - **Quantity Needed:** 1
+
+#### **S40_01001_Set up working environment**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Manual
+
+#### **S40_02001_Set in position Rails and LFT**
+- **Resource:** Automation Operator
+  - **Quantity Needed:** 2
+- **Resource:** Light Flex Track Rail
+  - **Quantity Needed:** 1
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Robot
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Auto
+
+#### **S40_02002_Cleanup and add sealant**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_02003_Inspection**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04001_Camera at stating holes**
+- **Resource:** Automation Operator
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Rail
+  - **Quantity Needed:** 1
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Robot
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Auto
+
+#### **S40_04002_Drilling orbital 4,8**
+- **Resource:** Automation Operator
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Rail
+  - **Quantity Needed:** 1
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Robot
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Auto
+
+#### **S40_04003_Drilling template install**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04004_Fixation drilling template suite manual**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04006_Deinstall drilling template**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04007_Set in position temporary fastener**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Resource:** Automation Operator
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Rail
+  - **Quantity Needed:** 1
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Robot
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Auto
+
+#### **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04010_Riveting buttstraps and stabiliser automatic**
+- **Resource:** Automation Operator
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Rail
+  - **Quantity Needed:** 1
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Robot
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Auto
+
+#### **S40_04011_Riveting buttstraps and stabiliser manual**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+#### **S40_04012_Deburring int, positioning, attach them automatic**
+- **Resource:** Automation Operator
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Rail
+  - **Quantity Needed:** 1
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Light Flex Track Robot
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Operation Type:** Auto
+
+#### **S40_04013_Deburring int, positioning, attach them manual**
+- **Resource:** Station platform
+  - **Quantity Needed:** 1
+- **Resource:** Station
+  - **Quantity Needed:** 1
+- **Resource:** Mechanical Operator
+  - **Quantity Needed:** 2
+- **Operation Type:** Manual
+
+---
+
+This mapping is derived from the ontology's resource and operation relationships.

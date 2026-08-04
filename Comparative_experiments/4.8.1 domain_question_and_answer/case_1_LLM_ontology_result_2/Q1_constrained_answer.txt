@@ -1,0 +1,1 @@
+The ontology does not provide a complete hierarchy of processes and sub-processes. It includes various classes related to processes, but their hierarchical relationships are not explicitly detailed in the provided content.

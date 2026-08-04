@@ -1,0 +1,30 @@
+Based on the provided ontology content, here is the hierarchy of processes and sub-processes:
+
+1. **Planned Process**
+   - Manufacturing Process
+     - Assembly Process
+     - Design Process
+     - Machining Process Plan
+     - Measuring Process Plan
+     - Manufacturing Process Plan
+     - Orbital Joint Process
+     - Positioning Operation
+     - Riveting Operation
+     - Sealing Operation
+     - Transport Operation
+     - Uninstallation Operation
+     - Cleaning Operation
+     - Deburring Operation
+     - Fastening Operation
+     - Fixing Operation
+     - Installation Operation
+     - Inspection Operation
+     - Setup Operation
+   - Business Process
+   - Verification Process
+   - Validation Process
+   - Tradeoff Process
+   - Recovery Procedure
+   - Production System Model
+
+The ontology does not provide additional sub-levels for these processes. If there are other sub-processes or further specific hierarchies needed, they are not included in the ontology content provided.

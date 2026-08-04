@@ -1,0 +1,45 @@
+Yes, the knowledge graph defines hierarchical relationships between processes and sub-processes. Here are the processes and their sub-processes as defined in the context:
+
+1. **Process**:
+   - Sub-process: **hasSubprocess**
+
+2. **Manufacturing Process**:
+   - Sub-process: **hasManufacturingProcessPlan**
+
+3. **Business Process**:
+   - Sub-process: **hasBusinessPlan**
+
+4. **Recovery Process**:
+   - Sub-process: **hasRecoveryProcess**
+
+5. **Orbital Joint Process**:
+   - Sub-processes:
+     - **S40_Upper Right Orbital Joint Process**
+     - **S40_Lower Right Orbital Joint Process**
+     - **S40_Upper Left Orbital Joint Process**
+     - **S40_Lower Left Orbital Joint Process**
+     - **S40_Lower Orbital Joint Process**
+     - **S40_Upper Orbital Joint Process**
+
+6. **Assembly Process**:
+   - Sub-process: **AssemblyProcessPlan**
+
+7. **Design Process**:
+   - Sub-process: **MeasuringProcessPlan**
+
+8. **Planned Process**:
+   - Sub-process: **PlannedProcess**
+
+9. **Installation Operation**:
+   - Sub-process: **Fixing Operation**
+
+10. **Drilling Operation**:
+    - Sub-process: **Drilling template install**
+
+11. **Cleanup Process**:
+    - Sub-process: **Cleanup and add sealant**
+
+12. **Jig Process**:
+    - Sub-processes:
+      - **Jig in**
+      - **Jig out**

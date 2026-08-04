@@ -1,0 +1,1 @@
+The ontology provides the `hasPredecessors` object property, which relates operations to their predecessor operations. However, the actual instances and their specific predecessors are not provided in the ontology content. Therefore, I cannot list the predecessor operations for each operation based on the given ontology.

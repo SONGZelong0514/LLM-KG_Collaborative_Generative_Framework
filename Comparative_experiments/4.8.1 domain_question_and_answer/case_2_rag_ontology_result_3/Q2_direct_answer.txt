@@ -1,0 +1,59 @@
+1. **Name**: S40_04014_Deinstall LFT and rails  
+   **Type**: Auto  
+   **Duration**: 35
+
+2. **Name**: S40_04010_Riveting buttstraps and stabiliser automatic  
+   **Type**: Auto  
+   **Duration**: 90
+
+3. **Name**: S40_04007_Set in position temporary fastener  
+   **Type**: Manual  
+   **Duration**: 15
+
+4. **Name**: S40_01001_Set up working environment  
+   **Type**: Manual  
+   **Duration**: 10
+
+5. **Name**: S40_04002_Drilling orbital 4,8  
+   **Type**: Auto  
+   **Duration**: 125
+
+6. **Name**: S40_04012_Deburring int, positioning, attach them automatic  
+   **Type**: Auto  
+   **Duration**: 25
+
+7. **Name**: S40_04013_Deburring int, positioning, attach them manual  
+   **Type**: Manual  
+   **Duration**: 45
+
+8. **Name**: S40_04008_Set up the fixations LGP/Hi-Lite automatic  
+   **Type**: Auto  
+   **Duration**: 20
+
+9. **Name**: S40_04009_Set up the fixations LGP/Hi-Lite manual  
+   **Type**: Manual  
+   **Duration**: 35
+
+10. **Name**: S40_02002_Cleanup and add sealant  
+     **Type**: Manual  
+     **Duration**: 35
+
+11. **Name**: S40_04011_Riveting buttstraps and stabiliser manual  
+     **Type**: Manual  
+     **Duration**: 180
+
+12. **Name**: S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template  
+     **Type**: Manual  
+     **Duration**: 185
+
+13. **Name**: S40_02001_Set in position Rails and LFT  
+     **Type**: -  
+     **Duration**: 10
+
+14. **Name**: S40_04006_Deinstall drilling template  
+     **Type**: Manual  
+     **Duration**: 25
+
+15. **Name**: S40_04001_Camera at stating holes  
+     **Type**: -  
+     **Duration**: 15

@@ -1,0 +1,31 @@
+Yes, calendars, numbers, and hourly costs are defined for resources in the knowledge graph. Here is the list for every resource:
+
+1. **Crane**:
+   - Calendar: 24x7
+   - Number: 1
+   - Hourly Cost: 30
+
+2. **Automation Operator**:
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+3. **Mechanical Operator**:
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+4. **Light Flex Track Robot**:
+   - Calendar: 24x7
+   - Number: Not specified
+   - Hourly Cost: Not specified
+
+5. **Hand Drilling Machine**:
+   - Calendar: 24x7
+   - Number: 6
+   - Hourly Cost: 10
+
+6. **Transportation Tooling**:
+   - Calendar: 27X7
+   - Number: Not specified
+   - Hourly Cost: 80

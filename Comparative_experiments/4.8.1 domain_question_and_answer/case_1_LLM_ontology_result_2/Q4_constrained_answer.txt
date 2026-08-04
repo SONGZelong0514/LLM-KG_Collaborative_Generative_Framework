@@ -1,0 +1,132 @@
+Based on the ontology, here is the operation–resource requirement mapping grouped by operation:
+
+### **Operations and Resource Requirements**
+
+#### **S40_00001_Jig in**
+- **Resource Requirements:**
+  - **Crane**: Quantity needed: 1
+
+#### **S40_00002_Jig out**
+- **Resource Requirements:**
+  - **Crane**: Quantity needed: 1
+
+#### **S40_01001_Set up working environment**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Mechanical Operator**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_02001_Set in position Rails and LFT**
+- **Resource Requirements:**
+  - **Automation Operator**: Quantity needed: 1
+  - **Light Flex Track Rail**: Quantity needed: 1
+  - **Station platform**: Quantity needed: 1
+  - **Light Flex Track Robot**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+
+#### **S40_02002_Cleanup and add sealant**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_02003_Inspection**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04001_Camera at stating holes**
+- **Resource Requirements:**
+  - **Automation Operator**: Quantity needed: 1
+  - **Light Flex Track Rail**: Quantity needed: 1
+  - **Station platform**: Quantity needed: 1
+  - **Light Flex Track Robot**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+
+#### **S40_04002_Drilling orbital 4,8**
+- **Resource Requirements:**
+  - **Automation Operator**: Quantity needed: 1
+  - **Light Flex Track Rail**: Quantity needed: 1
+  - **Station platform**: Quantity needed: 1
+  - **Light Flex Track Robot**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+
+#### **S40_04003_Drilling template install**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04004_Fixation drilling template suite manual**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04006_Deinstall drilling template**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04007_Set in position temporary fastener**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04008_Set up the fixations LGP/Hi-Lite automatic**
+- **Resource Requirements:**
+  - **Automation Operator**: Quantity needed: 1
+  - **Light Flex Track Rail**: Quantity needed: 1
+  - **Station platform**: Quantity needed: 1
+  - **Light Flex Track Robot**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+
+#### **S40_04009_Set up the fixations LGP/Hi-Lite manual**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04010_Riveting buttstraps and stabiliser automatic**
+- **Resource Requirements:**
+  - **Automation Operator**: Quantity needed: 1
+  - **Light Flex Track Rail**: Quantity needed: 1
+  - **Station platform**: Quantity needed: 1
+  - **Light Flex Track Robot**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+
+#### **S40_04011_Riveting buttstraps and stabiliser manual**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04012_Deburring int, positioning, attach them automatic**
+- **Resource Requirements:**
+  - **Automation Operator**: Quantity needed: 1
+  - **Light Flex Track Rail**: Quantity needed: 1
+  - **Station platform**: Quantity needed: 1
+  - **Light Flex Track Robot**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+
+#### **S40_04013_Deburring int, positioning, attach them manual**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2
+
+#### **S40_04014_Deinstall LFT and rails**
+- **Resource Requirements:**
+  - **Station platform**: Quantity needed: 1
+  - **Station**: Quantity needed: 1
+  - **Hand drilling machine**: Quantity needed: 2

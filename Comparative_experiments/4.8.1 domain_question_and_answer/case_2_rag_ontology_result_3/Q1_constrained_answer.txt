@@ -1,0 +1,34 @@
+The hierarchy of processes and sub-processes based on the domain knowledge graph is as follows:
+
+1. **Process**
+   - **Design Process**
+   - **Manufacturing Process**
+     - **Assembly Process**
+     - **Machining Process**
+     - **Measuring Process**
+     - **Recovery Process**
+     - **Transport Operation**
+     - **Cleaning Operation**
+     - **Fastening Operation**
+     - **Fixing Operation**
+   - **Business Process**
+     - **Tradeoff Process**
+     - **Validation Process**
+     - **Verification Process**
+   - **Orbital Joint Process**
+     - **S40_Upper Orbital Joint Process**
+     - **S40_Lower Orbital Joint Process**
+     - **S40_Upper Left Orbital Joint Process**
+     - **S40_Upper Right Orbital Joint Process**
+     - **S40_Lower Left Orbital Joint Process**
+     - **S40_Lower Right Orbital Joint Process**
+   - **Production Process**
+     - **Production System Model**
+     - **Production Resource**
+     - **Production System Model Element**
+   - **Agentive Process**
+     - **Action**
+   - **Process Aggregate**
+   - **Process Boundary**
+
+This hierarchy includes all levels of processes and sub-processes as described in the context.

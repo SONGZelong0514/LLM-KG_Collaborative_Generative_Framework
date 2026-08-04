@@ -1,0 +1,25 @@
+Yes, the knowledge graph does define hierarchical relationships between processes and subprocesses. Here are the processes and their respective subprocesses:
+
+1. **Business Process**: 
+   - Subprocess: Business Process Plan
+
+2. **Manufacturing Process**:
+   - Subprocesses: AssemblyProcessPlan, MeasuringProcessPlan, MachiningProcessPlan, Installation Operation, Fastening Operation, Fixing Operation, Cleaning Operation, Transport Operation, Inspection Operation, Uninstallation Operation
+
+3. **Orbital Joint Process**:
+   - Subprocesses: Upper Right Orbital Joint Process, Lower Right Orbital Joint Process, Upper Left Orbital Joint Process, Lower Left Orbital Joint Process
+
+4. **ValidationProcess**:
+   - Subprocess: VerificationProcess
+
+5. **Design Process**:
+   - Subprocess: Planned Process
+
+6. **ManufacturingOperation** (categorized as a planned process):
+   - Subprocess: Operation Specification
+
+7. **Process Aggregate**:
+   - Subprocess: Process
+
+8. **Recovery Process**:
+   - Subprocess: RecoveryProcedure

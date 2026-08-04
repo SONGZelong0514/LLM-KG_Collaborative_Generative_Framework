@@ -1,0 +1,21 @@
+The resource catalog includes the following:
+
+1. Resource Name: "ProductionSystemModel"
+   - Calendar: shift_40h_week
+   - Number: 8
+   - Hourly Cost: 100
+
+2. Resource Name: "Mechanical Operator"
+   - Calendar: 24x7
+   - Number: 2
+   - Hourly Cost: 75
+
+3. Resource Name: "Hand drilling machine"
+   - Calendar: 24x7
+   - Number: 6
+   - Hourly Cost: 10
+
+4. Resource Name: "Crane"
+   - Calendar: 24x7
+   - Number: 1
+   - Hourly Cost: 30

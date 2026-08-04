@@ -1,0 +1,1 @@
+The ontology does define a hierarchical relationship where processes can have subprocesses, as indicated by the object property `hasSubprocess`. However, the ontology content provided does not enumerate every process together with its specific sub-processes or list individual examples of these relationships.

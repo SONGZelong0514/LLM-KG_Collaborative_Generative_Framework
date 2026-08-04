@@ -1,0 +1,1 @@
+The context does not provide specific details on each operation's required resources or their quantities. The text mainly describes various classes and properties related to manufacturing processes, operations, and resources but lacks specific information on requirements by operation.

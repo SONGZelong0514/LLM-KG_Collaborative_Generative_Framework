@@ -1,0 +1,4 @@
+- **Mechanical Operator**: calendar: shift_40h_week, number: 8, hourly cost: 75.
+- **Automation Operator**: calendar: shift_40h_week, number: 8, hourly cost: 100.
+- **Crane**: calendar: 24x7, number: 1, hourly cost: 30.
+- **Hand drilling machine**: calendar: 24x7, number: 6, hourly cost: 10.

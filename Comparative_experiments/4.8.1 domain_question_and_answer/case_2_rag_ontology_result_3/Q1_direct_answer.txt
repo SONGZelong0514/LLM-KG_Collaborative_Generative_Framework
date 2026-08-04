@@ -1,0 +1,45 @@
+1. **Assembly Process**
+   - Sub-processes:
+     - AssemblyProcessPlan
+     - ManufacturingOperation
+
+2. **Manufacturing Process**
+   - Sub-processes:
+     - AssemblyProcessPlan
+     - ManufacturingOperation
+
+3. **Design Process**
+   - Sub-processes:
+     - ValidationProcess
+     - VerificationProcess
+
+4. **Tradeoff Process**
+   - Sub-processes:
+     - Specification
+
+5. **Business Process**
+   - Sub-processes:
+     - Business Process Plan
+
+6. **Orbital Joint Process**
+   - Sub-processes:
+     - S40_Upper Right Orbital Joint Process
+     - S40_Lower Right Orbital Joint Process
+     - S40_Upper Left Orbital Joint Process
+     - S40_Lower Left Orbital Joint Process
+     - S40_Lower Orbital Joint Process
+
+7. **Installation Operation**
+   - Sub-processes:
+     - Fixing Operation
+     - Cleaning Operation
+
+8. **Transport Operation**
+   - Sub-processes:
+     - Rear Fuselage
+     - Front Fuselage
+
+9. **Inspection Operation**
+   - Sub-processes:
+     - ValidationProcess
+     - VerificationProcess

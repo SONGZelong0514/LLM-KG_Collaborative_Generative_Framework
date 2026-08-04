@@ -1,0 +1,47 @@
+1. **Fixing Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+2. **Fastening Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+3. **Sealing Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+4. **Drilling Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+5. **Deburring Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+6. **Installation Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+7. **S40_01001_Set up working environment**
+   - Type: Not specified in the provided context.
+   - Duration: Not specified in the provided context.
+
+8. **Cleaning Operation**
+   - Type: ManufacturingOperation
+   - Duration: Not specified in the provided context.
+
+9. **S40_04007_Set in position temporary fastener**
+   - Type: Not specified in the provided context.
+   - Duration: 15 minutes
+
+10. **S40_04004_Fixation drilling template suite manual**
+    - Type: Not specified in the provided context.
+    - Duration: 30 minutes
+
+11. **S40_04003_Drilling template install**
+    - Type: Not specified in the provided context.
+    - Duration: 25 minutes
+
+12. **S40_02003_Inspection**
+    - Type: Not specified in the provided context.
+    - Duration: 55 minutes

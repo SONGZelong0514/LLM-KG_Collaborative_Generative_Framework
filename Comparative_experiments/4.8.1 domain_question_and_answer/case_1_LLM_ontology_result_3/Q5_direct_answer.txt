@@ -1,0 +1,1 @@
+The ontology provides information on some classes with the property `hasPredecessors`, but does not specify the exact predecessor operations for each instance. Therefore, I cannot list the predecessor operations for each operation based on the provided ontology content.

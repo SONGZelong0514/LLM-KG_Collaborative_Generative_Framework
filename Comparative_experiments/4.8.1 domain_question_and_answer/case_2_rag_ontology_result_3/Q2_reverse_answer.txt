@@ -1,0 +1,33 @@
+Yes, the knowledge graph specifies operation types and durations. Here is the list of operations together with their types and durations:
+
+1. **Drilling Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+2. **Installation Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+3. **Sealing Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+4. **Fixing Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+5. **Deburring Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+6. **Cleaning Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+7. **Setup Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)
+
+8. **Uninstallation Operation**  
+   - **Type**: Manual, Automatic, or Semi-Automatic  
+   - **Duration**: Positive Integer (in minutes)

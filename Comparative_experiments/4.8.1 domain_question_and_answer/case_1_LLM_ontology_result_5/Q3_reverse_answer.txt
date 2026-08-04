@@ -1,0 +1,51 @@
+Yes, calendars, numbers, and hourly costs are defined for resources in the ontology. Here is the list:
+
+1. **Drilling Template**
+   - Calendar: "24x7"
+   - Hourly cost: 10
+   - Number: Not specified
+
+2. **Hand drilling machine**
+   - Calendar: "24x7"
+   - Hourly cost: 10
+   - Number: 6
+
+3. **Station platform**
+   - Calendar: "24x7"
+   - Hourly cost: 75
+   - Number: 2
+
+4. **Light Flex Track Rail**
+   - Calendar: "24x7"
+   - Hourly cost: 5
+   - Number: 2
+
+5. **Automation Operator**
+   - Calendar: "shift_40h_week"
+   - Hourly cost: 100
+   - Number: 8
+
+6. **Mechanical Operator**
+   - Calendar: "shift_40h_week"
+   - Hourly cost: 100
+   - Number: 8
+
+7. **Station**
+   - Calendar: "7x24"
+   - Hourly cost: 80
+   - Number: 2
+
+8. **Light Flex Track Robot**
+   - Calendar: "24x7"
+   - Hourly cost: 75
+   - Number: 2
+
+9. **Transportation tooling**
+   - Calendar: "27X7"
+   - Hourly cost: 80
+   - Number: Not specified
+
+10. **Crane**
+    - Calendar: "24x7"
+    - Hourly cost: 30
+    - Number: 1

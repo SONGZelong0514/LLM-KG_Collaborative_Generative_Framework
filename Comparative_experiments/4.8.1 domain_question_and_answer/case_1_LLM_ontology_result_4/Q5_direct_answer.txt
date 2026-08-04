@@ -1,0 +1,1 @@
+The ontology provides the property `hasPredecessors` to indicate predecessor operations, but it does not specify any explicit relationships between operations using this property. Therefore, the predecessor operations for each operation cannot be determined from the provided ontology.

@@ -1,0 +1,21 @@
+The ontology provides various classes related to processes, but it does not explicitly describe a complete hierarchy of processes and sub-processes in a structured way. However, we can provide some information based on the class descriptions and their hierarchical relationships:
+
+1. **Planned Process** (`http://webprotege.stanford.edu/RxuHQIW4BrEOHZmuK12XWE`)
+   - Business Process (`http://webprotege.stanford.edu/R9UVKH134RHFGaQ0I1ZKDXB`)
+     - Business Process Plan (`http://webprotege.stanford.edu/RDdEYRuoApIs5jDJjuT9gsC`)
+   - Manufacturing Process (`http://webprotege.stanford.edu/R76ASdcuFZqzt7GXrJSXKk8`)
+     - Manufacturing Process Plan (`http://webprotege.stanford.edu/RCr8ocyX9HnsFbxjEYJSUoH`)
+       - Assembly Process (`http://webprotege.stanford.edu/REDA20L0Qcb2OF6f07mLiB`)
+         - Assembly Process Plan (`http://webprotege.stanford.edu/R9FlRLGZ1Kr6HyrLBnXdEt9`)
+       - Machining Process Plan (`http://webprotege.stanford.edu/RBtPCLg5PgCdUHyr7BlESvU`)
+       - Measuring Process Plan (`http://webprotege.stanford.edu/RC4avxmZ4nDhSi1xQ6veVt8`)
+
+The ontology defines various types of operations:
+
+- Transportation Operation (`http://webprotege.stanford.edu/RCRhpLUG2ilQiqoRqYOjwzj`)
+  - Jig In (`http://webprotege.stanford.edu/RBqX1tfBD9LL2nq45Xi5Xbo`)
+  - Jig Out (`http://webprotege.stanford.edu/RDs8Awh5IgVaI8rLpJ001hk`)
+
+- Installation Operation (`http://webprotege.stanford.edu/RDEoFn6DZry2SaxenOGiGD4`)
+
+Unfortunately, the ontology does not provide enough information to map out a detailed hierarchy beyond these relationships.

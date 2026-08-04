@@ -1,0 +1,1 @@
+Yes, the knowledge graph does encode precedence relations between operations using the `hasPredecessors` object property. However, the ontology content provided does not list specific individuals or operations with their predecessors. Therefore, I cannot provide a list of operations together with their predecessors based on the given ontology data.
