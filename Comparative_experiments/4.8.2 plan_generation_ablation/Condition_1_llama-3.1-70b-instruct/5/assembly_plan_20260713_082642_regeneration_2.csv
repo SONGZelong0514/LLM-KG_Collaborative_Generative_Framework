@@ -1,0 +1,34 @@
+﻿Order,Section,Operation,Type,Required Resources,Duration (min),Start Time (min),End Time (min),Cost (€)
+1,Shared,S40_00001_Jig in,Manual,"Crane (1), Transportation Tooling (1)",60,0,60,110.00
+2,Shared,S40_01001_Set up working environment,Manual,"Station (1), Mechanical Operator (1), Station Platform (1)",10,60,70,42.50
+3,Quarter section 1,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,70,95,147.92
+4,Quarter section 1,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,95,125,182.50
+5,Quarter section 1,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,125,310,1187.08
+6,Quarter section 1,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,310,335,152.08
+7,Quarter section 1,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,335,350,88.75
+8,Quarter section 1,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,350,385,116.67
+9,Quarter section 1,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,385,565,600.00
+10,Quarter section 1,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,565,610,150.00
+11a,Quarter section 2,S40_02001_Set in position Rails and LFT,Automatic,"Automation Operator (2), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",10,610,620,72.50
+11b,Quarter section 3,S40_04003_Drilling template install,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",25,610,635,147.92
+12a,Quarter section 2,S40_04001_Camera at stating holes,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",15,620,635,83.75
+12b,Quarter section 3,S40_04004_Fixation drilling template suite manual,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",30,635,665,182.50
+13a,Quarter section 2,"S40_04002_Drilling orbital 4,8",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",125,635,760,697.92
+13b,Quarter section 3,"S40_04005_Drilling (with adapter) 3,2 on Stringers int and drilling template",Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1), Hand Drilling Machine (2)",185,665,850,1187.08
+14a,Quarter section 2,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",20,760,780,111.67
+15a,Quarter section 2,S40_04010_Riveting buttstraps and stabiliser automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",90,780,870,502.50
+15b,Quarter section 3,S40_04006_Deinstall drilling template,Manual,"Station (1), Mechanical Operator (2), Drilling Template (1), Station Platform (1)",25,850,875,152.08
+16a,Quarter section 2,"S40_04012_Deburring int, positioning, attach them automatic",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",25,870,895,139.58
+16b,Quarter section 3,S40_04007_Set in position temporary fastener,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",15,875,890,88.75
+17a,Quarter section 4,S40_04001_Camera at stating holes,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",15,895,910,83.75
+17b,Quarter section 3,S40_04009_Set up the fixations LGP/Hi-Lite manual,Manual,Mechanical Operator (2),35,890,925,116.67
+18a,Quarter section 4,"S40_04002_Drilling orbital 4,8",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",125,910,1035,697.92
+19a,Quarter section 4,S40_04008_Set up the fixations LGP/Hi-Lite automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",20,1035,1055,111.67
+20a,Quarter section 4,S40_04010_Riveting buttstraps and stabiliser automatic,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",90,1055,1145,502.50
+21a,Quarter section 4,"S40_04012_Deburring int, positioning, attach them automatic",Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",25,1145,1170,139.58
+22a,Quarter section 4,S40_04014_Deinstall LFT and rails,Automatic,"Automation Operator (1), Station (1), Light Flex Track Rail (1), Light Flex Track Robot (1), Station Platform (1)",35,1170,1205,195.42
+22b,Quarter section 3,S40_04011_Riveting buttstraps and stabiliser manual,Manual,Mechanical Operator (2),180,925,1105,600.00
+23,Quarter section 3,"S40_04013_Deburring int, positioning, attach them manual",Manual,Mechanical Operator (2),45,1105,1150,150.00
+24,Shared,S40_02002_Cleanup and add sealant,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",35,1205,1240,207.08
+25,Shared,S40_02003_Inspection,Manual,"Station (1), Mechanical Operator (2), Station Platform (1)",55,1240,1295,325.42
+26,Shared,S40_00002_Jig out,Manual,"Crane (1), Transportation Tooling (1)",60,1295,1355,110.00
