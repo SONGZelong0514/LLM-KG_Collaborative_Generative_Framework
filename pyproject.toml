@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aircraft-assembly-design"
+version = "1.0.0"
+description = "LLM and knowledge-graph collaborative framework for aircraft assembly system design"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+    "gradio==5.31.0",
+    "langchain==0.2.17",
+    "langchain-community==0.2.19",
+    "langchain-openai==0.1.25",
+    "neo4j==5.28.1",
+    "openai==1.63.2",
+    "pandas==2.2.3",
+    "python-dotenv==1.0.1",
+    "pyvis==0.3.2",
+    "rdflib==7.1.4",
+]
+
+[project.scripts]
+aircraft-assembly-design = "aircraft_assembly_design.__main__:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+aircraft_assembly_design = ["assets/*.png"]
+
