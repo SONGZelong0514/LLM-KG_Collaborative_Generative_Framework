@@ -1,4 +1,4 @@
-# LLM–Knowledge Graph Collaborative Framework for Aircraft Assembly System Design
+# Large Language Model and Knowledge Graph Collaborative Framework for Aircraft Manufacturing System Design
 
 **Demo video:** [https://youtu.be/icpT_mcnjMk](https://youtu.be/icpT_mcnjMk)  
 **Associated paper:** [https://doi.org/10.1016/j.aei.2026.105349](https://doi.org/10.1016/j.aei.2026.105349)
