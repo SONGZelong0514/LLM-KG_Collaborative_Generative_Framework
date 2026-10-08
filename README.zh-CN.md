@@ -1,4 +1,4 @@
-# 基于大语言模型与知识图谱协同的飞机装配系统智能设计框架
+# 基于大语言模型与知识图谱协同的飞机制造系统生成式设计框架
 
 **演示视频：** [https://youtu.be/icpT_mcnjMk](https://youtu.be/icpT_mcnjMk)  
 **对应论文：** [https://doi.org/10.1016/j.aei.2026.105349](https://doi.org/10.1016/j.aei.2026.105349)
